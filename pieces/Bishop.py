@@ -9,21 +9,17 @@ class Bishop(Piece.Piece):
         
     def get_available_moves(self, matrix):
         available = list()
-        if(self.color == "w"):
-             available.append(matrix)
-        elif(self.color == "B"):
-            available.append(matrix)
+        for i in range(1,7):
+            if not(matrix[self.posX + 1][self.posY + 1][1:2] = self.color):
+                available.append(self.get_matrix_given_move(matrix, self.posX + 1, self.posY +1))       
+            if not(matrix[self.posX + 1][self.posY - 1][1:2] = self.color):
+                available.append(self.get_matrix_given_move(matrix, self.posX + 1, self.posY -1))
+            if not(matrix[self.posX - 1][self.posY + 1][1:2] = self.color):
+                available.append(self.get_matrix_given_move(matrix, self.posX -1, self.posY + 1))
+            if not(matrix[self.posX - 1][self.posY - 1][1:2] = self.color):
+                available.append(self.get_matrix_given_move(matrix, self.posX - 1, self.posY - 1))
 
         return available
-
-
-    def get_matrix_given_move(self, matrix, pX2, pY2):
-        matrix_moved = copy.deepcopy(matrix)
-        temp = matrix_moved[self.posX][self.posY]
-        matrix_moved[self.posX][self.posY] = matrix_moved[pX2][pY2]
-        matrix_moved[pX2][pY2] = temp
-        return matrix_moved
-
 
 
 

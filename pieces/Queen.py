@@ -5,12 +5,13 @@ class Queen(Piece.Piece):
 
     def __init__(self, c, pX, pY):
         self.color = c
-        self.positionX = pX
-        self.positionY = pY
+        self.posX = pX
+        self.posY = pY
 
 
     def get_available_moves(self, matrix):
         available = list()
+        '''same as castle'''
         for i in range(1,7):
             if(self.posX + i >= 8):
                 break
@@ -39,6 +40,7 @@ class Queen(Piece.Piece):
                 available.append(self.get_matrix_given_move(matrix, self.posX, self.posY - i))
             if not(matrix[self.posX][self.posY - i] == "00"):
                 break
+        '''same as bishop'''
         return available
 
 
