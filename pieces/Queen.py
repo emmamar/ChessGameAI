@@ -41,6 +41,31 @@ class Queen(Piece.Piece):
             if not(matrix[self.posX][self.posY - i] == "00"):
                 break
         '''same as bishop'''
+        for i in range(1, 7 - self.posX):
+            if(self.posY + i <= 7):
+                if not(matrix[self.posX + i][self.posY + i][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX + i, self.posY + i))
+                if not(matrix[self.posX + i][self.posY + i] == "00"):
+                    break
+        for i in range(1, 7 - self.posX):
+            if(self.posY - i >= 0):
+                if not(matrix[self.posX + i][self.posY - i][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX + i, self.posY - i))
+                if not(matrix[self.posX + i][self.posY - i] == "00"):
+                    break
+        for i in range(1, self.posX):
+            if(self.posY + i <= 7):
+                if not(matrix[self.posX - i][self.posY + i][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX - i, self.posY + i))
+                if not(matrix[self.posX - i][self.posY + i] == "00"):
+                    break
+        for i in range(1, self.posX):
+            if(self.posY - i >= 0):
+                if not(matrix[self.posX - i][self.posY - i][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX - i, self.posY - i))
+                if not(matrix[self.posX - i][self.posY - i] == "00"):
+                    break 
+
         return available
 
 

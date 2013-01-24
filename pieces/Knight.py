@@ -4,24 +4,47 @@ class Knight(Piece.Piece):
 
     def __init__(self, c, pX, pY):
         self.color = c
-        self.positionX = pX
-        self.positionY = pY
+        self.posX = pX
+        self.posY = pY
 
 
     def get_available_moves(self, matrix):
         available = list()
-        if(self.color == "w"):
-             available.append(matrix)
-        elif(self.color == "B"):
-            available.append(matrix)
+        if (self.posX - 1 >= 0):
+            if(self.posY - 2 >= 0):
+                if not (matrix[self.posX - 1][self.posY - 2][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX - 1, self.posY - 2))        
+            if(self.posY + 2 <= 7):
+                if not (matrix[self.posX - 1][self.posY + 2][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX - 1, self.posY + 2))
+
+        if(self.posX - 2 >= 0):
+            if(self.posY - 1 >= 0):
+                if not (matrix[self.posX - 2][self.posY + 1][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX - 2, self.posY + 1))
+
+            if(self.posY + 1 <= 7):
+                if not (matrix[self.posX - 2][self.posY + 1][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX - 2, self.posY + 1))
+
+        if(self.posX + 1 <= 7):
+            if(self.posY - 2 >= 0):
+                if not (matrix[self.posX + 1][self.posY - 2][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX + 1, self.posY - 2))
+
+            if(self.posY + 2 <= 7):
+                if not (matrix[self.posX + 1][self.posY + 2][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX + 1, self.posY + 2))
+
+        if(self.posX + 2 <= 7):
+            if(self.posY - 1 >= 0):
+                if not (matrix[self.posX + 2][self.posY - 1][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX + 2, self.posY - 1))
+
+            if(self.posY + 1 <= 7):
+                if not (matrix[self.posX + 2][self.posY + 1][1:2] == self.color):
+                    available.append(self.get_matrix_given_move(matrix, self.posX + 2, self.posY + 1))
 
         return available
-
-    def get_matrix_given_move(self, matrix, pX2, pY2):
-        matrix_moved = copy.deepcopy(matrix)
-        temp = matrix_moved[self.posX][self.posY]
-        matrix_moved[self.posX][self.posY] = matrix_moved[pX2][pY2]
-        matrix_moved[pX2][pY2] = temp
-        return matrix_moved
 
 
