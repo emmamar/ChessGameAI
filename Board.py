@@ -92,6 +92,20 @@ class Board:
             print "\n"
         return available_moves
              
+    def get_available_black_moves(self):
+        available_moves = list()
+        for piece in self.black_pieces:
+            per_piece = piece.get_available_moves(self.matrix)
+	    for moves in per_piece:
+                available_moves.append(moves)
+        for matx in available_moves:
+            for line in matx:
+                print line
+            print "\n"
+        return available_moves
 
+
+    def is_check_mate(self):
+        return true
 
 
