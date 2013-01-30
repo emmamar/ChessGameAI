@@ -1,50 +1,60 @@
 import Piece
+from Move import Move
 
 class Knight(Piece.Piece):
 
-    def __init__(self, c, pX, pY):
+    def __init__(self, c):
         self.color = c
-        self.posX = pX
-        self.posY = pY
 
-
-    def get_available_moves(self, matrix):
+    def get_available_moves(self, matrix, px, py):
+        posX = px
+        posY = py
         available = list()
-        if (self.posX - 1 >= 0):
-            if(self.posY - 2 >= 0):
-                if not (matrix[self.posX - 1][self.posY - 2][1:2] == self.color):
-                    available.append(self.get_matrix_given_move(matrix, self.posX - 1, self.posY - 2))        
-            if(self.posY + 2 <= 7):
-                if not (matrix[self.posX - 1][self.posY + 2][1:2] == self.color):
-                    available.append(self.get_matrix_given_move(matrix, self.posX - 1, self.posY + 2))
+        if posX - 1 >= 0:
+            if posY - 2 >= 0:
+                if matrix[posX - 1][posY - 2] == None or not matrix[posX - 1][posY - 2].color == self.color:
+                    available.append(Move(posX, posY, posX - 1, posY - 2))        
+            if posY + 2 <= 7:
+                if matrix[posX - 1][posY + 2] == None or not matrix[posX - 1][posY + 2].color == self.color:
+                    available.append(Move(posX, posY, posX - 1, posY + 2))
 
-        if(self.posX - 2 >= 0):
-            if(self.posY - 1 >= 0):
-                if not (matrix[self.posX - 2][self.posY + 1][1:2] == self.color):
-                    available.append(self.get_matrix_given_move(matrix, self.posX - 2, self.posY + 1))
+        if posX - 2 >= 0:
+            if posY - 1 >= 0:
+                if matrix[posX - 2][posY + 1] == None or not matrix[posX - 2][posY + 1].color == self.color:
+                    available.append(Move(posX, posY, posX - 2, posY + 1))
+            if posY + 1 <= 7:
+                if matrix[posX - 2][posY + 1] == None or not matrix[posX - 2][posY + 1].color == self.color:
+                    available.append(Move(posX, posY, posX - 2, posY + 1))
 
-            if(self.posY + 1 <= 7):
-                if not (matrix[self.posX - 2][self.posY + 1][1:2] == self.color):
-                    available.append(self.get_matrix_given_move(matrix, self.posX - 2, self.posY + 1))
+        if posX + 1 <= 7:
+            if posY - 2 >= 0:
+                if matrix[posX + 1][posY - 2] == None or not matrix[posX + 1][posY - 2].color == self.color:
+                    available.append(Move(posX, posY, posX + 1, posY - 2))
 
-        if(self.posX + 1 <= 7):
-            if(self.posY - 2 >= 0):
-                if not (matrix[self.posX + 1][self.posY - 2][1:2] == self.color):
-                    available.append(self.get_matrix_given_move(matrix, self.posX + 1, self.posY - 2))
+            if posY + 2 <= 7:
+                if matrix[posX + 1][posY + 2] == None or not matrix[posX + 1][posY + 2].color == self.color:
+                    available.append(Move(posX, posY, posX + 1, posY + 2))
 
-            if(self.posY + 2 <= 7):
-                if not (matrix[self.posX + 1][self.posY + 2][1:2] == self.color):
-                    available.append(self.get_matrix_given_move(matrix, self.posX + 1, self.posY + 2))
+        if posX + 2 <= 7:
+            if posY - 1 >= 0:
+                if matrix[posX + 2][posY - 1] == None or not matrix[posX + 2][posY - 1].color == self.color:
+                    available.append(Move(posX, posY, posX + 2, posY - 1))
 
-        if(self.posX + 2 <= 7):
-            if(self.posY - 1 >= 0):
-                if not (matrix[self.posX + 2][self.posY - 1][1:2] == self.color):
-                    available.append(self.get_matrix_given_move(matrix, self.posX + 2, self.posY - 1))
-
-            if(self.posY + 1 <= 7):
-                if not (matrix[self.posX + 2][self.posY + 1][1:2] == self.color):
-                    available.append(self.get_matrix_given_move(matrix, self.posX + 2, self.posY + 1))
+            if posY + 1 <= 7:
+                if matrix[posX + 2][posY + 1] == None or not matrix[posX + 2][posY + 1].color == self.color:
+                    available.append(Move(posX, posY, posX + 2, posY + 1))
 
         return available
+
+
+    def toString(self):
+        if self.color == "W":
+            return "RW"
+        else: 
+            return "RB"
+
+
+
+
 
 
