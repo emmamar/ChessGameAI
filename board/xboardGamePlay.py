@@ -3,31 +3,48 @@ from Player import Player
 from Move import Move
 import copy
 
+'''this class starts the game on the computer. It creates a board 
+object and can create 2 players, determine the next move for the 
+computer player and play the move for the human player in turn.'''
+
+'''constructor: creates a board object'''
 class xboardGamePlay:
   def __init__ (self):
     self.board_object = Board()
+    self.white_turn = True
 
+  '''start the game by creating 2 players'''
   def start_new_game(self):
     self.player1_computer = Player("B", "computer")
     self.player2_human = Player("W", "human")
     
-  def play_move_computer(self):
-    p1nm=self.player1_computer.determineNextMove(copy.deepcopy(self.board_object))
-    self.board_object.move_piece(p1nm)
-    self.save_board()
-    return p1nm
 
-  def play_move_human(self, given_move_alg):
-    move_from_alg_dic={"a":0,"b":1,"c":2,"d":3,"e":4,"f":5,"g":6,"h":7}
-    split = list(given_move_alg)
-    human_move = (Move(int(split[1]) - 1, 
-    move_from_alg_dic[split[0]], int(split[3]) -1, 
-    move_from_alg_dic[split[2]]))
-    self.board_object.move_piece(human_move)
-    self.save_board
- 
-  def save_board(self):
-    self.board_object.save_board() 
+  '''determine and play the computers move'''
+  def play_move_computer(self):
+    if not self.white_turn:
+      p1nm = self.player1_computer.determineNextMove(
+        self.board_object
+      )
+      self.board_object.try_move_piece(p1nm)
+      self.board_object.save_board()
+      self.white_turn = True
+      return p1nm
+    else:
+      '''isnt blacks turn'''
+      return None
+    
+
+  '''play the human players move on the board'''
+  def play_move_human(self, given_move):
+    if self.white_turn:
+      can_move_piece = self.board_object.try_move_piece(given_move)
+      self.board_object.save_board()
+      self.white_turn = False
+      return can_move_piece
+    else:
+      '''illegal move or isnt whites turn'''
+      return False 
+
 
           
  

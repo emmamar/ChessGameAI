@@ -66,56 +66,56 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") fairymax
-1271 >first : xboard
+908 >first : xboard
 protover 2
 shuffleOpenings = 0
-1443 <first : tellics say     Fairy-Max 4.8Q
-1443 <first : tellics say     by H.G. Muller
-1443 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
-1443 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
-1444 <first : feature myname="Fairy-Max 4.8Q"
-1444 >first : accepted myname
-1446 <first : feature memory=1
-1446 >first : accepted memory
-1446 <first : feature setboard=0 ping=1 done=0
-1446 >first : accepted setboard
-1446 >first : accepted ping
-1446 >first : accepted done
-1446 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
-1446 >first : accepted variants
-1446 <first : feature option="Resign -check 0"
-1446 >first : accepted option
-1446 <first : feature option="Resign Threshold -spin 800 200 1200"
-1446 >first : accepted option
-1446 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
-1446 >first : accepted option
-1446 <first : feature option="Multi-PV Margin -spin 0 0 1000"
-1446 >first : accepted option
-1446 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
-1446 >first : accepted option
-1446 <first : feature option="Dummy Slider Example -slider 20 0 100"
-1447 >first : accepted option
-1447 <first : feature option="Dummy String Example -string happy birthday!"
-1447 >first : accepted option
-1447 <first : feature option="Dummy Path Example -path ."
-1447 >first : accepted option
-1447 <first : feature option="Clear Hash -button"
-1447 >first : accepted option
-1447 <first : feature done=1
-1447 >first : accepted done
-1448 >first : memory 68
-1448 >first : new
+1065 <first : tellics say     Fairy-Max 4.8Q
+1065 <first : tellics say     by H.G. Muller
+1065 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
+1065 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
+1065 <first : feature myname="Fairy-Max 4.8Q"
+1065 >first : accepted myname
+1066 <first : feature memory=1
+1066 >first : accepted memory
+1066 <first : feature setboard=0 ping=1 done=0
+1066 >first : accepted setboard
+1066 >first : accepted ping
+1066 >first : accepted done
+1066 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
+1066 >first : accepted variants
+1066 <first : feature option="Resign -check 0"
+1066 >first : accepted option
+1066 <first : feature option="Resign Threshold -spin 800 200 1200"
+1066 >first : accepted option
+1066 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
+1066 >first : accepted option
+1066 <first : feature option="Multi-PV Margin -spin 0 0 1000"
+1066 >first : accepted option
+1066 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
+1066 >first : accepted option
+1066 <first : feature option="Dummy Slider Example -slider 20 0 100"
+1066 >first : accepted option
+1066 <first : feature option="Dummy String Example -string happy birthday!"
+1066 >first : accepted option
+1066 <first : feature option="Dummy Path Example -path ."
+1066 >first : accepted option
+1066 <first : feature option="Clear Hash -button"
+1066 >first : accepted option
+1066 <first : feature done=1
+1066 >first : accepted done
+1067 >first : memory 68
+1067 >first : new
 random
-1448 >first : level 40 5 0
-1448 >first : post
-1448 >first : hard
-1448 >first : ping 1
-1497 <first : pong 1
-26207 >first : force
-26208 >first : quit
+1067 >first : level 40 5 0
+1067 >first : post
+1067 >first : hard
+1067 >first : ping 1
+1119 <first : pong 1
+4242 >first : force
+4243 >first : quit
 Unload first
-StartChildProcess (dir=".") xbordEngineEmma.py
-26220 >first : xboard
+StartChildProcess (dir=".") board/xbordEngineEmma.py
+4257 >first : xboard
 protover 2
-26221 <first : xbordEngineEmma.py: No such file or directory
+4258 <first : board/xbordEngineEmma.py: No such file or directory
 GameEnds(28, xboard exit, 2)
