@@ -5,62 +5,46 @@ class Knight(Piece.Piece):
   def __init__(self, c):
     self.color = c
 
-  def get_available_moves(self, board, px, py):
+  def get_available_moves_specific(self, board, px, py):
     posX = px
     posY = py
     available = list()
     if posX - 1 >= 0:
       if posY - 2 >= 0:
-        if(board.matrix[posX - 1][posY - 2] == None
-        or not board.matrix[posX - 1][posY - 2].color == self.color):
-          move_to_try = Move(posX, posY, posX - 1, posY - 2)
-          if self.check_if_not_check(board,move_to_try):
-            available.append(move_to_try)
-      if posY + 2 <= 7:
-        if(board.matrix[posX - 1][posY + 2] == None
-        or not board.matrix[posX - 1][posY + 2].color == self.color):
-          move_to_try = Move(posX, posY, posX - 1, posY + 2)
-          if self.check_if_not_check(board,move_to_try):
-            available.append(move_to_try)
+        if(board.matrix[posX - 1][posY - 2] == None or not
+          board.matrix[posX - 1][posY - 2].color == self.color):
+          available.append(Move(posX, posY, posX - 1, posY - 2))
+      if posY + 2 < 8:
+        if(board.matrix[posX - 1][posY + 2] == None or not
+          board.matrix[posX - 1][posY + 2].color == self.color):
+          available.append(Move(posX, posY, posX - 1, posY + 2))
     if posX - 2 >= 0:
       if posY - 1 >= 0:
-        if(board.matrix[posX - 2][posY + 1] == None
-        or not board.matrix[posX - 2][posY + 1].color == self.color):
-          move_to_try = Move(posX, posY, posX - 2, posY + 1)
-          if self.check_if_not_check(board,move_to_try):
-            available.append(move_to_try)
-      if posY + 1 <= 7:
-        if(board.matrix[posX - 2][posY + 1] == None
-        or not board.matrix[posX - 2][posY + 1].color == self.color):
-          move_to_try = Move(posX, posY, posX - 2, posY + 1)
-          if self.check_if_not_check(board,move_to_try):
-            available.append(move_to_try)
-    if posX + 1 <= 7:
+        if(board.matrix[posX - 2][posY - 1] == None or not
+          board.matrix[posX - 2][posY - 1].color == self.color):
+          available.append(Move(posX, posY, posX - 2, posY - 1))
+      if posY + 1 < 8:
+        if(board.matrix[posX - 2][posY + 1] == None or not
+          board.matrix[posX - 2][posY + 1].color == self.color):
+          available.append(Move(posX, posY, posX - 2, posY + 1))
+    if posX + 1 < 8:
       if posY - 2 >= 0:
-        if(board.matrix[posX + 1][posY - 2] == None
-        or not board.matrix[posX + 1][posY - 2].color == self.color):
-          move_to_try = Move(posX, posY, posX + 1, posY - 2)
-          if self.check_if_not_check(board,move_to_try):
-            available.append(move_to_try)
-      if posY + 2 <= 7:
-        if(board.matrix[posX + 1][posY + 2] == None
-        or not board.matrix[posX + 1][posY + 2].color == self.color):
-          move_to_try = Move(posX, posY, posX + 1, posY + 2)
-          if self.check_if_not_check(board,move_to_try):
-            available.append(move_to_try)
-    if posX + 2 <= 7:
+        if(board.matrix[posX + 1][posY - 2] == None or not
+          board.matrix[posX + 1][posY - 2].color == self.color):
+          available.append(Move(posX, posY, posX + 1, posY - 2))
+      if posY + 2 < 8:
+        if(board.matrix[posX + 1][posY + 2] == None or not
+          board.matrix[posX + 1][posY + 2].color == self.color):
+          available.append(Move(posX, posY, posX + 1, posY + 2))
+    if posX + 2 < 8:
       if posY - 1 >= 0:
-        if(board.matrix[posX + 2][posY - 1] == None
-        or not board.matrix[posX + 2][posY - 1].color == self.color):
-          move_to_try = Move(posX, posY, posX + 2, posY - 1)
-          if self.check_if_not_check(board,move_to_try):
-            available.append(move_to_try)
-      if posY + 1 <= 7:
-        if(board.matrix[posX + 2][posY + 1] == None
-        or not board,matrix[posX + 2][posY + 1].color == self.color):
-          move_to_try = Move(posX, posY, posX + 2, posY + 1)
-          if self.check_if_not_check(board,move_to_try):
-            available.append(move_to_try)
+        if(board.matrix[posX + 2][posY - 1] == None or not
+          board.matrix[posX + 2][posY - 1].color == self.color):
+          available.append(Move(posX, posY, posX + 2, posY - 1))
+      if posY + 1 < 8:
+        if(board.matrix[posX + 2][posY + 1] == None or not
+          board.matrix[posX + 2][posY + 1].color == self.color):
+          available.append(Move(posX, posY, posX + 2, posY + 1))
 
     return available
 

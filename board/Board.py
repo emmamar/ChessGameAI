@@ -41,9 +41,20 @@ class Board:
     '''if(not self.is_illegal_move(move)):'''
     if(self.matrix[move.startX]
     [move.startY].__class__.__name__ == "Pawn"):
+      color = self.matrix[move.startX][move.startY].color
       self.matrix[move.startX][move.startY].first_move = False
-    self.matrix[move.endX][move.endY] = (
-    self.matrix[move.startX][move.startY])
+      if((color == "W" and move.endX == 7)
+      or color == "B" and move.endX == 0):
+        self.matrix[move.endX][move.endY] = Queen.Queen(
+          color
+        )
+      else:
+        self.matrix[move.endX][move.endY] = (
+        self.matrix[move.startX][move.startY])
+    else:
+      self.matrix[move.endX][move.endY] = (
+      self.matrix[move.startX][move.startY])
+
     self.matrix[move.startX][move.startY] = None
     return True
     '''else:
@@ -95,11 +106,10 @@ class Board:
             for l in range(0,8):
               if not self.matrix[k][l] == None:
                 if not self.matrix[k][l].color == color:
-                  check = not self.matrix[k][l].is_illegal(
-                    Move(k,i,l,j), self
-                  )
+                  check = (not self.matrix[k][l].is_illegal(
+                    Move(k,l,i,j), self
+                  ))
                 if check:
-                  print Move(k,i,l,j).toString()
                   return check
     return check
 

@@ -15,7 +15,7 @@ class Player:
   given the current board configuration'''
   def determineNextMove(self, board):
     choises = self.get_all_available_moves(board)
-    best_choise = Move(3,3,3,3)
+    best_choise = None
     if len(choises) > 0:
       max_heuristic = None
       for choise in choises:
@@ -26,7 +26,6 @@ class Player:
         or heuristic > max_heuristic):
           max_heuristic = heuristic
           best_choise = choise
-    print best_choise.toString()
     return best_choise
 
   '''helper function to determineNextMove that gets all the
@@ -40,8 +39,8 @@ class Player:
           per_piece = board.matrix[i][j].get_available_moves(
             board, i, j
           )
-          for moves in per_piece:
-            available_moves.append(moves)
+          for move in per_piece:
+            available_moves.append(move)
     return available_moves
 
   '''helper function to determineNextMove that gets the

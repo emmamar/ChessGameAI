@@ -7,7 +7,7 @@ class Queen(Piece.Piece):
   def __init__(self, c):
     self.color = c
  
-  def get_available_moves(self, board, px, py):
+  def get_available_moves_specific(self, board, px, py):
     posX = px
     posY = py
     available = list()
