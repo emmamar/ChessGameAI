@@ -1,5 +1,6 @@
 from Move import Move
 import copy
+import numpy
 
 '''this class creates a player object of a given color and of 
 human or computer'''
@@ -44,23 +45,98 @@ class Player:
     return available_moves
 
   '''helper function to determineNextMove that gets the
-  heuristic value of a particualer move'''
+  heuristic value of a particualer move, given a copy
+  of the board and a move'''
   def calculate_heuristic(self, board, move):
     board.try_move_piece(move)
-    piece_value = {"King":5000, "Queen":100, "Knight":50, 
-    "Bishop":50, "Pawn":10, "Castle":75}
-    heuristic = 0
+    total_heuristic = 0
     for i in range(0,8):
       for j in range(0,8):
-        if board.matrix[i][j] == None:
-          heuristic = heuristic
-        elif board.matrix[i][j].color == self.color:
-           heuristic = (heuristic +
-           piece_value[board.matrix[i][j].__class__.__name__])
-        else:
-          heuristic = (heuristic -
-          piece_value[board.matrix[i][j].__class__.__name__])
-    return heuristic
+        total_heuristic += self.calc_material(board.matrix[i][j])
+        total_heuristic += self.calc_piece_table_score(
+          board.matrix[i][j], i, j
+        )
+    return total_heuristic
+
+  '''also compare to otherside'''
+  def calc_material(self, piece):
+    '''calculate the material of the board'''
+    piece_value = {"King":5000, "Queen":1000, "Knight":500, "Bishop":500, 
+    "Pawn":100, "Castle":750}
+    if piece == None:
+      return 0
+    elif piece.color == self.color:
+      return piece_value[piece.__class__.__name__]
+    else:
+      return 0
+
+  def calc_mobility(self):
+    pass
+
+  def calc_doubled_blocked_isolated_pawns(self):
+    pass
+
+  def calc_piece_table_score(self, piece, posX, posY):
+    if piece == None:
+      return 0
+    elif piece.color == self.color:
+      if piece.__class__.__name__ == "Pawn":
+        pawn_table = numpy.matrix('0   0   0   0   0   0  0  0;'
+                                  '50 50  50  50  50  50 50 50;'
+                                  '10 10  20  30  30  20 10 10;'
+                                  '5   5  10  27  27  10  5  5;'
+                                  '0   0   0  25  25   0  0  0;'
+                                  '5  -5 -10   0   0 -10 -5  5;'
+                                  '5  10  10 -25 -25  10 10  5;'
+                                  '0   0   0   0   0   0  0  0')
+        return pawn_table[posX, posY]
+      elif piece.__class__.__name__ == "Knight":
+        knight_table = numpy.matrix('-50 -40 -30 -30 -30 -30 -40 -50;'
+                                    '-40 -20  0  0  0  0 -20 -40;'
+                                    '-30  0 10 15 15 10  0 -30;'
+                                    '-30  5 15 20 20 15  5 -30;'
+                                    '-30  0 15 20 20 15  0 -30;'
+                                    '-30  5 10 15 15 10 5 -30;'
+                                    '-40 -20  0 5  5  0 -20 -40;'
+                                    '-50 -40 -20 -30 -30 -20 -40 -50')
+        return knight_table[posX, posY]
+      elif piece.__class__.__name__ == "Bishop":
+        bishop_table = numpy.matrix('-20 -10 -10 -10 -10 -10 -10 -20;'
+                                    '-10  0  0  0  0  0  0 -10;'
+                                    '-10  0  5 10 10  5  0 -10;'
+                                    '-10  5  5 10 10  5  5 -10;'
+                                    '-10  0 10 10 10 10  0 -10;'
+                                    '-10 10 10 10 10 10 10 -10;'
+                                    '-10  5  0  0  0  0  5 -10;'
+                                    '-20 -10 -40 -10 -10 -40 -10 -20')
+        return bishop_table[posX, posY]
+      elif piece.__class__.__name__ == "King":
+        king_mid = numpy.matrix('-30 -40 -40 -50 -50 -40 -40 -30;'
+                                '-30 -40 -40 -50 -50 -40 -40 -30;'
+                                '-30 -40 -40 -50 -50 -40 -40 -30;'
+                                '-30 -40 -40 -50 -50 -40 -40 -30;'
+                                '-20 -30 -30 -40 -40 -30 -30 -20;'
+                                '-10 -20 -20 -20 -20 -20 -20 -10;'
+                                '20  20   0   0   0   0  20  20;'
+                                '20  30  10  0   0  10  30 20')
+        '''king_table_end_game = 
+        numpy.matrix([[-50,-40,-30,-20,-20,-30,-40,-50]
+                                            [-30,-20,-10,  0,  0,-10,-20,-30]
+                                            [-30,-10, 20, 30, 30, 20,-10,-30]
+                                            [-30,-10, 30, 40, 40, 30,-10,-30]
+                                            [-30,-10, 30, 40, 40, 30,-10,-30]
+                                            [-30,-10, 20, 30, 30, 20,-10,-30]
+                                            [-30,-30,  0,  0,  0,  0,-30,-30]
+                                            [-50,-30,-30,-30,-30,-30,-30,-50]])
+        '''
+        return king_mid[posX, posY]
+      else:
+        return 0
+    else:
+      return 0
+
+
+
 
 
 
