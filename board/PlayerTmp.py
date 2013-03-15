@@ -14,38 +14,27 @@ class Player:
 
   '''determines the best next move for the computer player
   given the current board configuration'''
-  def determineNextMove(self, board, best_sf):
+  def determineNextMove(self, board):
     choises = self.get_all_available_moves(board)
     best_choise = None
-    best_so_far = best_sf
 
     if len(choises) > 0:
       max_heuristic = None
       for choise in choises:
 
         if not(self.depth == 0):
-          '''create an opponent to search, and decrement depth'''
           if self.color == "B":
             opponent = Player("W", (self.depth - 1))
           elif self.color == "W":
             opponent = Player("B", (self.depth - 1))
-          
-          '''opponent searches in a copy of the board with the
-          choise played. gets their best move given the choise'''
           copy_of_board = copy.deepcopy(board)
           copy_of_board.try_move_piece(choise)
-          min_max_best, min_max_heur = opponent.determineNextMove(
-            copy_of_board, best_so_far
+          min_max_best = opponent.determineNextMove(
+            copy_of_board
           )
-          
-          if((best_so_far == None)
-          or (min_max_heur < best_so_far)):
-            best_so_far = min_max_heur
-
-          '''calculate the heuristic of the opponents best play
-          given the choise'''
           copy_of_board2 = copy.deepcopy(board)
           copy_of_board2.try_move_piece(choise)
+
           best_heuristic = self.calculate_heuristic(
             copy_of_board2, min_max_best
           )
@@ -53,18 +42,12 @@ class Player:
           best_heuristic = self.calculate_heuristic(
             copy.deepcopy(board), choise
           )
-
-        '''calculate the optimal choise by max of their heuristics'''
         if(max_heuristic == None
         or best_heuristic > max_heuristic):
           max_heuristic = best_heuristic
           best_choise = choise
-          '''alpha-beta pruning, pointless to continue'''
-          if((not best_so_far == None)
-          and (max_heuristic >= best_so_far)):
-            return best_choise, max_heuristic
 
-      return best_choise, max_heuristic
+      return best_choise
 
   '''helper function to determineNextMove that gets all the
   available next moves'''

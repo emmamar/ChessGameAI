@@ -62,11 +62,11 @@ class Bishop(Piece.Piece):
               return True
         elif length_X > 0:
           if length_Y < 0:
-            if not (board.matrix[move.startX - i][move.startY - i]
+            if not (board.matrix[move.startX - i][move.startY + i]
             == None):
               return True
           else:
-            if not (board.matrix[move.startX - i][move.startY + i]
+            if not (board.matrix[move.startX - i][move.startY - i]
             == None):
               return True
       if(not board.matrix[move.startX - length_X]

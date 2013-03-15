@@ -15,20 +15,20 @@ class xboardGamePlay:
 
   '''start the game by creating 2 players'''
   def start_new_game(self):
-    self.player1_computer = Player("B", "computer")
-    self.player2_human = Player("W", "human")
+    self.player1_computer = Player("B", 1)
+    self.player2_human = Player("W", 0)
     
 
   '''determine and play the computers move'''
   def play_move_computer(self):
     if not self.white_turn:
-      p1nm = self.player1_computer.determineNextMove(
-        self.board_object
+      p1next, heur = self.player1_computer.determineNextMove(
+        self.board_object, None
       )
-      self.board_object.try_move_piece(p1nm)
+      self.board_object.try_move_piece(p1next)
       self.board_object.save_board()
       self.white_turn = True
-      return p1nm
+      return p1next
     else:
       '''isnt blacks turn'''
       return None
