@@ -15,7 +15,7 @@ class xboardGamePlay:
 
   '''start the game by creating 2 players'''
   def start_new_game(self):
-    self.player1_computer = Player("B", 1)
+    self.player1_computer = Player("B", 2)
     self.player2_human = Player("W", 0)
     
 
