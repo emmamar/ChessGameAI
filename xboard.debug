@@ -1,0 +1,1226 @@
+locale = en_US.UTF-8
+recognized 'normal' (-1) as variant normal
+recognized 'normal' (-1) as variant normal
+recognized 'normal' (-1) as variant normal
+shuffleOpenings = 0
+Requested font set for list -*-helvetica-medium-r-normal--14-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--14-*-*-*-*-*-*-*,-*-*-*-*-*-*-14-*-*-*-*-*-*-*
+ got list -*-helvetica-medium-r-normal--14-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--14-*-*-*-*-*-*-*,-*-*-*-*-*-*-14-*-*-*-*-*-*-*, locale en_US.UTF-8
+ got charset -adobe-helvetica-medium-r-normal--14-100-100-100-p-76-iso8859-1
+ got charset -adobe-helvetica-medium-r-normal--14-100-100-100-p-76-iso8859-1
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-2
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-3
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-4
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-5
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-koi8-r
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-7
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-9
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-13
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-14
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-15
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-140-jisx0208.1983-0
+ got charset -daewoo-gothic-medium-r-normal--14-101-100-100-c-0-ksc5601.1987-0
+ got charset -isas-fangsong ti-medium-r-normal--14-101-100-100-c-0-gb2312.1980-0
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-jisx0201.1976-0
+ got charset -adobe-helvetica-medium-r-normal--14-100-100-100-p-76-iso10646-1
+Requested font set for list -*-helvetica-bold-r-normal--34-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--34-*-*-*-*-*-*-*,-*-*-*-*-*-*-34-*-*-*-*-*-*-*
+ got list -*-helvetica-bold-r-normal--34-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--34-*-*-*-*-*-*-*,-*-*-*-*-*-*-34-*-*-*-*-*-*-*, locale en_US.UTF-8
+ got charset -adobe-helvetica-bold-r-normal--34-240-100-100-p-182-iso8859-1
+ got charset -adobe-helvetica-bold-r-normal--34-240-100-100-p-182-iso8859-1
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-2
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-3
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-4
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-5
+ got charset -misc-fixed-medium-r-normal--34-246-100-100-c-0-koi8-r
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-7
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-9
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-13
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-14
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-15
+ got charset -jis-fixed-medium-r-normal--34-246-100-100-c-0-jisx0208.1983-0
+ got charset -daewoo-gothic-medium-r-normal--34-246-100-100-c-0-ksc5601.1987-0
+ got charset -isas-fangsong ti-medium-r-normal--34-246-100-100-c-0-gb2312.1980-0
+ got charset -misc-fixed-medium-r-normal--34-246-100-100-c-0-jisx0201.1976-0
+ got charset -adobe-helvetica-bold-r-normal--34-240-100-100-p-182-iso10646-1
+Requested font set for list -*-helvetica-bold-r-normal--12-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--12-*-*-*-*-*-*-*,-*-*-*-*-*-*-12-*-*-*-*-*-*-*
+ got list -*-helvetica-bold-r-normal--12-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--12-*-*-*-*-*-*-*,-*-*-*-*-*-*-12-*-*-*-*-*-*-*, locale en_US.UTF-8
+ got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-1
+ got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-1
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-2
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-3
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-4
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-5
+ got charset -misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-koi8-r
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-7
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-9
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-13
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-14
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-15
+ got charset -jis-fixed-medium-r-normal--12-87-100-100-c-0-jisx0208.1983-0
+ got charset -daewoo-gothic-medium-r-normal--12-87-100-100-c-0-ksc5601.1987-0
+ got charset -isas-fangsong ti-medium-r-normal--12-87-100-100-c-0-gb2312.1980-0
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-jisx0201.1976-0
+ got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso10646-1
+xboard 4.6.2 + fairymax
+Reset(1, 0) from gameMode 0
+recognized 'normal' (-1) as variant normal
+GameEnds(0, (null), 2)
+shuffleOpenings = 0
+StartChildProcess (dir=".") fairymax
+889 >first : xboard
+protover 2
+shuffleOpenings = 0
+1044 <first : tellics say     Fairy-Max 4.8Q
+1044 <first : tellics say     by H.G. Muller
+1044 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
+1044 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
+1045 <first : feature myname="Fairy-Max 4.8Q"
+1045 >first : accepted myname
+1045 <first : feature memory=1
+1045 >first : accepted memory
+1045 <first : feature setboard=0 ping=1 done=0
+1045 >first : accepted setboard
+1045 >first : accepted ping
+1045 >first : accepted done
+1045 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
+1045 >first : accepted variants
+1045 <first : feature option="Resign -check 0"
+1045 >first : accepted option
+1045 <first : feature option="Resign Threshold -spin 800 200 1200"
+1045 >first : accepted option
+1045 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
+1045 >first : accepted option
+1045 <first : feature option="Multi-PV Margin -spin 0 0 1000"
+1045 >first : accepted option
+1045 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
+1045 >first : accepted option
+1045 <first : feature option="Dummy Slider Example -slider 20 0 100"
+1045 >first : accepted option
+1045 <first : feature option="Dummy String Example -string happy birthday!"
+1045 >first : accepted option
+1045 <first : feature option="Dummy Path Example -path ."
+1045 >first : accepted option
+1045 <first : feature option="Clear Hash -button"
+1045 >first : accepted option
+1045 <first : feature done=1
+1045 >first : accepted done
+1046 >first : memory 68
+1046 >first : new
+random
+1046 >first : level 40 5 0
+1046 >first : post
+1046 >first : hard
+1046 >first : ping 1
+1103 <first : pong 1
+6377 >first : force
+6378 >first : quit
+Unload first
+StartChildProcess (dir=".") fairymax
+6399 >first : xboard
+protover 2
+6548 <first : tellics say     Fairy-Max 4.8Q
+6548 <first : tellics say     by H.G. Muller
+6548 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
+6548 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
+6548 <first : feature myname="Fairy-Max 4.8Q"
+6548 >first : accepted myname
+6549 <first : feature memory=1
+6549 >first : accepted memory
+6549 <first : feature setboard=0 ping=1 done=0
+6549 >first : accepted setboard
+6549 >first : accepted ping
+6549 >first : accepted done
+6549 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
+6549 >first : accepted variants
+6549 <first : feature option="Resign -check 0"
+6549 >first : accepted option
+6549 <first : feature option="Resign Threshold -spin 800 200 1200"
+6549 >first : accepted option
+6549 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
+6549 >first : accepted option
+6549 <first : feature option="Multi-PV Margin -spin 0 0 1000"
+6549 >first : accepted option
+6549 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
+6549 >first : accepted option
+6549 <first : feature option="Dummy Slider Example -slider 20 0 100"
+6549 >first : accepted option
+6549 <first : feature option="Dummy String Example -string happy birthday!"
+6549 >first : accepted option
+6549 <first : feature option="Dummy Path Example -path ."
+6549 >first : accepted option
+6549 <first : feature option="Clear Hash -button"
+6549 >first : accepted option
+6549 <first : feature done=1
+6549 >first : accepted done
+recognized 'normal' (-1) as variant normal
+6550 >first : memory 68
+6550 >first : new
+random
+6550 >first : level 40 5 0
+6550 >first : post
+6550 >first : hard
+6550 >first : ping 1
+6550 >first : force
+6605 <first : pong 1
+Unload second
+StartChildProcess (dir=".") chessAI/xbordEngineEmma.py
+16690 >second: xboard
+protover 2
+16715 <second: feature myname="emmas"
+16715 >second: accepted myname
+16716 <second: ok
+16716 <second: ok
+26699 >second: new
+random
+26699 >second: level 40 5 0
+26699 >second: post
+26699 >second: hard
+26699 >second: force
+26699 <second: ok
+26699 <second: ok
+26699 <second: ok
+26699 <second: ok
+26699 <second: ok
+26699 <second: ok
+New game (0): Fairy-Max 4.8Q-emmas (w)
+26716 >first : computer
+26717 >second: computer
+26717 >first : black
+26717 >first : time 30000
+26717 >first : otim 30000
+26717 >first : white
+book hit = (NULL)
+26717 >first : go
+nps: w=-1, b=-1
+26718 <first : Error (unknown command): computer
+26718 <first :  1     17        0          7 a2a4
+26718 <first :  1     19        0          9 b2b4
+26718 <first :  1     20        0         11 c2c4
+26718 <first :  1     26        0         13 c2c3
+26718 <first :  1     27        0         15 d2d4
+26718 <first :  2    -11        0         29 d2d4 d7d5
+26718 <first :  2      1        0         38 d2d3 c7c5
+26718 <first :  2     12        0         70 f2f3 c7c5
+26718 <first :  2     14        0         99 b1c3 c7c5
+26731 <first :  3      2        0        328 b1c3 c7c5 d2d4
+26731 <first :  3     10        0        495 g1f3 c7c5 c2c4
+26731 <first :  3     28        0        824 c2c3 c7c5 d2d4
+26731 <first :  4      8        0       1500 c2c3 d7d5 d2d4 b8c6
+26731 <first :  4     10        1       3956 g1f3 d7d5 d2d4 b8c6
+26747 <first :  5     19        3      13017 g1f3 d7d5 d2d4 b8c6 b1c3
+26760 <first :  5     20        4      20568 a2a4 d7d5 d2d4 b8c6 b1c3
+26782 <first :  5     27        6      32405 d2d4 d7d5 b1c3 b8c6 c1f4
+26810 <first :  6     13        9      46831 d2d4 d7d5 b1c3 b8c6 c1f4 c8f5
+27055 <first :  7     17       33     175147 d2d4 d7d5 b1c3 b8c6 c1f4 c8f5 g1f3
+27754 <first :  8      1      103     542246 d2d4 d7d5 b1c3 b8c6 c1f4 c8f5 g1f3 g8f6
+30311 <first :  8      3      359    1878244 f2f4 b8c6 c2c3 d7d5 g1f3
+31408 <first :  8      4      469    2461941 h2h3 d7d5 b1c3 b8c6 g1f3 g8f6 d2d4 c8f5
+32289 <first :  8     13      557    2927560 g1f3 d7d5 c2c3 b8c6 d2d4 c8f5 c1f4 f5e4
+32656 <first : move g1f3
+32656 >second: time 30000
+32656 >second: otim 29406
+book hit = (NULL)
+32656 >second: g1f3
+32656 >second: black
+32656 >second: go
+39513 <second: ok
+39513 <second: ok
+39513 <second: ok
+39513 <second: move b8c6
+Interrupting first
+39513 >first : time 29406
+39513 >first : otim 29314
+book hit = (NULL)
+39513 >first : b8c6
+39607 <first :  1     15        0          3 c2c4
+39607 <first :  1     19        0          5 c2c3
+39607 <first :  2      5        0          9 c2c3 d7d5
+39607 <first :  2     11        0         12 d2d3
+39607 <first :  3     11        0         21 d2d3
+39607 <first :  4     11        0         29 d2d3
+39607 <first :  5     10        0       2447 d2d3 d7d5 b1d2 c8e6 c2c4
+39607 <first :  5     11        1       4668 e2e4 d7d5 f1d3 c6b4 d3b5
+39607 <first :  5     12        2      12206 c2c3 d7d5 d2d4
+39607 <first :  6     12        4      20874 c2c3 d7d5 d2d4
+39614 <first :  7      1       10      50946 c2c3 d7d5 d2d4 c8f5 c1f4 g8f6 b1d2
+39731 <first :  7     11       21     111617 c2c4 g8f6 d2d4 d7d5 c4d5 f6d5 b1c3
+39916 <first :  7     20       40     206892 d2d3 d7d5 b1d2 g8f6 c2c4 c8f5 h2h4
+41387 <first :  8     -4      187     953427 d2d3 g8f6 c2c4 d7d5 b1c3 c8e6 d1b3 a8b8
+42633 <first :  8      8      312    1587285 d2d4 g8f6 c1f4 d7d5 b1d2 f6h5 f4e3
+43428 <first :  8     11      391    1995351 e2e3 d7d5 f1e2 c8f5 e1g1 g8f6 d2d4 a7a5
+43949 <first : move e2e3
+Interrupting second
+43950 >second: time 29314
+43950 >second: otim 28962
+book hit = (NULL)
+43950 >second: e2e3
+44023 <second: ok
+44023 <second: ok
+65989 <second: ok
+65989 <second: move g8f6
+Interrupting first
+65989 >first : time 28962
+65989 >first : otim 27110
+book hit = (NULL)
+65989 >first : g8f6
+66082 <first :  1    -84        0          3 e3e4
+66082 <first :  1    -13        0          3 f3g1
+66083 <first :  1     -2        0          3 f3g5
+66083 <first :  1      6        0          3 a2a4
+66083 <first :  1      8        0          5 b2b3
+66083 <first :  1     22        0          7 f1e2
+66083 <first :  2      2        0         11 f1e2 a7a5
+66083 <first :  2      6        0         23 f1c4 d7d5
+66083 <first :  3     -4        0        241 f1c4 d7d5 c4b3
+66083 <first :  3     16        0        449 f1e2 d7d5 e1g1
+66083 <first :  4     11        0        530 f1e2 d7d5 e1g1 c8f5
+66083 <first :  5     11        0       1070 f1e2 d7d5 e1g1 c8f5
+66083 <first :  6     12        3      19333 f1e2 d7d5 e1g1 c8f5
+66264 <first :  7     16       27     132330 f1e2 e7e5 e1g1 f8d6 d2d4 e8g8 b1c3
+66528 <first :  7     24       53     262021 f1d3 e7e5 b1c3 d7d5 d3e2 e5e4 f3g5
+66966 <first :  8     -3       97     479946 f1d3 e7e5 d3e2 f8e7 e1g1 e8g8 d2d4 d7d6
+67903 <first :  8     14      191     947293 f1e2 e7e5 e1g1 f8d6 d2d4 e8g8 b1c3 a7a5
+71041 <first :  9     26      505    2523632 f1e2 d7d5 e1g1 c8f5 d2d4 c6b4 b1a3 c7c6 c1d2
+71214 <first : move f1e2
+Interrupting second
+71215 >second: time 27110
+71215 >second: otim 28439
+book hit = (NULL)
+71215 >second: f1e2
+94149 <second: ok
+94149 <second: move e7e6
+Interrupting first
+94149 >first : time 28439
+94149 >first : otim 24817
+book hit = (NULL)
+94149 >first : e7e6
+94228 <first :  1    -84        0          3 e3e4
+94228 <first :  1    -13        0          3 f3g1
+94228 <first :  1     -6        0          3 f3h4
+94228 <first :  1     -1        0          3 f3g5
+94228 <first :  1      6        0          3 a2a4
+94228 <first :  1     15        0          3 d2d4
+94228 <first :  1     26        0          3 e1g1
+94228 <first :  2     20        0          7 e1g1 a7a5
+94228 <first :  3     26        0        195 e1g1 d7d5 b1c3
+94229 <first :  4     20        0        312 e1g1 d7d5 b1c3 a7a5
+94229 <first :  5     23        0       4434 e1g1 f8e7 d2d3 d7d5 a2a4
+94229 <first :  6     18        4      23528 e1g1 d7d5 b1c3 f8d6 c3b5 d6b4
+94526 <first :  7     18       37     176544 e1g1 d7d5 b1c3 f8e7 d2d4 e8g8 c1d2
+95765 <first :  8     10      161     777632 e1g1 d7d5 b1c3 f8e7 d2d4 e8g8 c1d2 c8d7
+99262 <first :  9     15      511    2501520 e1g1 d7d5 b1c3 f8e7 d2d4 e8g8 c1d2 c8d7 a2a4
+102546 <first : move e1g1
+Interrupting second
+102547 >second: time 24817
+102547 >second: otim 27600
+book hit = (NULL)
+102547 >second: e1g1
+131312 <second: ok
+131312 <second: move f8d6
+Interrupting first
+131313 >first : time 27600
+131313 >first : otim 21940
+book hit = (NULL)
+131313 >first : f8d6
+131409 <first :  1     15        0          3 d2d4
+131409 <first :  2    -11        0         31 d2d4 e8g8
+131409 <first :  2     -4        0        385 a2a4 e8g8
+131409 <first :  3     -4        0        516 a2a4 e8g8
+131409 <first :  3     22        0        719 d2d4 e8g8 b1d2
+131409 <first :  4      1        0       2827 d2d4 h7h6 b1c3 e8g8
+131409 <first :  5     13        2      10021 d2d4 h7h5 f3d2 a7a5 b1c3
+131571 <first :  6      3       25     119572 d2d4 e8g8 b1c3 b7b6 c1d2 a7a5
+131900 <first :  7      6       58     282579 d2d4 e8g8 b1c3 h7h5 c1d2 a7a5 a2a4
+132996 <first :  8      3      168     817618 d2d4 e8g8 b1c3 a7a5 h2h4 h7h5 c1d2 b7b6
+135061 <first :  9      6      374    1842242 d2d4 e8g8 b1c3 d6e7 c1d2 d7d6 a2a4 c8d7 h2h4
+135894 <first : move d2d4
+Interrupting second
+135894 >second: time 21940
+135894 >second: otim 27142
+book hit = (NULL)
+135894 >second: d2d4
+181768 <second: ok
+181768 <second: move e8g8
+Interrupting first
+181768 >first : time 27142
+181768 >first : otim 17353
+book hit = (NULL)
+181768 >first : e8g8
+181841 <first :  1    -85        0         15 d4d5 f6d5
+181841 <first :  1    -84        0         19 e3e4 f6e4
+181841 <first :  1     -4        0         21 f3d2
+181841 <first :  1     -1        0         23 f3g5
+181841 <first :  1      4        0         29 a2a3
+181841 <first :  1      6        0         33 c2c4
+181841 <first :  1      7        0         33 b1c3
+181841 <first :  2      7        0         34 b1c3
+181841 <first :  3      7        0         44 b1c3
+181841 <first :  4      7        0         57 b1c3
+181841 <first :  5      7        0        208 b1c3
+181841 <first :  5     13        2      11204 b1d2 a7a5 a2a4 b7b6 d2c4
+181841 <first :  6      7        6      31683 b1d2 d6e7 a2a4 d7d5 h2h4 c8d7
+181926 <first :  7      9       15      76890 b1d2 d6e7 a2a4 d7d5 h2h4 c8d7 e2d3
+182135 <first :  8      5       36     181095 b1d2 d6e7 a2a4 d7d5 h2h4 c8d7 e2d3 a7a5
+182490 <first :  8     11       72     360823 b1c3 d6e7 c1d2 d7d5 a2a4 c8d7 h2h4 a7a5
+185535 <first :  9     13      376    1870766 b1c3 d6e7 c1d2 d7d5 a2a4 c8d7 h2h4 a7a5 e2d3
+203556 <first : move b1c3
+Interrupting second
+203556 >second: time 17353
+203556 >second: otim 24963
+book hit = (NULL)
+203556 >second: b1c3
+244079 <second: ok
+244079 <second: move d6b4
+Interrupting first
+244079 >first : time 24963
+244079 >first : otim 13300
+book hit = (NULL)
+244079 >first : d6b4
+244183 <first :  1     -9        0          3 d4d5
+244184 <first :  1     -3        0          3 c3b5
+244184 <first :  1     -1        0          3 f3g5
+244184 <first :  1      6        0          3 a2a4
+244184 <first :  1      9        0          3 c1d2
+244184 <first :  2     -6        0         76 c1d2 d7d5
+244184 <first :  2     -2        0        558 a2a3 b4d6
+244184 <first :  2     18        0        654 h2h4 b4d6
+244184 <first :  3     18        0        664 h2h4 b4d6
+244184 <first :  4     -9        0       1229 h2h4 d7d5 c1d2 c8d7
+244184 <first :  4     -8        0       2189 h2h3 d7d5 c1d2 b4d6
+244184 <first :  4     -7        1       4870 c1d2 d7d5 a2a3 b4d6
+244184 <first :  4      1        3      16142 a2a3 b4d6 c1d2 a7a5
+244184 <first :  5      6        4      20432 a2a3 b4d6 c1d2 a7a5 h2h4
+244184 <first :  6      1        9      43255 a2a3 b4d6 c1d2 a7a5 h2h4 h7h5
+244442 <first :  7      2       36     173158 a2a3 b4e7 d4d5 e6d5 c3d5 f6d5 d1d5
+244971 <first :  8     -8       89     435049 a2a3 b4e7 d4d5 f6d5 c3d5 e6d5 h2h3 f7f5 d1d5
+247089 <first :  9     -1      300    1415232 a2a3 b4e7 d4d5 f6d5 c3d5 e6d5 d1d5 d7d6 c1d2
+251474 <first : 10     -6      739    3552826 a2a3 b4e7 b2b4 d7d5 b4b5 c6b8 c1d2 b8d7 h2h4 h7h5
+255447 <first : move a2a3
+Interrupting second
+255447 >second: time 13300
+255447 >second: otim 23826
+book hit = (NULL)
+255447 >second: a2a3
+273218 <second: ok
+273218 <second: move b4c3
+Interrupting first
+273218 >first : time 23826
+273218 >first : otim 11523
+book hit = (NULL)
+273218 >first : b4c3
+273308 <first :  1     38        0          3 b2c3
+273308 <first :  2     22        0         27 b2c3 d7d5
+273308 <first :  3     34        0        477 b2c3 d7d5 c3c4
+273308 <first :  4     25        0        818 b2c3 d7d5 c3c4 c8d7
+273308 <first :  5     33        2      11469 b2c3 f6e4 c1b2 d7d5 c3c4
+273308 <first :  6     26        8      36833 b2c3 f6e4 c1b2 d7d5 c3c4 c8d7 c4d5 e6d5
+273425 <first :  7     31       20      97330 b2c3 f6e4 c1b2 d7d5 c3c4 c8d7 h2h4
+273695 <first :  8     26       47     237755 b2c3 f6e4 c1b2 d7d5 c3c4 c8d7 h2h4 a7a5 c4d5 e6d5
+274442 <first :  9     28      122     624412 b2c3 f6e4 c1b2 d7d5 c3c4 a7a5 c4d5 d8d5 h2h4
+277000 <first : 10     26      378    1970339 b2c3 f6e4 c1b2 d7d5 c3c4 a7a5 h2h4 c8d7 c4d5 e6d5
+277325 <first : move b2c3
+Interrupting second
+277325 >second: time 11523
+277325 >second: otim 23415
+book hit = (NULL)
+277325 >second: b2c3
+297165 <second: ok
+297165 <second: move d7d5
+Interrupting first
+297165 >first : time 23415
+297165 >first : otim 9539
+book hit = (NULL)
+297165 >first : d7d5
+297238 <first :  1     49        0          3 c3c4
+297238 <first :  2     40        0         19 c3c4 c8d7
+297238 <first :  3     47        0        363 c3c4 c8d7 h2h4
+297238 <first :  4     40        0        525 c3c4 c8d7 h2h4 a7a5
+297238 <first :  5     47        2      10148 c3c4 f6e4 e2d3 c8d7 h2h4
+297238 <first :  6     42        4      21657 c3c4 f6e4 e2d3 c8d7 a1b1 a8b8 c4d5 e6d5
+297278 <first :  7     41       11      55330 c3c4 f6e4 e2d3 c8d7 d1e1 a7a5 h2h4
+297735 <first :  8     42       56     292165 c3c4 f6e4 e2d3 c8d7 h2h4 a7a5 a1b1 a8b8 c4d5 e6d5
+299559 <first :  9     42      239    1215415 c3c4 a7a5 h2h4 c8d7 a1b1 a8b8 c1d2 f6e4 d2e1
+301688 <first : move c3c4
+Interrupting second
+301689 >second: time 9539
+301689 >second: otim 22963
+book hit = (NULL)
+301689 >second: c3c4
+315724 <second: ok
+315724 <second: move c8d7
+Interrupting first
+315724 >first : time 22963
+315724 >first : otim 8136
+book hit = (NULL)
+315724 >first : c8d7
+315798 <first :  1     30        0          3 c4d5
+315798 <first :  1     31        0          3 a3a4
+315798 <first :  1     33        0          3 f3d2
+315798 <first :  1     36        0          3 f3g5
+315798 <first :  1     40        0          3 f3e5
+315798 <first :  1     41        0          3 h2h4
+315798 <first :  2     41        0          4 h2h4
+315798 <first :  3     41        0         59 h2h4
+315798 <first :  4     41        0        154 h2h4
+315798 <first :  4     44        1       5559 f3e5 d7e8 f2f4 a7a5
+315798 <first :  5     47        1       8512 f3e5 d7e8 f2f4 c6e5 d4e5
+315798 <first :  6     46        3      19328 f3e5 d7e8 f2f4 c6e5 d4e5 f6e4 c4d5 e6d5
+315852 <first :  7     46       12      60492 f3e5 d7e8 a1b1 a8b8 f2f4 c6e5 d4e5
+316109 <first :  8     26       38     194648 f3e5 c6e5 d4e5 f6e4 c1b2 c7c6 b2d4 f7f5
+316816 <first :  8     31      109     552249 f3d2 h7h6 h2h4 a7a5 e2f3 c6e7 a1b1 d7c6
+318194 <first :  8     32      246    1239275 c2c3 a7a5 a3a4 h7h5 c1a3 f8e8 a3c5 c6e7
+318709 <first :  8     37      298    1499187 e2d3 a7a5 h2h4 f6e4 c4d5 e4c3 d1e1 c3d5
+321225 <first : move e2d3
+Interrupting second
+321225 >second: time 8136
+321225 >second: otim 22413
+book hit = (NULL)
+321225 >second: e2d3
+344126 <second: ok
+344126 <second: move h7h6
+Interrupting first
+344126 >first : time 22413
+344126 >first : otim 5845
+book hit = (NULL)
+344126 >first : h7h6
+344200 <first :  1     30        0          3 c4d5
+344200 <first :  1     31        0          3 a3a4
+344200 <first :  1     33        0          3 f3d2
+344200 <first :  1     44        0          3 h2h4
+344200 <first :  2     37        0         21 h2h4 a7a5
+344200 <first :  2     41        0         44 c1d2 a7a6
+344200 <first :  3     39        0        458 c1d2 f6e4 d2e1
+344200 <first :  3     43        0       1063 a1b1 d8c8 h2h4
+344200 <first :  4     38        0       1877 a1b1 d8c8 c1d2 a7a5
+344200 <first :  5     38        4      21196 a1b1 f6e4 b1b7 e4d6 b7b3 d6c4
+344208 <first :  5     39        8      38444 c1d2 f6e4 d2e1 a7a5 h2h4
+344329 <first :  6     39       20      97451 c1d2 f6e4 d2e1 a7a5 h2h4 a8b8 c4d5 e6d5
+344394 <first :  6     40       26     130578 a1b1 a8b8 h2h3 f6e4 c4d5 e6d5
+344642 <first :  7     38       51     255047 a1b1 a8b8 c1d2 f6e4 d2e1 a7a5 h2h4
+344751 <first :  7     40       62     310191 c1d2 f6e4 d2e1 a7a5 c4d5 e6d5 h2h4
+345243 <first :  8     39      111     570629 c1d2 f6e4 d2e1 a7a5 h2h4 a8b8 c4d5 e6d5
+345618 <first :  8     40      149     767766 h2h4 a7a5 c1d2 f6e4 d2e1 a8b8
+346068 <first :  9     40      194     997199 h2h4 a7a5 c1d2 f6e4 d2e1 a8b8 c4d5 e6d5 a1b1
+347513 <first : 10     39      338    1752234 h2h4 a7a5 c1d2 f6e4 d2e1 a8b8 a1b1 d8e8 c4d5 e6d5
+351657 <first : move h2h4
+Interrupting second
+351658 >second: time 5845
+351658 >second: otim 21660
+book hit = (NULL)
+351658 >second: h2h4
+371901 <second: ok
+371901 <second: move a8b8
+Interrupting first
+371901 >first : time 21660
+371901 >first : otim 3821
+book hit = (NULL)
+371901 >first : a8b8
+371974 <first :  1     42        0          3 c4d5
+371975 <first :  2     42        0          7 c4d5 f6d5
+371975 <first :  3     42        0        364 c4d5 f6d5
+371975 <first :  4     41        0        947 c4d5 e6d5 c1d2 a7a5
+371975 <first :  5     42        0       4768 c4d5 e6d5 c1d2 a7a5 d2c3
+371975 <first :  6     38        4      24060 c4d5 e6d5 c1b2 a7a5 b2c3
+372079 <first :  7     35       17      86136 c4d5 e6d5 c1b2 a7a5 b2c3 f6e4 c3e1
+372316 <first :  7     36       41     210168 c1d2 f6e4 d2e1 a7a6 c4d5 e6d5 a1b1
+372408 <first :  8     35       50     259097 c1d2 f6e4 d2e1 a7a6 a1b1 d8e8 c4d5 e6d5
+373333 <first :  9     36      143     736905 c1d2 f6e4 d2e1 a7a6 a3a4 d7e8 c4d5 d8d5 a1b1
+375226 <first : 10     33      332    1727819 c1d2 f6e4 d2e1 a7a5 a3a4 d7e8 c4d5 d8d5 f3d2 e4f6
+382876 <first : move c1d2
+Interrupting second
+382876 >second: time 3821
+382876 >second: otim 20562
+book hit = (NULL)
+382876 >second: c1d2
+405906 <second: ok
+405906 <second: move b8c8
+Interrupting first
+405906 >first : time 20562
+405906 >first : otim 1518
+book hit = (NULL)
+405906 >first : b8c8
+405979 <first :  1     30        0          3 c4d5
+405979 <first :  1     31        0          3 a3a4
+405979 <first :  1     34        0          3 d3e2
+405979 <first :  1     38        0          3 d2c3
+405979 <first :  2     31        0         37 d2c3 a7a5
+405979 <first :  2     37        0        298 a1b1 c8b8
+405979 <first :  3     41        0       1512 a1b1 c8b8 d3e2
+405979 <first :  4     33        0       3821 a1b1 c8b8 b1b5 a7a6
+405979 <first :  5     34        5      28765 a1b1 c8b8 c4d5 f6d5 d3e4
+406079 <first :  6     35       17      83582 a1b1 b7b6 b1c1 a7a5 c1b1
+406214 <first :  7     36       30     152907 a1b1 b7b6 c4d5 f6d5 e3e4 d5f6 d2f4
+406730 <first :  8     31       82     419706 a1b1 c8b8 c4d5 f6d5 b1a1 b8c8 a1b1 d8e7
+407273 <first :  8     32      136     701095 c4d5 f6d5 c2c3 a7a5 c3c4 d5f6 d2c3 c8b8
+408200 <first :  9     33      229    1188484 c4d5 f6d5 c2c3 d5f6 c3c4 a7a5 d2c3
+409689 <first : 10     36      378    1974310 c4d5 f6d5 c2c3 d5f6 c3c4 a7a5 d1b1 b7b6 d2c3 c6e7
+411030 <first : move c4d5
+Interrupting second
+411031 >second: time 1518
+411031 >second: otim 20050
+book hit = (NULL)
+411031 >second: c4d5
+473532 <second: ok
+473532 <second: move c6e7
+Interrupting first
+473532 >first : time 20050
+473532 >first : otim 1
+book hit = (NULL)
+473532 >first : c6e7
+473626 <first :  1     97        0          3 d5e6
+473626 <first :  1    106        0          3 a1b1
+473626 <first :  2    106        0        235 a1b1 e7d5
+473626 <first :  3     98        0       1765 a1b1 c8b8 d5e6 d7e6
+473626 <first :  3    100        0       2666 d5e6 d7e6 f3e5
+473626 <first :  4     97        0       3752 d5e6 d7e6 a1b1 e6d5
+473626 <first :  4     98        2      10110 a1b1 c8b8 d5e6 d7e6
+473626 <first :  5    101        3      17275 a1b1 c8b8 d5e6 d7e6 f3e5
+473626 <first :  6     97        6      32265 a1b1 c8b8 d5e6 d7e6 f3e5 a7a6
+473727 <first :  7     97       19      95148 a1b1 c8b8 d5e6 d7e6 d2b4 a7a6 b4c5
+473954 <first :  8     96       42     214337 a1b1 c8b8 d5e6 d7e6 f3e5 e7f5 d2b4 f8e8
+474734 <first :  9     95      120     627507 a1b1 c8b8 d5e6 d7e6 c2c3 c7c5 c3c4 e7f5 b1b5
+475362 <first :  9     97      182     963925 d1b1 b7b6 d3a6 c8b8 d5e6 d7e6 a6d3 c7c5 d2c3
+476522 <first : 10     96      298    1594289 d1b1 b7b6 d3a6 c8b8 d5e6 d7e6 a6d3 c7c5 b1b5 b8c8
+478009 <first : move d1b1
+Interrupting second
+478009 >second: time 1
+478009 >second: otim 19602
+book hit = (NULL)
+478009 >second: d1b1
+519428 <second: ok
+519428 <second: move c8b8
+Interrupting first
+519428 >first : time 19602
+519428 >first : otim 1
+book hit = (NULL)
+519428 >first : c8b8
+519501 <first :  1     97        0          3 d5e6
+519501 <first :  2     97        0          7 d5e6 d7e6
+519501 <first :  3     97        0        106 d5e6 d7e6
+519501 <first :  4     97        0        153 d5e6 d7e6
+519501 <first :  5     97        0        718 d5e6 d7e6
+519501 <first :  6     97        0       1083 d5e6 d7e6
+519501 <first :  7     97        0       1630 d5e6 d7e6
+519645 <first :  8     97       21     107035 d5e6 d7e6 c2c3 b7b5 e3e4 a7a6 d2f4 b8c8
+520308 <first :  9     98       87     462551 d5e6 d7e6 c2c3 d8d6 c3c4 c7c5 d2c3 e7c6 a1a2
+522080 <first : 10    100      265    1408906 d5e6 d7e6 c2c3 d8d6 c3c4 c7c5 d2c3 d6b6 f3e5 b6b1 a1b1
+523423 <first : move d5e6
+Interrupting second
+523423 >second: time 1
+523423 >second: otim 19202
+book hit = (NULL)
+523423 >second: d5e6
+617913 <second: ok
+617913 <second: move d7e6
+Interrupting first
+617913 >first : time 19202
+617913 >first : otim 1
+book hit = (NULL)
+617913 >first : d7e6
+617986 <first :  1   -666        0          7 b1b7 b8b7
+617986 <first :  1    111        0         13 b1c1
+617986 <first :  2     96        0         27 b1c1 a7a6
+617986 <first :  2     98        0         54 b1b2 d8e8
+617986 <first :  2    105        0         96 b1b5 a7a6
+617986 <first :  3    105        0        484 b1b5 a7a6 b5c5
+617986 <first :  4    101        0       1023 b1b5 a7a6 b5c5 e7d5
+617987 <first :  4    102        0       2947 b1b2 a7a6 d2c3 e7d5
+617987 <first :  5    103        2      10424 b1b2 e7f5 e3e4 f5d6 a1e1
+617987 <first :  5    104        3      15455 b1b5 a7a6 b5c5
+618026 <first :  6    104       11      55014 b1b5 a7a6 b5c5 e7d5 f3e5 b8c8
+618346 <first :  7    104       43     220197 b1b5 a7a6 b5a5 d8c8 f3e5 e7f5 d2b4
+619225 <first :  8    104      131     679728 b1b5 a7a6 b5a5 d8c8 f3e5 e7f5 d2b4 f8e8
+621669 <first :  8    107      375    1950778 c2c4 a7a6 f3e5 e7c6 f2f4 d8e8 d3f5 e6f5
+622410 <first : move c2c4
+Interrupting second
+622410 >second: time 1
+622410 >second: otim 18753
+book hit = (NULL)
+622410 >second: c2c4
+678097 <second: ok
+678097 <second: move e6g4
+Interrupting first
+678097 >first : time 18753
+678097 >first : otim 1
+book hit = (NULL)
+678097 >first : e6g4
+678190 <first :  1   -666        0          3 b1b7
+678191 <first :  1    111        0          3 b1c1
+678191 <first :  1    114        0          3 f3e5
+678191 <first :  2    112        0        123 f3e5 g4e6
+678191 <first :  3    113        0        456 f3e5 g4e6 d2c3
+678191 <first :  4    117        1       4481 f3e5 g4e6 d4d5 e6c8
+678191 <first :  5    118        2      12048 f3e5 g4e6 d4d5 e6c8 d2c3
+678191 <first :  6    118        8      42581 f3e5 g4h5 f2f4 e7c6 b1b5 c6e7
+678294 <first :  7    118       19     100033 f3e5 g4h5 f2f4 e7c6 b1b5 d8e8 d3f5
+678603 <first :  8    116       50     265124 f3e5 g4h5 f2f4 a7a6 f4f5 e7c6 e5f3 h5g4
+679645 <first :  9    116      154     824012 f3e5 g4h5 f2f4 e7c6 b1c1 a7a6 e5c6 b7c6 f4f5
+684564 <first : 10    116      646    3455992 f3e5 g4h5 f2f4 e7c6 e5f3 a7a6 f4f5 h5g4
+687409 <first : move f3e5
+Interrupting second
+687409 >second: time 1
+687409 >second: otim 17822
+book hit = (NULL)
+687409 >second: f3e5
+737682 <second: ok
+737682 <second: move e7c6
+Interrupting first
+737683 >first : time 17822
+737683 >first : otim 1
+book hit = (NULL)
+737683 >first : e7c6
+737784 <first :  1    145        0          3 e5g4
+737784 <first :  2    145        0          5 e5g4 f6g4
+737784 <first :  3    143        0       1054 e5g4 f6g4 f2f3
+737784 <first :  4    155        1       7609 e5g4 f6g4 d3h7 g8h8 f2f3
+737784 <first :  5    151        3      14314 e5g4 f6g4 d3h7 g8h8 f2f3 g4e5
+737784 <first :  6    151        9      47622 e5g4 f6g4 d3h7 g8h8 f2f3 g4e5 f1c1
+737908 <first :  7    145       22     112945 e5g4 f6g4 d3h7 g8h8 f2f3 g4e5 f1c1 a7a5
+738558 <first :  8    139       87     454072 e5g4 f6g4 f2f3 g4f6 b1d1 a7a6 d3f5 c6e7
+739338 <first :  9    140      165     883532 e5g4 f6g4 f2f3 g4f6 f3f4 d8e8 f4f5 a7a5 a1a2
+741217 <first : 10    139      353    1927784 e5g4 f6g4 f2f3 g4f6 d2c3 a7a6 d3f5 c6e7 f5d3 d8e8
+742930 <first : move e5g4
+Interrupting second
+742931 >second: time 1
+742931 >second: otim 17297
+book hit = (NULL)
+742931 >second: e5g4
+775336 <second: ok
+775336 <second: move f6g4
+Interrupting first
+775336 >first : time 17297
+775336 >first : otim 1
+book hit = (NULL)
+775336 >first : f6g4
+775444 <first :  1   -629        0          7 b1b7 b8b7
+775444 <first :  1     74        0         11 b1c1 d8h4
+775444 <first :  1    142        0        115 d4d5
+775444 <first :  2    136        0        161 d4d5 c6e5
+775444 <first :  2    155        0        318 d3h7 g8h8 h4h5
+775444 <first :  3    146        0        425 d3h7 g8h8 h4h5 c6e5
+775445 <first :  4    155        0       2090 d3h7 g8h8 f2f3 g4e5 f1c1
+775445 <first :  5    147        0       3779 d3h7 g8h8 f2f3 g4e5 f1c1 a7a5
+775445 <first :  6    115        3      15195 d3h7 g8h8 f2f3 g4e5 f1c1 g7g6 d4e5 d8d2
+775445 <first :  6    138        4      23923 f2f3
+775445 <first :  7    138        7      39783 f2f3
+775466 <first :  8    138       12      59417 f2f3
+776371 <first :  9    141      103     545303 f2f3 g4f6 d2c3 a7a6 d3f5 c6e7 f5d3 d8e8 b1c1
+779011 <first : 10    141      367    2050370 f2f3 g4f6 d2c3 a7a6 d3f5 c6e7 f5d3 d8e8 b1c1 b8c8
+781385 <first : move f2f3
+Interrupting second
+781385 >second: time 1
+781385 >second: otim 16692
+book hit = (NULL)
+781385 >second: f2f3
+814965 <second: ok
+814965 <second: move g4f6
+Interrupting first
+814966 >first : time 16692
+814966 >first : otim 1
+book hit = (NULL)
+814966 >first : g4f6
+815059 <first :  1   -629        0          7 b1b7 b8b7
+815059 <first :  1    148        0         17 b1c1
+815059 <first :  2    135        0         38 b1c1 a7a5
+815059 <first :  2    141        0         75 b1e1 a7a6
+815059 <first :  3    142        0        440 b1e1 a7a6 d2c3
+815059 <first :  3    143        0        610 f1d1 a7a6 d3f5
+815059 <first :  4    143        0        802 f1d1 a7a6 d3f5 c6e7
+815059 <first :  5    142        1       6124 f1d1 a7a6 d3f5 c6e7 f5d3
+815059 <first :  6    142        4      25133 f1d1 a7a6 d3f5 c6e7 f5d3 d8e8
+815157 <first :  7    142       19     100230 f1d1 a7a6 d3f5 c6e7 f5d3 d8e8 b1c1
+815300 <first :  8    142       33     180163 f1d1 a7a6 d3f5 c6e7 f5d3 d8e8 b1c1 e7c6
+816156 <first :  9    142      119     665037 f1d1 a7a6 d3f5 c6e7 f5d3 d8e8 b1b4 e7c6 b4b3
+820051 <first :  9    144      508    2807992 a1a2 a7a6 f3f4 f8e8 a2b2 d8e7 d4d5 c6d8 b2a2
+820258 <first : move a1a2
+Interrupting second
+820258 >second: time 1
+820258 >second: otim 16163
+book hit = (NULL)
+820258 >second: a1a2
+859642 <second: ok
+859642 <second: move d8e7
+Interrupting first
+859642 >first : time 16163
+859642 >first : otim 1
+book hit = (NULL)
+859642 >first : d8e7
+859715 <first :  1   -629        0          3 b1b7
+859715 <first :  1    148        0          3 b1c1
+859715 <first :  1    150        0          3 d3f5
+859715 <first :  2    141        0        123 d3f5 a7a5
+859715 <first :  3    141        0       1176 d3f5 a7a5 b1c1
+859715 <first :  4    141        0       2754 d3f5 a7a5 b1c1 b8d8
+859716 <first :  4    143        3      17937 f1e1 a7a6 d3f5 f8e8
+859716 <first :  5    143        5      30228 f1e1 a7a6 d3f5 b7b5 b1c1
+860176 <first :  6    145       53     280156 f1e1 f8e8 d3f5 a7a6 d2c3 e8f8
+860326 <first :  6    146       68     360613 f3f4 a7a5 f4f5 f8e8 b1e1 b8c8
+860572 <first :  7    145       92     495950 f3f4 a7a5 b1e1 b8e8 d4d5 c6d8 f4f5
+862367 <first :  8    147      272    1486115 f3f4 a7a6 f4f5 f6g4 d4d5 c6d8 b1e1 g4e5
+865047 <first : move f3f4
+Interrupting second
+865047 >second: time 1
+865047 >second: otim 15622
+book hit = (NULL)
+865047 >second: f3f4
+937756 <second: ok
+937756 <second: move e7e3
+Interrupting first
+937756 >first : time 15622
+937756 >first : otim 1
+book hit = (NULL)
+937756 >first : e7e3
+937950 <first :  1    930        0          3 d2e3
+937950 <first :  2    921        0         45 d2e3 a7a5
+937951 <first :  3    920        0        726 d2e3 f6g4 d3h7
+937951 <first :  4    893        0       1426 d2e3 f6g4 b1c1 g4e3
+937951 <first :  5    893        1      10412 d2e3 f6g4 b1e1 g4e3 e1e3
+937951 <first :  6    884        3      20330 d2e3 f6g4 b1e1 g4e3 e1e3 a7a5
+937951 <first :  7    894       12      75062 d2e3 f6g4 b1e1 b8e8 a2e2 g4e3 e2e3
+937971 <first :  8    888       21     128036 d2e3 f6g4 b1e1 g4e3 e1e3 b8e8 d3e4 a7a5
+938258 <first :  9    894       50     306707 d2e3 f6g4 b1e1 b8e8 a2e2 g4e3 e2e3 e8e3 e1e3
+938732 <first : 10    885       97     606155 d2e3 f6g4 b1e1 b8e8 a2e2 g4e3 e2e3 e8e3 e1e3 a7a5
+940182 <first : 11    894      242    1524321 d2e3 f6g4 b1e1 b8e8 a2e2 g4e3 e2e3 e8d8 d4d5 c6d4 f4f5
+944953 <first : 12    894      719    4586752 d2e3 f6g4 b1e1 b8e8 a2e2 g4e3 e2e3 e8a8 e1a1 a8e8 e3e8 f8e8
+945305 <first : move d2e3
+Interrupting second
+945306 >second: time 1
+945306 >second: otim 14867
+book hit = (NULL)
+945306 >second: d2e3
+977845 <second: ok
+977845 <second: move a7a6
+Interrupting first
+977845 >first : time 14867
+977845 >first : otim 1
+book hit = (NULL)
+977845 >first : a7a6
+977918 <first :  1    154        0          3 b1b7
+977918 <first :  1    925        0          3 b1c1
+977918 <first :  1    929        0          3 d4d5
+977918 <first :  1    938        0          3 f4f5
+977918 <first :  2    938        0         69 f4f5 c6e7
+977918 <first :  3    927        0        869 f4f5 f6g4 e3f4 c6d4 f4c7
+977918 <first :  3    932        0       1158 d4d5 c6e7 f4f5
+977918 <first :  4    938        0       4704 d4d5 c6d8 f4f5 b7b5
+977918 <first :  5    939        1       9120 d4d5 c6d8 f4f5 b7b5 e3f4
+977918 <first :  6    939        3      20627 d4d5 c6d8 f4f5 b8c8 e3f4 c7c5
+977930 <first :  7    939        8      48495 d4d5 c6d8 f4f5 b8c8 e3f4 f8e8 a2b2
+978120 <first :  8    941       27     161203 d4d5 c6d8 e3d4 f8e8 b1a1 f6h5 f4f5 h5g3
+978748 <first :  9    944       90     540001 d4d5 c6a5 e3d4 f8d8 d4c3 b7b6 b1b2 f6h5 c3e5
+980665 <first : 10    950      282    1720768 d4d5 b7b5 d5c6 b5c4 b1d1 c4d3 d1d3 b8b5 f4f5 f6d5
+987014 <first : 11    963      916    5631426 d4d5 c6a5 e3d4 f8d8 b1e1 b7b6 d4f6 g7f6 e1e7 c7c6 d5d6
+988010 <first : move d4d5
+Interrupting second
+988011 >second: time 1
+988011 >second: otim 13851
+book hit = (NULL)
+988011 >second: d4d5
+1018305 <second: ok
+1018305 <second: move c6e7
+Interrupting first
+1018305 >first : time 13851
+1018305 >first : otim 1
+book hit = (NULL)
+1018305 >first : c6e7
+1018398 <first :  1    152        0          3 b1b7
+1018398 <first :  1    925        0          3 b1c1
+1018398 <first :  1    931        0          3 f4f5
+1018398 <first :  2    931        0          4 f4f5
+1018399 <first :  2    978        0        253 e3a7 b8c8 b1b7
+1018399 <first :  3    978        0        704 e3a7 b8c8 b1b7
+1018399 <first :  4    995        0       3883 e3a7 b8c8 a7c5 c8e8
+1018399 <first :  5   1015        2      13996 e3a7 b8c8 b1b7 e7g6 d3g6
+1018399 <first :  6   1032        7      45499 e3a7 b8c8 b1b7 e7g6 a7c5 f8e8 d3g6 f7g6 b7a6
+1018478 <first :  7   1032       17      97736 e3a7 b8c8 b1b7 e7g6 a7c5 f8e8 d3g6
+1018665 <first :  8   1032       36     209731 e3a7 b8c8 b1b7 e7g6 a7c5 f8e8 d3g6 f7g6
+1019373 <first :  9   1032      106     636837 e3a7 b8c8 b1b7 e7g6 a7c5 f8e8 d3g6 f7g6 b7a6
+1021638 <first : 10   1040      333    2003034 e3a7 b8c8 b1b7 e7g6 g2g3 f8e8 b7a6 c8a8 a6a5 a8c8
+1022478 <first : move e3a7
+Interrupting second
+1022479 >second: time 1
+1022479 >second: otim 13433
+book hit = (NULL)
+1022479 >second: e3a7
+1063494 <second: ok
+1063494 <second: move g8h8
+Interrupting first
+1063494 >first : time 13433
+1063494 >first : otim 1
+book hit = (NULL)
+1063494 >first : g8h8
+1063608 <first :  1   1099        0          3 a7b8
+1063608 <first :  2   1099        0          5 a7b8 f8b8
+1063608 <first :  3   1078        0       1330 a7b8 f8b8 f4f5
+1063608 <first :  4   1083        0       2389 a7b8 f8b8 a2e2 e7g8
+1063608 <first :  5   1087        1      10326 a7b8 f8b8 a2e2 e7g8 f4f5
+1063608 <first :  6   1078        3      20882 a7b8 f8b8 a2b2 b7b6 f4f5 b8c8
+1063608 <first :  7   1078       10      64403 a7b8 f8b8 a2b2 b7b6 f4f5 b8c8 b2c2
+1063779 <first :  7   1087       28     160469 a2e2 e7g8 a7b8 f8b8 e2b2 b7b6 f4f5
+1063929 <first :  8   1087       43     251771 a2e2 e7g8 a7b8 f8b8 f4f5 b7b5 a3a4 b5b4
+1064474 <first :  9   1087       97     591829 a2e2 e7g8 a7b8 f8b8 f4f5 b7b6 b1c1 b8c8 c1d1
+1065951 <first :  9   1129      245    1530314 a7b8 f8b8 b1b4 e7g6
+1066211 <first : 10   1139      271    1702856 a7b8 f8b8 b1b4 e7g6 b4c5 c7c6 d5c6 b7c6 h4h5 g6h4 c5c6
+1067439 <first : 11   1139      394    2497404 a7b8 f8b8 b1b4 e7g6 b4c5 c7c6 d5c6 b7c6 h4h5 g6h4 c5c6
+1069047 <first : move a7b8
+Interrupting second
+1069047 >second: time 1
+1069047 >second: otim 12878
+book hit = (NULL)
+1069047 >second: a7b8
+1114893 <second: ok
+1114893 <second: move f8b8
+Interrupting first
+1114893 >first : time 12878
+1114893 >first : otim 1
+book hit = (NULL)
+1114893 >first : f8b8
+1115012 <first :  1    296        0          7 b1b7 b8b7
+1115012 <first :  1   1073        0         13 b1c1
+1115012 <first :  1   1079        0         25 f4f5
+1115012 <first :  2   1077        0         71 f4f5 b7b5
+1115012 <first :  2   1082        0        212 a2e2 e7g8
+1115012 <first :  2   1139        0        278 b1b4
+1115012 <first :  3   1139        0        284 b1b4
+1115012 <first :  4   1139        0        324 b1b4
+1115012 <first :  5   1139        0        480 b1b4
+1115012 <first :  6   1139        0        594 b1b4
+1115012 <first :  7   1139        0       1647 b1b4
+1115012 <first :  8   1139        0       1859 b1b4
+1115012 <first :  9   1139        0       2343 b1b4
+1115895 <first : 10   1137      100     625645 b1b4 e7g6 b4c5 c7c6 d5c6 b7c6 h4h5 g6f8 c5c6 f8e6 c6a6 f6h5
+1117758 <first : 11   1137      286    1877423 b1b4 e7g6 b4c5 c7c6 d5c6 b7c6 h4h5 g6f8 c5c6 f8e6 c6a6
+1120508 <first : move b1b4
+Interrupting second
+1120508 >second: time 1
+1120508 >second: otim 12317
+book hit = (NULL)
+1120508 >second: b1b4
+1187141 <second: ok
+1187141 <second: move c7c5
+Interrupting first
+1187142 >first : time 12317
+1187142 >first : otim 1
+book hit = (NULL)
+1187142 >first : c7c5
+1187215 <first :  1   1144        0          3 b4c5
+1187215 <first :  2   1147        0         29 b4c5 e7g6
+1187215 <first :  3   1147        0        297 b4c5 e7g6 c5f2
+1187215 <first :  4   1205        0       3933 b4c5 b8e8 d5d6 e8c8
+1187215 <first :  5   1205        1       6548 b4c5 b8e8 d5d6 e8c8 c5e5
+1187215 <first :  6   1218        3      20628 b4c5 b8e8 c5b6 e8b8 b6c7 b8e8 c7b7
+1187226 <first :  7   1218        8      51625 b4c5 b8e8 c5b6 e8b8 b6c7 b8e8 c7b7
+1187419 <first :  8   1219       27     176205 b4c5 e7g6 c5c7 b8f8 c7b7 g6h4 b7a6 h4g6
+1187678 <first :  9   1237       53     354754 b4c5 e7g6 c5c7 b8f8 c7b7 f6h5 d3g6 f7g6 d5d6 h5f4 b7a6
+1188311 <first : 10   1257      116     786363 b4c5 e7g6 c5c7 b8e8 c7b7 g6h4 d5d6
+1189466 <first : 11   1288      232    1599583 b4c5 b8e8 a2e2 e7g8 e2e8 f6e8 c5c8 g8f6 c8b7 e8d6 b7a6
+1192201 <first : 12   1291      505    3538549 b4c5 e7g8 c5c7 b8e8 c7b7 e8e3 d3c2 f6e4 b7a6 e4d2 f1d1 d2e4
+1192833 <first : move b4c5
+Interrupting second
+1192834 >second: time 1
+1192834 >second: otim 11747
+book hit = (NULL)
+1192834 >second: b4c5
+1268170 <second: ok
+1268170 <second: move b8e8
+Interrupting first
+1268170 >first : time 11747
+1268170 >first : otim 1
+book hit = (NULL)
+1268170 >first : b8e8
+1268263 <first :  1    555        0          7 c5e7 e8e7
+1268264 <first :  1   1147        0         13 c5b4
+1268264 <first :  1   1206        0         15 d5d6
+1268264 <first :  2   1206        0        111 d5d6 e8c8
+1268264 <first :  2   1290        0        254 a2e2
+1268264 <first :  2   1295        0        254 f1e1
+1268264 <first :  3   1295        0        275 f1e1
+1268264 <first :  4   1295        0        306 f1e1
+1268264 <first :  5   1295        0        500 f1e1
+1268264 <first :  6   1295        0        682 f1e1
+1268264 <first :  7   1295        0       5692 f1e1
+1268264 <first :  8   1295        0       5920 f1e1
+1268264 <first :  9   1295        1       8071 f1e1
+1268264 <first : 10   1295        1       9943 f1e1
+1269588 <first : 11   1296      141     980009 f1e1 e7g8 e1e8 f6e8 c5c8 g8f6 c8b7 g7g5 f4g5 h6g5 h4g5
+1280308 <first : move f1e1
+Interrupting second
+1280308 >second: time 1
+1280308 >second: otim 10533
+book hit = (NULL)
+1280308 >second: f1e1
+1318796 <second: ok
+1318796 <second: move e7g8
+Interrupting first
+1318796 >first : time 10533
+1318796 >first : otim 1
+book hit = (NULL)
+1318796 >first : e7g8
+1318890 <first :  1   1156        0          9 e1e8
+1318890 <first :  2   1156        0         17 e1e8 f6e8
+1318890 <first :  3   1215        0        565 e1e8 f6e8 d5d6
+1318890 <first :  4   1220        0       1542 e1e8 f6e8 c5f8 e8f6 f8f7
+1318890 <first :  5   1220        0       2226 e1e8 f6e8 c5f8 e8f6 f8f7
+1318890 <first :  6   1280        0       4775 e1e8 f6e8 c5c8 g8f6 c8b7 e8d6 b7a6
+1318890 <first :  7   1280        1      10090 e1e8 f6e8 c5c8 g8f6 c8b7 e8d6 b7a6
+1318890 <first :  8   1287        3      26692 e1e8 f6e8 c5c8 g8f6 c8b7 g7g5 f4g5 h6g5
+1318890 <first :  9   1287        5      41103 e1e8 f6e8 c5c8 g8f6 c8b7 g7g5 f4g5 h6g5 h4g5
+1318972 <first : 10   1325       17     127164 e1e8 f6e8 c5c8 g8f6 c8b7 h8g8 b7a6 f6h5 a6c8 g8f8
+1319221 <first : 11   1343       42     310684 e1e8 f6e8 c5c8 g8f6 c8b7 h8g8 b7a6 f6h5 d5d6 h5f4 d6d7
+1319834 <first : 12   1356      103     783870 e1e8 f6e8 c5c8 e8f6 c8b7 f6h5 b7f7 g8f6 f7f8 f6g8 d5d6 h5f6 f4f5
+1320790 <first : 13   1372      199    1550696 e1e8 f6e8 c5c8 e8f6 d5d6 b7b5 d6d7 f6d7 c8d7 b5c4 d3c4 f7f6 c4a6
+1322568 <first : 14   1375      377    2976900 e1e8 f6e8 c5c8 e8f6 d5d6 b7b5 d6d7 f6d7 c8d7 f7f6 c4b5 a6b5 h4h5 f6f5 d3f5
+1323649 <first : move e1e8
+Interrupting second
+1323649 >second: time 1
+1323649 >second: otim 10048
+book hit = (NULL)
+1323649 >second: e1e8
+1337601 <second: ok
+1337601 <second: move f6e8
+Interrupting first
+1337601 >first : time 10048
+1337601 >first : otim 1
+book hit = (NULL)
+1337601 >first : f6e8
+1337695 <first :  1   1207        0          3 d5d6
+1337695 <first :  2   1198        0         11 d5d6 e8f6
+1337695 <first :  2   1212        0         89 a2b2 b7b5
+1337695 <first :  3   1205        0        441 a2b2 b7b5 c4b5 a6b5 d3b5
+1337695 <first :  3   1211        0        524 c5f8 e8f6 f8f7
+1337695 <first :  4   1263        0        934 c5f8 e8f6 d5d6 b7b5 f8f7 b5c4 f7c4
+1337695 <first :  4   1321        0       1623 c5c8 e8d6 c8d8 d6c4 d3c4
+1337695 <first :  5   1321        0       2411 c5c8 e8d6 c8d8 d6c4 d3c4
+1337695 <first :  6   1319        0       4177 c5c8 e8d6 c8c7 d6e8 c7c8
+1337695 <first :  6   1375        0       6324 d5d6 e8f6 c5c8
+1337695 <first :  7   1375        0       6861 d5d6 e8f6 c5c8
+1337695 <first :  8   1375        1       8475 d5d6 e8f6 c5c8
+1337695 <first :  9   1375        1      12426 d5d6 e8f6 c5c8
+1337695 <first : 10   1375        3      24301 d5d6 e8f6 c5c8
+1337695 <first : 11   1375        4      36870 d5d6 e8f6 c5c8
+1337883 <first : 12   1375       28     220118 d5d6 e8f6 c5c8
+1338342 <first : 13   1374       74     594269 d5d6 e8f6 c5c8 b7b5 d6d7 f6d7 c8d7 f7f6 c4b5 a6b5 h4h5 f6f5 d3f5
+1340382 <first : 13   1414      278    2247873 c5c8 e8f6 c8b7 a6a5 b7f7 f6g4 f7f5 g4f6 d5d6 a5a4 f5b5 g7g6 b5a4
+1342813 <first : 14   1451      521    4221356 c5c8 e8f6 c8b7 f6g4 d5d6 g4f6 d6d7 f6d7 b7d7 f7f6 d7a7 h6h5 a7f7
+1345324 <first : move c5c8
+Interrupting second
+1345324 >second: time 1
+1345324 >second: otim 9276
+book hit = (NULL)
+1345324 >second: c5c8
+1366187 <second: ok
+1366187 <second: move e8d6
+Interrupting first
+1366187 >first : time 9276
+1366187 >first : otim 1
+book hit = (NULL)
+1366187 >first : e8d6
+1366281 <first :  1    570        0          3 c8g8
+1366281 <first :  1   1147        0          3 c8d8
+1366281 <first :  2   1331        0         41 c8d8 d6c4 d3c4
+1366281 <first :  2   1450        0         59 c8c7
+1366281 <first :  3   1450        0        117 c8c7
+1366281 <first :  4   1450        0        158 c8c7
+1366281 <first :  5   1450        0        360 c8c7
+1366281 <first :  6   1450        0        461 c8c7
+1366281 <first :  7   1450        0       1091 c8c7
+1366281 <first :  8   1450        0       1553 c8c7
+1366281 <first :  9   1450        0       4077 c8c7
+1366281 <first : 10   1450        0       6425 c8c7
+1366281 <first : 11   1450        5      41241 c8c7
+1367037 <first : 11   1471       85     688261 c8f8 b7b5 f8d6 b5c4 d3c4 a6a5 d6d8 g7g5 h4g5 h6g5 d8g5
+1367759 <first : 12   1528      157    1286401 c8f8 b7b5 f8d6 b5c4 d3c4 a6a5 d6f8 h8h7 d5d6 g8f6 f4f5 f6e4 c4f7
+1369784 <first : 13   1546      359    2970707 c8f8 b7b5 f8d6 b5c4 d3c4 g7g5 f4g5 h6g5 h4g5 h8g7 d6a6 f7f6 a6a7
+1369900 <first : move c8f8
+Interrupting second
+1369901 >second: time 1
+1369901 >second: otim 8904
+book hit = (NULL)
+1369901 >second: c8f8
+1382784 <second: ok
+1382784 <second: move b7b5
+Interrupting first
+1382784 >first : time 8904
+1382784 >first : otim 1
+book hit = (NULL)
+1382784 >first : b7b5
+1382858 <first :  1   1406        0         11 f8d6
+1382858 <first :  2   1547        0         25 f8d6 b5c4
+1382858 <first :  3   1547        0         59 f8d6 b5c4
+1382858 <first :  4   1547        0         74 f8d6 b5c4
+1382858 <first :  5   1547        0         90 f8d6 b5c4
+1382858 <first :  6   1547        0        110 f8d6 b5c4
+1382858 <first :  7   1547        0        181 f8d6 b5c4
+1382858 <first :  8   1547        0        214 f8d6 b5c4
+1382858 <first :  9   1547        0        238 f8d6 b5c4
+1382858 <first : 10   1547        0        278 f8d6 b5c4
+1382858 <first : 11   1547        0        427 f8d6 b5c4
+1383541 <first : 12   1606       75     622525 f8d6 b5c4 d3c4 h6h5 d6a6 g8e7 d5d6 e7g6 a6c8 h8h7 c8f5 f7f6 f5h5
+1385188 <first : 13   1639      240    2006067 f8d6 b5c4 d3c4 h8h7 d6a6 g8f6 c4d3 h7h8 d5d6 g7g5 h4g5 h6g5 a6a8 h8g7 f4g5
+1386531 <first : move f8d6
+Interrupting second
+1386532 >second: time 1
+1386532 >second: otim 8530
+book hit = (NULL)
+1386532 >second: f8d6
+1394314 <second: ok
+1394314 <second: move b5c4
+Interrupting first
+1394314 >first : time 8530
+1394314 >first : otim 1
+book hit = (NULL)
+1394314 >first : b5c4
+1394387 <first :  1   1640        0          5 d3c4
+1394387 <first :  2   1640        0          6 d3c4
+1394387 <first :  3   1640        0         66 d3c4
+1394387 <first :  4   1640        0         84 d3c4
+1394387 <first :  5   1640        0        136 d3c4
+1394387 <first :  6   1640        0        174 d3c4
+1394387 <first :  7   1640        0        414 d3c4
+1394387 <first :  8   1640        0        527 d3c4
+1394387 <first :  9   1640        0        621 d3c4
+1394387 <first : 10   1640        0        847 d3c4
+1394387 <first : 11   1640        0       1742 d3c4
+1394782 <first : 12   1644       46     400454 d3c4 h8h7 d6a6 g8f6 c4d3 h7h8 d5d6 g7g5 h4g5 h6g5 a6a8 h8g7 f4g5 f6g4
+1395998 <first : 13   1782      168    1476962 d3c4 h8h7 d6a6 f7f5 a6e6 g8f6 e6f5 h7g8 d5d6 g8h8 f5c8 h8h7 d6d7 f6d7 c8d7 h6h5
+1396717 <first : 13   1945      240    2111592 d6f8 c4d3 d5d6 d3d2 a2d2 h8h7 d6d7 g8f6 d7d8 f6e4 f8g8 h7g6 d2d7 f7f5 d7g7
+1397109 <first : 14   2160      279    2453017 d6f8 c4d3 d5d6 d3d2 a2d2 h8h7 d6d7 g8f6 d7d8 f6e4 d8d3 h7g6 d3e4 g6f6 f4f5
+1399885 <first : 15   7992      557    5040695 d6f8 c4d3 a2b2 d3d2 b2b8 d2d1 g1h2 h8h7 f4f5 d1g1 h2g1 h6h5
+1400942 <first : move d6f8
+Interrupting second
+1400942 >second: time 1
+1400942 >second: otim 7867
+book hit = (NULL)
+1400942 >second: d6f8
+1403753 <second: ok
+1403753 <second: move c4d3
+Interrupting first
+1403753 >first : time 7867
+1403753 >first : otim 1
+book hit = (NULL)
+1403753 >first : c4d3
+1403826 <first :  1   1046        0          9 f8f7
+1403826 <first :  2   1033        0         31 f8f7 g8f6
+1403826 <first :  2   1039        0        175 f8a8 h8h7 a8a6
+1403826 <first :  2   1102        0        474 a2d2 g7g5 d2d3 g5f4 f8f7
+1403826 <first :  3   1102        0        564 a2d2 g7g5 d2d3
+1403826 <first :  4   1103        0       2695 a2d2 f7f6 f4f5 h6h5 d2d3
+1403826 <first :  5   1103        0       3508 a2d2 f7f6 f4f5 h6h5 d2d3
+1403826 <first :  5   1117        0       5193 f8f7 g7g5 f4g5 h6g5 h4g5
+1403826 <first :  6   1116        1       8629 f8f7 g7g5 f4g5 h6g5 h4g5 a6a5
+1403826 <first :  6   1143        1      12564 a2d2 f7f6 d5d6 g7g5 d6d7 g5f4 d2d3
+1403827 <first :  7   1173        3      29857 a2d2 g7g5 f4g5 h6g5 h4g5 h8h7 d2d3
+1403827 <first :  8   1220        7      62076 a2d2 f7f6 d5d6 f6f5 d2d3 h8h7 f8f5 g7g6
+1403875 <first :  9   1225       12      97314 a2d2 h8h7 f8f7 g8f6 d5d6 h6h5 f4f5 h7h6 d2d3
+1403881 <first :  9   1874       12     103071 d5d6 f7f6 d6d7 d3d2 d7d8 d2d1 d8d1 g7g5 d1d5
+1403890 <first : 10   2101       13     110551 d5d6 f7f6 d6d7 d3d2 a2d2 h6h5 d7d8 h8h7 f8g8 h7g6
+1403899 <first : 11   2144       14     119018 d5d6 f7f6 d6d7 d3d2 a2d2 h6h5 d7d8 h8h7 f8g8 h7h6 d8e8
+1403906 <first : 11   7993       15     125918 a2b2 h8h7 f4f5 d3d2 b2b8 d2d1 g1h2
+1403953 <first : 12   7993       20     169943 a2b2 h8h7 f4f5 d3d2 b2b8 d2d1 g1h2
+1403999 <first : 13   7993       24     213782 a2b2 h8h7 f4f5 d3d2 b2b8 d2d1 g1h2
+1404150 <first : 14   7993       39     360055 a2b2 h8h7 f4f5 d3d2 b2b8 d2d1 g1h2
+1404688 <first : 15   7993       93     909018 a2b2 h8h7 f4f5 d3d2 b2b8 d2d1 g1h2 d1g1 h2g1 h6h5 f8g8
+1405365 <first : 16   7993      161    1568514 a2b2 h8h7 f4f5 d3d2 b2b8 d2d1 g1h2 d1g1 h2g1 h6h5 f8g8 h7h6 g8h8
+1407932 <first : 17   7993      417    4208710 a2b2 h8h7 f4f5 d3d2 b2b8 d2d1 g1h2 d1g1 h2g1 h6h5 f8g8 h7h6 g8h8
+1408651 <first : move a2b2
+Interrupting second
+1408651 >second: time 1
+1408651 >second: otim 7377
+book hit = (NULL)
+1408651 >second: a2b2
+1412155 <second: ok
+1412155 <second: move h6h5
+Interrupting first
+1412155 >first : time 7377
+1412155 >first : otim 1
+book hit = (NULL)
+1412155 >first : h6h5
+1412229 <first :  1   1045        0          3 f8f7
+1412229 <first :  2   1033        0          7 f8f7 g8f6
+1412229 <first :  2   1038        0         45 f8a8 h8h7
+1412229 <first :  2   1101        0        134 b2d2 g7g5
+1412229 <first :  2   1225        0        160 b2b8 f7f5 f8g8
+1412229 <first :  3   1225        0        192 b2b8 f7f5 f8g8
+1412229 <first :  4   1228        0        506 b2b8 h8h7 f4f5 f7f6 f8g8
+1412229 <first :  5   1275        0        679 b2b8 h8h7 f8g8 h7g6 d5d6
+1412229 <first :  6   1282        0       1782 b2b8 h8h7 f8g8 h7g6 b8b6 g6f5 b6a6
+1412229 <first :  7   1282        0       5290 b2b8 h8h7 f8g8 h7g6 b8b6 g6f5 b6a6
+1412229 <first :  8   7996        1      12837 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412229 <first :  9   7996        1      14721 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412229 <first : 10   7996        1      17925 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412229 <first : 11   7996        2      27431 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412229 <first : 12   7996        4      45262 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412229 <first : 13   7996        6      70470 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412255 <first : 14   7996       10     105806 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412307 <first : 15   7996       15     178536 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412382 <first : 16   7996       22     288008 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412466 <first : 17   7996       31     409522 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412542 <first : 18   7996       38     525681 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412615 <first : 19   7996       46     642518 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412690 <first : 20   7996       53     772965 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412768 <first : 21   7996       61     912666 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412848 <first : 22   7996       69    1058823 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1412931 <first : 23   7996       77    1210816 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1413016 <first : 24   7996       86    1368421 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1413104 <first : 25   7996       94    1531721 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1413194 <first : 26   7996      103    1700704 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1413286 <first : 27   7996      113    1875379 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1413381 <first : 28   7996      122    2055747 b2b8 h8h7 f4f5 f7f6 f8g8 h7h6 g8h8
+1413442 <first : move b2b8
+Interrupting second
+1413443 >second: time 1
+1413443 >second: otim 7248
+book hit = (NULL)
+1413443 >second: b2b8
+1413849 <second: ok
+1413849 <second: move d3d2
+Interrupting first
+1413850 >first : time 7248
+1413850 >first : otim 1
+book hit = (NULL)
+1413850 >first : d3d2
+1413924 <first :  1   1171        0          3 f8g8
+1413924 <first :  2   7999        0          5 f8g8
+1413924 <first :  3   7999        0          7 f8g8
+1413924 <first :  4   7999        0         11 f8g8
+1413924 <first :  5   7999        0         15 f8g8
+1413924 <first :  6   7999        0         19 f8g8
+1413924 <first :  7   7999        0         23 f8g8
+1413924 <first :  8   7999        0         27 f8g8
+1413924 <first :  9   7999        0         31 f8g8
+1413924 <first : 10   7999        0         35 f8g8
+1413924 <first : 11   7999        0         39 f8g8
+1413925 <first : 12   7999        0         43 f8g8
+1413925 <first : 13   7999        0         47 f8g8
+1413925 <first : 14   7999        0         51 f8g8
+1413925 <first : 15   7999        0         55 f8g8
+1413925 <first : 16   7999        0         59 f8g8
+1413925 <first : 17   7999        0         63 f8g8
+1413925 <first : 18   7999        0         68 f8g8
+1413925 <first : 19   7999        0         73 f8g8
+1413925 <first : 20   7999        0         78 f8g8
+1413925 <first : 21   7999        0         83 f8g8
+1413925 <first : 22   7999        0        104 f8g8
+1413925 <first : 23   7999        0        129 f8g8
+1413925 <first : 24   7999        0        154 f8g8
+1413925 <first : 25   7999        0        179 f8g8
+1413925 <first : 26   7999        0        204 f8g8
+1413925 <first : 27   7999        0        236 f8g8
+1413925 <first : 28   7999        0        268 f8g8
+1413925 <first : move f8g8
+Interrupting second
+1413926 >second: f8g8
+GameEnds(25, Xboard adjudication: Checkmate, 4)
+GE(25, Xboard adjudication: Checkmate, 4) bare king k=8 color=0
+Interrupting first
+1413926 >first : result 1-0 {Xboard adjudication: Checkmate}
+1413926 >second: result 1-0 {Xboard adjudication: Checkmate}
+1413936 >first : force
+1413936 >first : ping 2
+1413936 >second: force
+1414016 <first : 1-0 {White mates}
+1414016 <second: ok
+1414016 <first : Error (unknown command): result
+1414016 <first : pong 2
+GameEnds(25, Xboard adjudication: Checkmate, 2)
+1438142 >first : quit
+1438157 >second: quit

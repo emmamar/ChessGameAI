@@ -1,0 +1,16 @@
+MODULES_MANAGER_V2
+Board|/home/emma/PythonWorkspace/chessAI/Board.py
+Move|/home/emma/PythonWorkspace/chessAI/Move.py
+Player|/home/emma/PythonWorkspace/chessAI/Player.py
+PlayerTMP2|/home/emma/PythonWorkspace/chessAI/PlayerTMP2.py
+PlayerTmp|/home/emma/PythonWorkspace/chessAI/PlayerTmp.py
+pieces.Bishop|/home/emma/PythonWorkspace/chessAI/pieces/Bishop.py
+pieces.Castle|/home/emma/PythonWorkspace/chessAI/pieces/Castle.py
+pieces.King|/home/emma/PythonWorkspace/chessAI/pieces/King.py
+pieces.Knight|/home/emma/PythonWorkspace/chessAI/pieces/Knight.py
+pieces.Pawn|/home/emma/PythonWorkspace/chessAI/pieces/Pawn.py
+pieces.Piece|/home/emma/PythonWorkspace/chessAI/pieces/Piece.py
+pieces.Queen|/home/emma/PythonWorkspace/chessAI/pieces/Queen.py
+pieces.__init__|/home/emma/PythonWorkspace/chessAI/pieces/__init__.py
+xboardGamePlay|/home/emma/PythonWorkspace/chessAI/xboardGamePlay.py
+xbordEngineEmma|/home/emma/PythonWorkspace/chessAI/xbordEngineEmma.py

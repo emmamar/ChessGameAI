@@ -1,0 +1,31 @@
+import copy
+import sys
+
+class Piece():
+
+  def __init__(self, c):
+    self.d = 1
+    self.color = c
+  
+  def get_available_moves(self, board,px,py):
+    posX = px
+    posY = py
+    test_set = self.get_available_moves_specific(board,px,py)
+    available = list()
+
+    for move in test_set:
+      if self.not_check(board, move):
+        available.append(move)
+    return available
+
+
+  def not_check(self, board, move_to_try):
+    can_move = board.try_move_piece(
+      move_to_try
+    )
+    no_check = can_move and not board.is_check(self.color)
+    board.undo()
+    return no_check
+
+  def get_color(self):
+    return self.color

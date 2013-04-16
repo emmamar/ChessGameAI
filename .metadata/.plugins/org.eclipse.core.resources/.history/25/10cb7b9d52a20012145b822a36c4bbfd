@@ -1,0 +1,37 @@
+import Piece
+from Castle import Castle
+from Bishop import Bishop
+from Move import Move
+
+class Queen(Piece.Piece):
+  def __init__(self, c):
+    self.color = c
+ 
+  def get_available_moves_specific(self, board, px, py):
+    posX = px
+    posY = py
+    available = list()
+    bishop_instance = Bishop(self.color)
+    castle_instance = Castle(self.color)
+    available = (bishop_instance.get_available_moves(
+                   board, px, py
+                 ) +
+                 castle_instance.get_available_moves(
+                   board, px, py)
+                 )
+
+    return available
+
+  def is_illegal(self, move, board):
+    bishop_instance = Bishop(self.color)
+    castle_instance = Castle(self.color)
+    return (bishop_instance.is_illegal(move, board)
+    and castle_instance.is_illegal(move, board))
+      
+
+  def toString(self):
+    if self.color == "W":
+      return "QW"
+    else:
+      return "QB"
+
