@@ -3,56 +3,74 @@ from Move import Move
 
 class Bishop(Piece.Piece):
 
-  def __init__(self, c):
+  def __init__(self, c, px, py):
     self.color = c
+    self.posX = px
+    self.posY = py   
+    self.first_move = True
+    self.material = 500
+    if( self.color == "B"):
+      self.table = [-20, -10, -10, -10, -10, -10, -10, -20,
+                              -10,   0,   0,   0,   0,   0,   0, -10,
+                              -10,   0,   5,  10,  10,   5,   0, -10,
+                              -10,   5,   5,  10,  10,   5,   5, -10,
+                              -10,   0,  10,  10,  10,  10,   0, -10,
+                              -10,  10,  10,  10,  10,  10,  10, -10,
+                              -10,   5,   0,   0,   0,   0,   5, -10,
+                              -20, -10, -40, -10, -10, -40, -10, -20]
+    else:
+      self.table = [-20, -10, -40, -10, -10, -40, -10, -20,
+                          -10,   5,   0,   0,   0,   0,   5, -10,
+                          -10,  10,  10,  10,  10,  10,  10, -10,
+                          -10,   0,  10,  10,  10,  10,   0, -10,
+                          -10,   5,   5,  10,  10,   5,   5, -10,
+                          -10,   0,   5,  10,  10,   5,   0, -10,
+                          -10,   0,   0,   0,   0,   0,   0, -10,
+                          -20, -10, -10, -10, -10, -10, -10, -20]
         
-  def get_available_moves_specific(self, board, px, py):
-    posX = px
-    posY = py
+  def get_available_moves_specific(self, board):
     available = list()
-
-    for i in range(1, 8 - posX):
-      if posY + i <= 7:
-        if(board.matrix[posX + i][posY + i] == None or not
-          board.matrix[posX + i][posY + i].color == self.color):
-          available.append(Move(posX,posY,posX + i, posY + i))
-        if not board.matrix[posX + i][posY + i] == None:
+    for i in range(1, 8 - self.posX):
+      if self.posY + i <= 7:
+        if(board.matrix[self.posX + i][self.posY + i] == None or not
+          board.matrix[self.posX + i][self.posY + i].color == self.color):
+          available.append(Move(self.posX,self.posY,self.posX + i, self.posY + i))
+        if not board.matrix[self.posX + i][self.posY + i] == None:
           break
-    for i in range(1, 8 - posX):
-      if posY - i >= 0:
-        if(board.matrix[posX + i][posY -i] == None or not
-          board.matrix[posX + i][posY - i].color == self.color):
-          available.append(Move(posX, posY, posX + i, posY - i))
-        if not board.matrix[posX + i][posY - i] == None:
+    for i in range(1, 8 - self.posX):
+      if self.posY - i >= 0:
+        if(board.matrix[self.posX + i][self.posY -i] == None or not
+          board.matrix[self.posX + i][self.posY - i].color == self.color):
+          available.append(Move(self.posX, self.posY, self.posX + i, self.posY - i))
+        if not board.matrix[self.posX + i][self.posY - i] == None:
           break
-    for i in range(1, posX):
-      if posY + i <= 7:
-        if(board.matrix[posX - i][posY + i] == None or not
-          board.matrix[posX - i][posY + i].color == self.color):
-          available.append(Move(posX, posY, posX - i, posY + i))
-        if not board.matrix[posX - i][posY + i] == None:
+    for i in range(1, self.posX):
+      if self.posY + i <= 7:
+        if(board.matrix[self.posX - i][self.posY + i] == None or not
+          board.matrix[self.posX - i][self.posY + i].color == self.color):
+          available.append(Move(self.posX, self.posY, self.posX - i, self.posY + i))
+        if not board.matrix[self.posX - i][self.posY + i] == None:
           break
-    for i in range(1, posX):
-      if posY - i >= 0:
-        if(board.matrix[posX - i][posY - i] == None or not
-          board.matrix[posX - i][posY - i].color == self.color):
-          available.append(Move(posX, posY, posX - i, posY - i))
-        if not board.matrix[posX - i][posY - i] == None:
+    for i in range(1, self.posX):
+      if self.posY - i >= 0:
+        if(board.matrix[self.posX - i][self.posY - i] == None or not
+          board.matrix[self.posX - i][self.posY - i].color == self.color):
+          available.append(Move(self.posX, self.posY, self.posX - i, self.posY - i))
+        if not board.matrix[self.posX - i][self.posY - i] == None:
           break
     return available
 
-
-
-
-
-
   '''move already checks its within the board'''
   def is_illegal(self, startX, startY, endX, endY, board):
-    if abs(startX - endX) == abs(startY - 
-      endY):
+    if ((startX - endX == startY - endY) 
+    or (startX - endX == -(startY - endY))):
       length_X = startX - endX
       length_Y = startY - endY
-      for i in range(1, abs(length_X)):
+      if(length_X < 0):
+        torange = -length_X
+      else:
+        torange = length_X
+      for i in range(1, torange):
         if length_X < 0:
           if length_Y < 0:
             if not (board.matrix[startX + i][startY + i]

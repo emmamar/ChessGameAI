@@ -4,21 +4,25 @@ from Bishop import Bishop
 
 
 class Queen(Piece.Piece):
-  def __init__(self, c):
+  def __init__(self, c, px, py):
     self.color = c
-    self.bishop = Bishop(self.color)
-    self.castle = Castle(self.color)
+    self.posX = px
+    self.posY = py
+    self.first_move = True
+    self.bishop = Bishop(self.color, px, py)
+    self.castle = Castle(self.color, px, py)
+    self.table = None
+    self.material = 1000
  
-  def get_available_moves_specific(self, board, px, py):
-    posX = px
-    posY = py
+  def get_available_moves_specific(self, board):
+    self.bishop.posX = self.posX
+    self.castle.posX = self.posX
+    self.bishop.posY = self.posY
+    self.castle.posY = self.posY
     available = (self.bishop.get_available_moves_specific(
-                   board, posX, posY
-                 ) +
+                   board) +
                  self.castle.get_available_moves_specific(
-                   board, posX, posY)
-                 )
-
+                   board))
     return available
       
   def is_illegal(self, startX, startY, endX, endY, board):

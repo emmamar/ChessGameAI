@@ -19,6 +19,8 @@ class Board:
     self.black_king_refY = None
     self.white_king_refX = None
     self.white_king_refY = None
+    self.white_pieces = list()
+    self.black_pieces = list()
     
     i = 0
     for line in f:
@@ -26,35 +28,49 @@ class Board:
       self.matrix.append(list())
       j = 0
       for item in row_list:
-        piece_to_add = self.createPiece(item)
+        piece_to_add = self.createPiece(item, i, j)
         self.matrix[i].append(piece_to_add)
-        if(not piece_to_add == None and (piece_to_add.__class__.__name__ == "King")):
-          if (piece_to_add.get_color() == "B"):
-            self.black_king_refX = i
-            self.black_king_refY = j
+        if(not piece_to_add == None ):
+          if (piece_to_add.color == "B"):
+            self.black_pieces.append(piece_to_add)
+            if(piece_to_add.__class__.__name__ == "King"):
+              self.black_king_refX = i
+              self.black_king_refY = j
           else:
-            self.white_king_refX = i
-            self.white_king_refY = j
+            self.white_pieces.append(piece_to_add)
+            if(piece_to_add.__class__.__name__ == "King"):
+              self.white_king_refX = i
+              self.white_king_refY = j
         j += 1
       i += 1
 
   '''creates a specific piece object given its representation
   in the Board.txt file'''
-  def createPiece(self, item):
-    piece_map = {"00":None, "PB":Pawn.Pawn("B"),
-    "KB":King.King("B"), "QB":Queen.Queen("B"),
-    "BB":Bishop.Bishop("B"), "RB":Knight.Knight("B"),
-    "CB":Castle.Castle("B"), "PW":Pawn.Pawn("W"),
-    "KW":King.King("W"), "QW":Queen.Queen("W"),
-    "BW":Bishop.Bishop("W"), "RW":Knight.Knight("W"),
-    "CW":Castle.Castle("W")}
+  def createPiece(self, item, i , j):
+    piece_map = {"00":None, "PB":Pawn.Pawn("B", i, j),
+    "KB":King.King("B", i, j), "QB":Queen.Queen("B", i, j),
+    "BB":Bishop.Bishop("B", i, j), "RB":Knight.Knight("B", i, j),
+    "CB":Castle.Castle("B", i, j), "PW":Pawn.Pawn("W", i, j),
+    "KW":King.King("W", i, j), "QW":Queen.Queen("W", i, j),
+    "BW":Bishop.Bishop("W", i, j), "RW":Knight.Knight("W", i, j),
+    "CW":Castle.Castle("W", i, j)}
     return piece_map[item]
-
+  
+  def get_black(self):
+    return self.black_pieces
+  
+  def get_white(self):
+    return self.white_pieces
 
   '''moves a piece on the board given the move'''
   def try_move_piece(self, move):
     self.history.append(move) 
     self.history.append(self.matrix[move.endX][move.endY])
+    if(not self.matrix[move.endX][move.endY] == None):
+      if(self.matrix[move.endX][move.endY].color == "B"):
+        self.black_pieces.remove(self.matrix[move.endX][move.endY])
+      else:
+        self.white_pieces.remove(self.matrix[move.endX][move.endY])
     self.history.append(False)
     '''if(not self.is_illegal_move(move)):'''
     if(self.matrix[move.startX]
@@ -63,7 +79,7 @@ class Board:
       if((color == "W" and move.endX == 7)
       or color == "B" and move.endX == 0):
         self.matrix[move.endX][move.endY] = Queen.Queen(
-          color
+          color, move.endX, move.endY
         )
         self.history.pop()
         self.history.append(True)
@@ -74,31 +90,39 @@ class Board:
       self.history.append(False) 
     elif (self.matrix[move.startX]
     [move.startY].__class__.__name__ == "King"):
-      if(self.matrix[move.startX][move.startY].get_first_move()):
+      if(self.matrix[move.startX][move.startY].first_move):
         if(move.endY == 2 or move.endY == 6):
           if(self.matrix[move.startX][move.startY].color == "B"):
             if(move.endY == 2):
               self.matrix[7][3] = self.matrix[7][0]
               self.matrix[7][0] = None
-              self.matrix[7][3].set_first(False)
+              self.matrix[7][3].first_move = False
+              self.matrix[7][3].setPosX(7)
+              self.matrix[7][3].setPosY(3)
             if(move.endY == 6):
               self.matrix[7][5] = self.matrix[7][7]
               self.matrix[7][7] = None
-              self.matrix[7][5].set_first(False)
+              self.matrix[7][5].first_move = False
+              self.matrix[7][5].setPosX(7)
+              self.matrix[7][5].setPosY(5)
           else:
             if(move.endY == 2):
               self.matrix[0][3] = self.matrix[0][0]
               self.matrix[0][0] = None
-              self.matrix[0][3].set_first(False)
+              self.matrix[0][3].first_move = False
+              self.matrix[0][3].setPosX(0)
+              self.matrix[0][3].setPosY(3)
             if(move.endY == 6):
               self.matrix[0][5] = self.matrix[0][7]
               self.matrix[0][7] = None  
-              self.matrix[0][5].set_first(False)
+              self.matrix[0][5].first_move = False
+              self.matrix[0][5].setPosX(0)
+              self.matrix[0][5].setPosY(5)
           self.history.append(True)
         else:
           self.history.append(False)
         self.history.append(True)
-        self.matrix[move.startX][move.startY].set_first(False)
+        self.matrix[move.startX][move.startY].first_move = False
       else:
         self.history.append(False)
         self.history.append(False)
@@ -112,10 +136,10 @@ class Board:
       self.matrix[move.startX][move.startY])
     elif (self.matrix[move.startX]
     [move.startY].__class__.__name__ == "Castle"):
-      if(self.matrix[move.startX][move.startY].get_first_move()):
+      if(self.matrix[move.startX][move.startY].first_move):
         self.history.append(False)
         self.history.append(True)
-        self.matrix[move.startX][move.startY].set_first(False)
+        self.matrix[move.startX][move.startY].first_move = False
       else:
         self.history.append(False)
         self.history.append(False)
@@ -127,6 +151,8 @@ class Board:
       self.history.append(False)
       self.history.append(False)
     self.matrix[move.startX][move.startY] = None
+    self.matrix[move.endX][move.endY].posX = move.endX
+    self.matrix[move.endX][move.endY].posY = move.endY
     return True
     '''else:
     return False'''
@@ -136,6 +162,11 @@ class Board:
     castled = self.history.pop()
     queened = self.history.pop()
     last_move_taken = self.history.pop()
+    if(not last_move_taken == None):
+      if(last_move_taken.color == "B"):
+        self.black_pieces.append(last_move_taken)
+      else:
+        self.white_pieces.append(last_move_taken)
     last_move = self.history.pop()
    
     
@@ -150,25 +181,33 @@ class Board:
           self.matrix[7][0] = self.matrix[7][3]
           self.matrix[7][3] = None
           self.matrix[7][0].set_first(True)
+          self.matrix[7][0].setPosX(7)
+          self.matrix[7][0].setPosY(0)
         elif(last_move.endY == 6):
           self.matrix[7][7] = self.matrix[7][5]
           self.matrix[7][5] = None
           self.matrix[7][7].set_first(True)
+          self.matrix[7][7].setPosX(7)
+          self.matrix[7][7].setPosY(7)
           
       elif(last_move.endX == 0):
         if(last_move.endY == 2):
           self.matrix[0][0] = self.matrix[0][3]
           self.matrix[0][3] = None
           self.matrix[0][0].set_first(True)
+          self.matrix[0][0].setPosX(0)
+          self.matrix[0][0].setPosY(0)
         elif(last_move.endY == 6):
           self.matrix[0][7] = self.matrix[0][5]
           self.matrix[0][5] = None
           self.matrix[0][7].set_first(True)
-      self.matrix[last_move.endX][last_move.endY].set_first(first_move)
+          self.matrix[0][7].setPosX(0)
+          self.matrix[0][7].setPosY(7)
+      self.matrix[last_move.endX][last_move.endY].first_move = first_move
       self.matrix[last_move.startX][last_move.startY] = self.matrix[last_move.endX][last_move.endY]
     elif(self.matrix[last_move.endX]
     [last_move.endY].__class__.__name__ == "King"):
-      self.matrix[last_move.endX][last_move.endY].set_first(first_move)
+      self.matrix[last_move.endX][last_move.endY].first_move = first_move
       if(self.matrix[last_move.endX][last_move.endY].color == "B"):
         self.black_king_refX = last_move.startX
         self.black_king_refY = last_move.startY
@@ -179,7 +218,7 @@ class Board:
       self.matrix[last_move.endX][last_move.endY])
     elif(self.matrix[last_move.endX]
     [last_move.endY].__class__.__name__ == "Castle"):
-      self.matrix[last_move.endX][last_move.endY].set_first(first_move)
+      self.matrix[last_move.endX][last_move.endY].first_move = first_move
       self.matrix[last_move.startX][last_move.startY] = (
       self.matrix[last_move.endX][last_move.endY])
     else:
@@ -187,6 +226,8 @@ class Board:
       self.matrix[last_move.endX][last_move.endY])
 
     self.matrix[last_move.endX][last_move.endY] = last_move_taken
+    self.matrix[last_move.startX][last_move.startY].posX = last_move.startX
+    self.matrix[last_move.startX][last_move.startY].posY = last_move.startY
     
 
     
@@ -231,18 +272,20 @@ class Board:
     if(color == "B"):
       kingX = self.black_king_refX
       kingY = self.black_king_refY
+      for piece in self.white_pieces:
+        check = (not piece.is_illegal(
+          piece.posX, piece.posY, kingX, kingY, self))
+        if check:
+            return check
     else:
       kingX = self.white_king_refX
       kingY = self.white_king_refY
-
-    for k in [0,1,2,3,4,5,6,7]:
-      for l in [0,1,2,3,4,5,6,7]:
-        if((not self.matrix[k][l] == None) and
-        (not self.matrix[k][l].color == color)):
-          check = (not self.matrix[k][l].is_illegal(
-            k, l, kingX, kingY, self))
-          if check:
+      for piece in self.black_pieces:
+        check = (not piece.is_illegal(
+          piece.posX, piece.posY, kingX, kingY, self))
+        if check:
             return check
+      
     return check
 
   def is_illegal_move(self, move):

@@ -16,6 +16,71 @@ class Player:
     '''create player'''
     self.color = c
     self.depth = dep
+    '''self.tables = {"Pawn":{"B":[0,   0,   0,   0,   0,   0,  0,  0,
+                                 50, 50,  50,  50,  50,  50, 50, 50,
+                                 10, 10,  20,  30,  30,  20, 10, 10,
+                                 5,   5,  10,  27,  27,  10,  5,  5,
+                                 0,   0,   0,  25,  25,   0,  0,  0,
+                                 5,  -5, -10,   0,   0, -10, -5,  5,
+                                 5,  10,  10, -25, -25,  10, 10,  5,
+                                 0,   0,   0,   0,   0,   0,  0,  0],
+                            "W":[0,   0,   0,   0,   0,   0,   0,   0,
+                                 5,  10,  10, -25, -25,  10,  10,   5,
+                                 5,  -5, -10,   0,   0, -10,  -5,   5,
+                                 0,   0,   0,  25,  25,   0,   0,   0,
+                                 5,   5,  10,  27,  27,  10,   5,   5,
+                                10,  10,  20,  30,  30,  20,  10,  10,
+                                50,  50,  50,  50,  50,  50,  50,  50,
+                                 0,   0,   0,   0,   0,   0,   0,   0]},
+                    "Knight":{"B":[-50, -40, -30, -30, -30, -30, -40, -50,
+                              -40, -20,   0,   0,   0,   0, -20, -40,
+                              -30,   0,  10,  15,  15,  10,   0, -30,
+                              -30,   5,  15,  20,  20,  15,   5, -30,
+                              -30,   0,  15,  20,  20,  15,   0, -30,
+                              -30,   5,  10,  15,  15,  10,   5, -30,
+                              -40, -20,   0,   5,   5,   0, -20, -40,
+                              -50, -40, -20, -30, -30, -20, -40, -50],
+                              "W":[-50, -40, -20, -30, -30, -20, -40, -50,
+                              -40, -20,   0,   5,   5,   0, -20, -40,
+                              -30,   5,  10,  15,  15,  10,   5, -30,
+                              -30,   0,  15,  20,  20,  15,   0, -30,
+                              -30,   5,  15,  20,  20,  15,   5, -30,
+                              -30,   0,  10,  15,  15,  10,   0, -30,
+                              -40, -20,   0,   0,   0,   0, -20, -40,
+                              -50, -40, -30, -30, -30, -30, -40, -50]},
+                    "Bishop":{"B":[-20, -10, -10, -10, -10, -10, -10, -20,
+                              -10,   0,   0,   0,   0,   0,   0, -10,
+                              -10,   0,   5,  10,  10,   5,   0, -10,
+                              -10,   5,   5,  10,  10,   5,   5, -10,
+                              -10,   0,  10,  10,  10,  10,   0, -10,
+                              -10,  10,  10,  10,  10,  10,  10, -10,
+                              -10,   5,   0,   0,   0,   0,   5, -10,
+                              -20, -10, -40, -10, -10, -40, -10, -20],
+                                "W":[-20, -10, -40, -10, -10, -40, -10, -20,
+                          -10,   5,   0,   0,   0,   0,   5, -10,
+                          -10,  10,  10,  10,  10,  10,  10, -10,
+                          -10,   0,  10,  10,  10,  10,   0, -10,
+                          -10,   5,   5,  10,  10,   5,   5, -10,
+                          -10,   0,   5,  10,  10,   5,   0, -10,
+                          -10,   0,   0,   0,   0,   0,   0, -10,
+                          -20, -10, -10, -10, -10, -10, -10, -20]},
+
+                    "King":{"B":[-30, -40, -40, -50, -50, -40, -40, -30,
+                          -30, -40, -40, -50, -50, -40, -40, -30,
+                          -30, -40, -40, -50, -50, -40, -40, -30,
+                          -30, -40, -40, -50, -50, -40, -40, -30,
+                          -20, -30, -30, -40, -40, -30, -30, -20,
+                          -10, -20, -20, -20, -20, -20, -20, -10,
+                           20,  20,   0,   0,   0,   0,  20,  20,
+                           20,  30,  10,   0,   0,  10,  30, 20],
+                           "W": [20,  30,  10,  0,   0,  10,  30, 20,
+                          20,  20,   0,   0,   0,   0,  20,  20,
+                          -10, -20, -20, -20, -20, -20, -20, -10,
+                          -20, -30, -30, -40, -40, -30, -30, -20,
+                          -30, -40, -40, -50, -50, -40, -40, -30,
+                          -30, -40, -40, -50, -50, -40, -40, -30,
+                          -30, -40, -40, -50, -50, -40, -40, -30,
+                          -30, -40, -40, -50, -50, -40, -40, -30]}}'''
 
   '''determines the best next move for the computer player
   given the current board configuration'''
@@ -73,15 +138,18 @@ class Player:
   available next moves'''
   def get_all_available_moves(self, board):
     available_moves = list()
-    for i in [0,1,2,3,4,5,6,7]:
-      for j in [0,1,2,3,4,5,6,7]:
-        if (not board.matrix[i][j] == None
-        and board.matrix[i][j].color == self.color):
-          per_piece = board.matrix[i][j].get_available_moves(
-            board, i, j
-          )
-          for move in per_piece:
-            available_moves.append(move)
+    if(self.color == "B"):
+      for piece in board.get_black():
+        per_piece = piece.get_available_moves(
+          board)
+        for move in per_piece:
+          available_moves.append(move)
+    elif(self.color == "W"):
+      for piece in board.get_white():
+        per_piece = piece.get_available_moves(
+          board)
+        for move in per_piece:
+          available_moves.append(move)
     return available_moves
 
   '''helper function to determineNextMove that gets the
@@ -90,26 +158,26 @@ class Player:
   def calculate_heuristic(self, board, move):
     board.try_move_piece(move)
     total_heuristic = 0
-    for i in [0,1,2,3,4,5,6,7]:
-      for j in [0,1,2,3,4,5,6,7]:
-        if(not board.matrix[i][j] == None):
-          total_heuristic += self.calc_material(board.matrix[i][j])
-          total_heuristic += self.calc_piece_table_score(
-            board.matrix[i][j], i, j
-          )
+    for piece in board.get_black():
+      total_heuristic += self.calc_material(piece)
+      total_heuristic += self.calc_piece_table_score(
+        piece, piece.posX, piece.posY
+      )
+    for piece in board.get_white():
+      total_heuristic += self.calc_material(piece)
+      total_heuristic += self.calc_piece_table_score(
+        piece, piece.posX, piece.posY
+      )
     board.undo()
     return total_heuristic
 
   def calc_material(self, piece):
     '''calculate the material of the board'''
-    piece_value = {"King":5000, "Queen":1000, "Knight":500, "Bishop":500, 
-    "Pawn":100, "Castle":750}
     if piece.color == self.color:
-      return piece_value[piece.__class__.__name__]
-    elif not piece.color == self.color:
-      return -piece_value[piece.__class__.__name__]
+      return piece.material
     else:
-      return 0
+      return -piece.material
+
 
   def calc_mobility(self):
     pass
@@ -118,95 +186,9 @@ class Player:
     pass
 
   def calc_piece_table_score(self, piece, posX, posY):
-    piece_value = 0;
-    if piece == None:
-      return 0
-    else:
-      if piece.__class__.__name__ == "Pawn":
-        if piece.color == "B":
-          pawn_table = [0,   0,   0,   0,   0,   0,  0,  0,
-                            50, 50,  50,  50,  50,  50, 50, 50,
-                            10, 10,  20,  30,  30,  20, 10, 10,
-                            5,   5,  10,  27,  27,  10,  5,  5,
-                            0,   0,   0,  25,  25,   0,  0,  0,
-                            5,  -5, -10,   0,   0, -10, -5,  5,
-                            5,  10,  10, -25, -25,  10, 10,  5,
-                            0,   0,   0,   0,   0,   0,  0,  0]
-        else:
-          pawn_table = [0,   0,   0,   0,   0,   0,   0,   0,
-                            5,  10,  10, -25, -25,  10,  10,   5,
-                            5,  -5, -10,   0,   0, -10,  -5,   5,
-                            0,   0,   0,  25,  25,   0,   0,   0,
-                            5,   5,  10,  27,  27,  10,   5,   5,
-                           10,  10,  20,  30,  30,  20,  10,  10,
-                           50,  50,  50,  50,  50,  50,  50,  50,
-                            0,   0,   0,   0,   0,   0,   0,   0]
-                                    
-        piece_value = pawn_table[(posX*8) +  posY]
-      elif piece.__class__.__name__ == "Knight":
-        if piece.color == "B":
-          knight_table = [-50, -40, -30, -30, -30, -30, -40, -50,
-                              -40, -20,   0,   0,   0,   0, -20, -40,
-                              -30,   0,  10,  15,  15,  10,   0, -30,
-                              -30,   5,  15,  20,  20,  15,   5, -30,
-                              -30,   0,  15,  20,  20,  15,   0, -30,
-                              -30,   5,  10,  15,  15,  10,   5, -30,
-                              -40, -20,   0,   5,   5,   0, -20, -40,
-                              -50, -40, -20, -30, -30, -20, -40, -50]
-        else:
-          knight_table = [-50, -40, -20, -30, -30, -20, -40, -50,
-                              -40, -20,   0,   5,   5,   0, -20, -40,
-                              -30,   5,  10,  15,  15,  10,   5, -30,
-                              -30,   0,  15,  20,  20,  15,   0, -30,
-                              -30,   5,  15,  20,  20,  15,   5, -30,
-                              -30,   0,  10,  15,  15,  10,   0, -30,
-                              -40, -20,   0,   0,   0,   0, -20, -40,
-                              -50, -40, -30, -30, -30, -30, -40, -50]
-
-        piece_value = knight_table[(posX*8) +  posY]
-      elif piece.__class__.__name__ == "Bishop":
-        if piece.color == "B":
-          bishop_table = [-20, -10, -10, -10, -10, -10, -10, -20,
-                              -10,   0,   0,   0,   0,   0,   0, -10,
-                              -10,   0,   5,  10,  10,   5,   0, -10,
-                              -10,   5,   5,  10,  10,   5,   5, -10,
-                              -10,   0,  10,  10,  10,  10,   0, -10,
-                              -10,  10,  10,  10,  10,  10,  10, -10,
-                              -10,   5,   0,   0,   0,   0,   5, -10,
-                              -20, -10, -40, -10, -10, -40, -10, -20]
-        else:
-          bishop_table = [-20, -10, -40, -10, -10, -40, -10, -20,
-                          -10,   5,   0,   0,   0,   0,   5, -10,
-                          -10,  10,  10,  10,  10,  10,  10, -10,
-                          -10,   0,  10,  10,  10,  10,   0, -10,
-                          -10,   5,   5,  10,  10,   5,   5, -10,
-                          -10,   0,   5,  10,  10,   5,   0, -10,
-                          -10,   0,   0,   0,   0,   0,   0, -10,
-                          -20, -10, -10, -10, -10, -10, -10, -20]
-
-        piece_value =  bishop_table[(posX*8) +  posY]
-      elif piece.__class__.__name__ == "King":
-        if piece.color == "B":
-          king_mid = [-30, -40, -40, -50, -50, -40, -40, -30,
-                          -30, -40, -40, -50, -50, -40, -40, -30,
-                          -30, -40, -40, -50, -50, -40, -40, -30,
-                          -30, -40, -40, -50, -50, -40, -40, -30,
-                          -20, -30, -30, -40, -40, -30, -30, -20,
-                          -10, -20, -20, -20, -20, -20, -20, -10,
-                           20,  20,   0,   0,   0,   0,  20,  20,
-                           20,  30,  10,   0,   0,  10,  30, 20]
-        else:
-          king_mid = [20,  30,  10,  0,   0,  10,  30, 20,
-                          20,  20,   0,   0,   0,   0,  20,  20,
-                          -10, -20, -20, -20, -20, -20, -20, -10,
-                          -20, -30, -30, -40, -40, -30, -30, -20,
-                          -30, -40, -40, -50, -50, -40, -40, -30,
-                          -30, -40, -40, -50, -50, -40, -40, -30,
-                          -30, -40, -40, -50, -50, -40, -40, -30,
-                          -30, -40, -40, -50, -50, -40, -40, -30]
-         
-        '''king_table_end_game = 
-        numpy.matrix([[-50,-40,-30,-20,-20,-30,-40,-50]
+    piece_value = 0         
+    '''king_table_end_game = 
+    numpy.matrix([[-50,-40,-30,-20,-20,-30,-40,-50]
                                         [-30,-20,-10,  0,  0,-10,-20,-30]
                                         [-30,-10, 20, 30, 30, 20,-10,-30]
                                         [-30,-10, 30, 40, 40, 30,-10,-30]
@@ -215,15 +197,14 @@ class Player:
                                         [-30,-30,  0,  0,  0,  0,-30,-30]
                                         [-50,-30,-30,-30,-30,-30,-30,-50]])
         '''
-        piece_value = king_mid[(posX*8) +  posY]
-
-
-      else:
-        return 0
+    if(not piece.table == None):
+      piece_value = piece.table[(posX*8) +  posY]
       if (piece.color == self.color):
         return piece_value
       else:
         return -piece_value
+    else:
+      return piece_value
 
 
 

@@ -2,61 +2,60 @@ import Piece
 from Move import Move
 
 class Castle(Piece.Piece):
-  def __init__(self, c):
+  def __init__(self, c, px, py):
     self.color = c
+    self.posX = px
+    self.posY = py
     self.first_move = True
-
-  def get_available_moves_specific(self, board, px, py):
-    posX = px
-    posY = py
+    self.table = None
+    self.material = 750
+    
+  def get_available_moves_specific(self, board):
     available = list()
 
-    for i in range(1,7):
-      if posX + i > 7:
+    for i in [1,2,3,4,5,6,7]:
+      if self.posX + i > 7:
         break
-      if(board.matrix[posX + i][posY] == None
-      or not board.matrix[posX + i][posY].color == self.color):
-        available.append(Move(posX, posY, posX + i, posY))
-      if not board.matrix[posX + i][posY] == None:
+      if(board.matrix[self.posX + i][self.posY] == None
+      or not board.matrix[self.posX + i][self.posY].color == self.color):
+        available.append(Move(self.posX, self.posY, self.posX + i, self.posY))
+      if not board.matrix[self.posX + i][self.posY] == None:
         break
-    for i in range(1,7):
-      if posX - i < 0:
+    for i in [1,2,3,4,5,6,7]:
+      if self.posX - i < 0:
         break
-      if(board.matrix[posX - i][posY] == None
-      or not board.matrix[posX - i][posY].color == self.color):
-        available.append(Move(posX, posY, posX - i, posY))
-      if not board.matrix[posX - i][posY] == None:
+      if(board.matrix[self.posX - i][self.posY] == None
+      or not board.matrix[self.posX - i][self.posY].color == self.color):
+        available.append(Move(self.posX, self.posY, self.posX - i, self.posY))
+      if not board.matrix[self.posX - i][self.posY] == None:
         break
-    for i in range(1,7):
-      if posY + i > 7:
+    for i in [1,2,3,4,5,6,7]:
+      if self.posY + i > 7:
         break
-      if(board.matrix[posX][posY + i] == None
-      or not board.matrix[posX][posY + i].color == self.color):
-        available.append(Move(posX, posY, posX, posY + i))
-      if not board.matrix[posX][posY + i] == None:
+      if(board.matrix[self.posX][self.posY + i] == None
+      or not board.matrix[self.posX][self.posY + i].color == self.color):
+        available.append(Move(self.posX, self.posY, self.posX, self.posY + i))
+      if not board.matrix[self.posX][self.posY + i] == None:
         break
-    for i in range(1,7):
-      if posY - i < 0:
+    for i in [1,2,3,4,5,6,7]:
+      if self.posY - i < 0:
         break
-      if(board.matrix[posX][posY - i] == None
-      or not board.matrix[posX][posY - i].color == self.color):
-        available.append(Move(posX, posY, posX, posY - i))
-      if not board.matrix[posX][posY - i] == None:
+      if(board.matrix[self.posX][self.posY - i] == None
+      or not board.matrix[self.posX][self.posY - i].color == self.color):
+        available.append(Move(self.posX, self.posY, self.posX, self.posY - i))
+      if not board.matrix[self.posX][self.posY - i] == None:
         break
     return available        
   
-  def get_first_move(self):
-    return self.first_move
-  
-  def set_first(self, arg):
-    self.first_move = arg
-  
-
   def is_illegal(self, startX, startY, endX, endY, board):
-    if(abs(startX - endX) > 0
-    and abs(startY - endY) == 0):
+    if( (not(startX - endX) == 0)
+    and (startY - endY == 0)):
       length_of_move = startX - endX
-      for i in range(1, abs(length_of_move)):
+      if (length_of_move < 0):
+        range_var = -length_of_move
+      else:
+        range_var = length_of_move
+      for i in range(1, range_var):
         if(length_of_move < 0):
           if(not board.matrix[startX + i][startY]
           == None):
@@ -74,10 +73,14 @@ class Castle(Piece.Piece):
           return False
       else:
         return False
-    elif(abs(startX - endX) == 0
-    and abs(startY - endY) > 0):
+    elif(startX - endX == 0
+    and (not (startY - endY) ==  0)):
       length_of_move = startY - endY
-      for i in range(1, abs(length_of_move)):
+      if (length_of_move < 0):
+        range_var = -length_of_move
+      else:
+        range_var = length_of_move
+      for i in range(1, range_var):
         if(length_of_move < 0):
           if(not board.matrix[startX][startY + i]
           == None):
