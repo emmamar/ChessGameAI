@@ -1,7 +1,5 @@
 #!/usr/bin/python
 
-import cProfile
-
 
 import sys
 from Move import Move

@@ -43,14 +43,6 @@ class Move:
       str(self.endX + 1))
     return self.algebraic
 
-  def getStartX(self):
-    return self.startX
-  def getStartY(self):
-    return self.startY
-  def getEndX(self):
-    return self.endX
-  def getEndY(self):
-    return self.endY
   def get_algebraic(self):
     return self.algebraic
   def to_string(self):

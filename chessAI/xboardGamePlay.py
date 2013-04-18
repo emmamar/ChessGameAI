@@ -1,8 +1,5 @@
 from Board import Board
 from Player import Player
-from Move import Move
-import copy
-import cProfile
 
 '''this class starts the game on the computer. It creates a board 
 object and can create 2 players, determine the next move for the 

@@ -4,7 +4,6 @@ from pieces import Queen
 from pieces import Bishop
 from pieces import Knight
 from pieces import Pawn
-from Move import Move
 
 '''this class creates a board object that stores information
 about the current board configuration.'''
@@ -64,30 +63,41 @@ class Board:
 
   '''moves a piece on the board given the move'''
   def try_move_piece(self, move):
+    '''move'''
     self.history.append(move) 
+    '''taken piece'''
     self.history.append(self.matrix[move.endX][move.endY])
     if(not self.matrix[move.endX][move.endY] == None):
       if(self.matrix[move.endX][move.endY].color == "B"):
         self.black_pieces.remove(self.matrix[move.endX][move.endY])
       else:
         self.white_pieces.remove(self.matrix[move.endX][move.endY])
+    '''queened'''
     self.history.append(False)
-    '''if(not self.is_illegal_move(move)):'''
-    if(self.matrix[move.startX]
-    [move.startY].__class__.__name__ == "Pawn"):
+    if(self.matrix[move.startX][move.startY].__class__.__name__ == "Pawn"):
       color = self.matrix[move.startX][move.startY].color
       if((color == "W" and move.endX == 7)
       or color == "B" and move.endX == 0):
+        if(color == "B"):
+          self.black_pieces.remove(self.matrix[move.startX][move.startY])
+        else:
+          self.white_pieces.remove(self.matrix[move.startX][move.startY])
         self.matrix[move.endX][move.endY] = Queen.Queen(
           color, move.endX, move.endY
         )
+        if(color == "B"):
+          self.black_pieces.append(self.matrix[move.endX][move.endY])
+        else:
+          self.white_pieces.append(self.matrix[move.endX][move.endY])
         self.history.pop()
         self.history.append(True)
       else:
         self.matrix[move.endX][move.endY] = (
         self.matrix[move.startX][move.startY])
+      '''castled'''
       self.history.append(False)
-      self.history.append(False) 
+      '''castle/king first moved'''
+      self.history.append(False)
     elif (self.matrix[move.startX]
     [move.startY].__class__.__name__ == "King"):
       if(self.matrix[move.startX][move.startY].first_move):
@@ -97,27 +107,27 @@ class Board:
               self.matrix[7][3] = self.matrix[7][0]
               self.matrix[7][0] = None
               self.matrix[7][3].first_move = False
-              self.matrix[7][3].setPosX(7)
-              self.matrix[7][3].setPosY(3)
+              self.matrix[7][3].posX = 7
+              self.matrix[7][3].posY = 3
             if(move.endY == 6):
               self.matrix[7][5] = self.matrix[7][7]
               self.matrix[7][7] = None
               self.matrix[7][5].first_move = False
-              self.matrix[7][5].setPosX(7)
-              self.matrix[7][5].setPosY(5)
+              self.matrix[7][5].posX = 7
+              self.matrix[7][5].posY = 5
           else:
             if(move.endY == 2):
               self.matrix[0][3] = self.matrix[0][0]
               self.matrix[0][0] = None
               self.matrix[0][3].first_move = False
-              self.matrix[0][3].setPosX(0)
-              self.matrix[0][3].setPosY(3)
+              self.matrix[0][3].posX = 0
+              self.matrix[0][3].posY = 3
             if(move.endY == 6):
               self.matrix[0][5] = self.matrix[0][7]
               self.matrix[0][7] = None  
               self.matrix[0][5].first_move = False
-              self.matrix[0][5].setPosX(0)
-              self.matrix[0][5].setPosY(5)
+              self.matrix[0][5].posX = 0
+              self.matrix[0][5].posY = 5
           self.history.append(True)
         else:
           self.history.append(False)
@@ -154,56 +164,61 @@ class Board:
     self.matrix[move.endX][move.endY].posX = move.endX
     self.matrix[move.endX][move.endY].posY = move.endY
     return True
-    '''else:
-    return False'''
 
   def undo(self):
     first_move = self.history.pop()
     castled = self.history.pop()
     queened = self.history.pop()
     last_move_taken = self.history.pop()
+    last_move = self.history.pop()
     if(not last_move_taken == None):
       if(last_move_taken.color == "B"):
         self.black_pieces.append(last_move_taken)
       else:
         self.white_pieces.append(last_move_taken)
-    last_move = self.history.pop()
    
-    
     if(queened):
       color = self.matrix[last_move.endX][last_move.endY].color
+      if(color == "W"):
+        self.white_pieces.remove(self.matrix[last_move.endX][last_move.endY])
+      else:
+        self.black_pieces.remove(self.matrix[last_move.endX][last_move.endY])
       self.matrix[last_move.startX][last_move.startY] = Pawn.Pawn(
-        color
-      )
+        color, last_move.startX, last_move.startY)
+      if(color == "W"):
+        self.white_pieces.append(self.matrix[last_move.startX][last_move.startY])
+      else:
+        self.black_pieces.append(self.matrix[last_move.startX][last_move.startY])
+        
     elif(castled):
       if(last_move.endX == 7):
         if(last_move.endY == 2):
           self.matrix[7][0] = self.matrix[7][3]
           self.matrix[7][3] = None
-          self.matrix[7][0].set_first(True)
-          self.matrix[7][0].setPosX(7)
-          self.matrix[7][0].setPosY(0)
+          self.matrix[7][0].first_move = True
+          self.matrix[7][0].posX = 7
+          self.matrix[7][0].posY= 0
         elif(last_move.endY == 6):
           self.matrix[7][7] = self.matrix[7][5]
           self.matrix[7][5] = None
-          self.matrix[7][7].set_first(True)
-          self.matrix[7][7].setPosX(7)
-          self.matrix[7][7].setPosY(7)
+          self.matrix[7][7].first_move = True
+          self.matrix[7][7].posX = 7
+          self.matrix[7][7].posY = 7
           
       elif(last_move.endX == 0):
         if(last_move.endY == 2):
           self.matrix[0][0] = self.matrix[0][3]
           self.matrix[0][3] = None
-          self.matrix[0][0].set_first(True)
-          self.matrix[0][0].setPosX(0)
-          self.matrix[0][0].setPosY(0)
+          self.matrix[0][0].first_move = True
+          self.matrix[0][0].posX = 0
+          self.matrix[0][0].posY = 0
         elif(last_move.endY == 6):
           self.matrix[0][7] = self.matrix[0][5]
           self.matrix[0][5] = None
-          self.matrix[0][7].set_first(True)
-          self.matrix[0][7].setPosX(0)
-          self.matrix[0][7].setPosY(7)
-      self.matrix[last_move.endX][last_move.endY].first_move = first_move
+          self.matrix[0][7].first_move = True
+          self.matrix[0][7].posX = 0
+          self.matrix[0][7].posY = 7
+      self.matrix[last_move.endX][last_move.endY].first_move = True
       self.matrix[last_move.startX][last_move.startY] = self.matrix[last_move.endX][last_move.endY]
     elif(self.matrix[last_move.endX]
     [last_move.endY].__class__.__name__ == "King"):
@@ -236,34 +251,25 @@ class Board:
   def save_board(self):
     f = open('/home/emma/Python/board/BoardPlayed.txt', 'w')
     f.write(self.to_string())
-
-  '''returns the current board matrix configuration'''
-  def getMatrix(self):
-    return self.matrix
     
   '''returns the given piece at a position in the same
   representation as Board.txt'''
   def getValueAt(self, x, y):
     if (x < 0 or x >= 8 or y < 0 or y >= 8):
       print "not in range"
-    return self.matrix[x][y].toString()
+    return self.matrix[x][y].string_rep
 
   '''returns the matrix in string form like in Board.txt'''
   def to_string(self):
     board_string = ''
-    for i in range(0, 8):
-      for j in range(0, 8):
+    for i in [0,1,2,3,4,5,6,7]:
+      for j in [0,1,2,3,4,5,6,7]:
         if self.matrix[i][j] == None:
           board_string += "00" + ' '
         else:
-          board_string += self.matrix[i][j].toString() + ' '
+          board_string += self.matrix[i][j].string_rep + ' '
       board_string += '\n'
     return board_string
-
-  '''determines whether the current board represents a check
-  mate configuration'''
-  def is_check_mate(self):
-    return True
 
   '''determines whether the current board represents a check
   configuration'''

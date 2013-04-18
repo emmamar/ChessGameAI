@@ -1,15 +1,8 @@
-import copy
-import sys
-import cProfile
 
 class Piece():
 
   def __init__(self, c, px, py):
-    self.d = 1
-    self.color = c
-    self.posX = px
-    self.posY = py
-    self.first_move = True
+    pass
   
   def get_available_moves(self, board):
     test_set = self.get_available_moves_specific(board)
