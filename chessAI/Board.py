@@ -20,6 +20,8 @@ class Board:
     self.white_king_refY = None
     self.white_pieces = list()
     self.black_pieces = list()
+    self.white_piece_count = 16
+    self.black_piece_count = 16
     
     i = 0
     for line in f:
@@ -54,14 +56,9 @@ class Board:
     "BW":Bishop.Bishop("W", i, j), "RW":Knight.Knight("W", i, j),
     "CW":Castle.Castle("W", i, j)}
     return piece_map[item]
-  
-  def get_black(self):
-    return self.black_pieces
-  
-  def get_white(self):
-    return self.white_pieces
 
   '''moves a piece on the board given the move'''
+
   def try_move_piece(self, move):
     '''move'''
     self.history.append(move) 
@@ -70,8 +67,10 @@ class Board:
     if(not self.matrix[move.endX][move.endY] == None):
       if(self.matrix[move.endX][move.endY].color == "B"):
         self.black_pieces.remove(self.matrix[move.endX][move.endY])
+        self.black_piece_count -= 1
       else:
         self.white_pieces.remove(self.matrix[move.endX][move.endY])
+        self.white_piece_count -= 1
     '''queened'''
     self.history.append(False)
     if(self.matrix[move.startX][move.startY].__class__.__name__ == "Pawn"):
@@ -174,8 +173,10 @@ class Board:
     if(not last_move_taken == None):
       if(last_move_taken.color == "B"):
         self.black_pieces.append(last_move_taken)
+        self.black_piece_count += 1
       else:
         self.white_pieces.append(last_move_taken)
+        self.white_piece_count += 1
    
     if(queened):
       color = self.matrix[last_move.endX][last_move.endY].color
@@ -203,8 +204,7 @@ class Board:
           self.matrix[7][5] = None
           self.matrix[7][7].first_move = True
           self.matrix[7][7].posX = 7
-          self.matrix[7][7].posY = 7
-          
+          self.matrix[7][7].posY = 7   
       elif(last_move.endX == 0):
         if(last_move.endY == 2):
           self.matrix[0][0] = self.matrix[0][3]
@@ -218,6 +218,12 @@ class Board:
           self.matrix[0][7].first_move = True
           self.matrix[0][7].posX = 0
           self.matrix[0][7].posY = 7
+      if(self.matrix[last_move.endX][last_move.endY].color == "B"):
+        self.black_king_refX = last_move.startX
+        self.black_king_refY = last_move.startY
+      else:
+        self.white_king_refX = last_move.startX
+        self.white_king_refY = last_move.startY
       self.matrix[last_move.endX][last_move.endY].first_move = True
       self.matrix[last_move.startX][last_move.startY] = self.matrix[last_move.endX][last_move.endY]
     elif(self.matrix[last_move.endX]
@@ -243,21 +249,12 @@ class Board:
     self.matrix[last_move.endX][last_move.endY] = last_move_taken
     self.matrix[last_move.startX][last_move.startY].posX = last_move.startX
     self.matrix[last_move.startX][last_move.startY].posY = last_move.startY
-    
 
-    
   '''saves the current board configuration back to the Board.txt
   file'''
   def save_board(self):
     f = open('/home/emma/Python/board/BoardPlayed.txt', 'w')
     f.write(self.to_string())
-    
-  '''returns the given piece at a position in the same
-  representation as Board.txt'''
-  def getValueAt(self, x, y):
-    if (x < 0 or x >= 8 or y < 0 or y >= 8):
-      print "not in range"
-    return self.matrix[x][y].string_rep
 
   '''returns the matrix in string form like in Board.txt'''
   def to_string(self):
@@ -270,6 +267,7 @@ class Board:
           board_string += self.matrix[i][j].string_rep + ' '
       board_string += '\n'
     return board_string
+  
 
   '''determines whether the current board represents a check
   configuration'''
@@ -291,11 +289,5 @@ class Board:
           piece.posX, piece.posY, kingX, kingY, self))
         if check:
             return check
-      
     return check
-
-  def is_illegal_move(self, move):
-    return self.matrix[move.startX][move.startY].is_illegal(
-      move, self
-    )
 

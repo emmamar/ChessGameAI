@@ -22,6 +22,10 @@ class xboardGamePlay:
   def play_move_computer(self):
     if not self.white_turn:
       alpha_list = list()
+      
+      if ((self.board_object.black_piece_count + self.board_object.white_piece_count) < 16):
+        self.depth += 2
+      
       for i in range(self.depth + 1):
         alpha_list.append(None)
       '''cProfile.runctx( "self.player1_computer.determineNextMove(self.board_object, alpha_list)", 

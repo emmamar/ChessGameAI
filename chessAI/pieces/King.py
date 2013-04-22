@@ -21,6 +21,15 @@ class King(Piece.Piece):
                     -10, -20, -20, -20, -20, -20, -20, -10,
                      20,  20,   0,   0,   0,   0,  20,  20,
                      20,  30,  10,   0,   0,  10,  30,  20]
+      self.table_end = [-50, -40, -30, -20, -20, -30, -40, -50,
+                    -30, -30,   0,   0,   0,   0, -30, -30,
+                    -30, -10,  20,  30,  30,  20, -10, -30,
+                    -30, -10,  30,  40,  40,  30, -10, -30,
+                    -30, -10,  30,  40,  40,  30, -10, -30,
+                    -30, -10,  20,  30,  30,  20, -10, -30,
+                    -30, -20, -10,   0,   0, -10, -20, -30,
+                    -50, -30, -30, -30, -30, -30, -30, -50]
+      
     else:
       self.table = [20,  30,  10,   0,   0,  10,  30,  20,
                     20,  20,   0,   0,   0,   0,  20,  20,
@@ -30,6 +39,14 @@ class King(Piece.Piece):
                    -30, -40, -40, -50, -50, -40, -40, -30,
                    -30, -40, -40, -50, -50, -40, -40, -30,
                    -30, -40, -40, -50, -50, -40, -40, -30]
+      self.table_end = [-50, -40, -30, -20, -20, -30, -40, -50,
+                    -30, -20, -10,   0,   0, -10, -20, -30,
+                    -30, -10,  20,  30,  30,  20, -10, -30,
+                    -30, -10,  30,  40,  40,  30, -10, -30,
+                    -30, -10,  30,  40,  40,  30, -10, -30,
+                    -30, -10,  20,  30,  30,  20, -10, -30,
+                    -30, -30,   0,   0,   0,   0, -30, -30,
+                    -50, -30, -30, -30, -30, -30, -30, -50]
 
   def get_available_moves_specific(self, board):
     available = list()
@@ -73,12 +90,25 @@ class King(Piece.Piece):
             and board.matrix[7][1] == None
             and board.matrix[7][2] == None
             and board.matrix[7][3] == None):
-              available.append(Move(self.posX, self.posY, self.posX, self.posY - 2))
+              if(not board.is_check(self.color)):
+                board.try_move_piece(Move(7,4,7,3))
+                if(not board.is_check(self.color)):
+                  board.undo()
+                  available.append(Move(self.posX, self.posY, self.posX, self.posY - 2))
+                else:
+                  board.undo()                  
           if(board.matrix[7][7].__class__.__name__ == "Castle"):
             if(board.matrix[7][7].first_move
             and board.matrix[7][6] == None
             and board.matrix[7][5] == None):
-              available.append(Move(self.posX, self.posY, self.posX, self.posY + 2))
+              if(not board.is_check(self.color)):
+                board.try_move_piece(Move(7,4,7,5))
+                if(not board.is_check(self.color)):
+                  board.undo()
+                  available.append(Move(self.posX, self.posY, self.posX, self.posY + 2))
+                else:
+                  board.undo() 
+              
       else:
         if(self.posX == 0 and self.posY == 4): 
           if(board.matrix[0][0].__class__.__name__ == "Castle"):
@@ -86,12 +116,24 @@ class King(Piece.Piece):
             and board.matrix[0][1] == None
             and board.matrix[0][2] == None
             and board.matrix[0][3] == None):
-              available.append(Move(self.posX, self.posY, self.posX, self.posY - 2))
+              if(not board.is_check(self.color)):
+                board.try_move_piece(Move(0,4,0,3))
+                if(not board.is_check(self.color)):
+                  board.undo()
+                  available.append(Move(self.posX, self.posY, self.posX, self.posY - 2))
+                else:
+                  board.undo()  
           if(board.matrix[0][7].__class__.__name__ == "Castle"):
             if(board.matrix[0][7].first_move
             and board.matrix[0][6] == None
             and board.matrix[0][5] == None):
-              available.append(Move(self.posX, self.posY, self.posX, self.posY + 2))       
+              if(not board.is_check(self.color)):
+                board.try_move_piece(Move(0,4,0,5))
+                if(not board.is_check(self.color)):
+                  board.undo()
+                  available.append(Move(self.posX, self.posY, self.posX, self.posY + 2))  
+                else:
+                  board.undo() 
     return available
 
   def is_illegal(self, startX, startY, endX, endY, board):

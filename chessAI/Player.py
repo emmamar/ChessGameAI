@@ -29,7 +29,6 @@ class Player:
             opponent = Player("W", (self.depth - 1))
           elif self.color == "W":
             opponent = Player("B", (self.depth - 1))
-
           board.try_move_piece(choise)
           opponent_choise, opponent_heur = opponent.determineNextMove(
             board, alpha_beta_list[1:]
@@ -70,13 +69,13 @@ class Player:
   def get_all_available_moves(self, board):
     available_moves = list()
     if(self.color == "B"):
-      for piece in board.get_black():
+      for piece in board.black_pieces:
         per_piece = piece.get_available_moves(
           board)
         for move in per_piece:
           available_moves.append(move)
     elif(self.color == "W"):
-      for piece in board.get_white():
+      for piece in board.white_pieces:
         per_piece = piece.get_available_moves(
           board)
         for move in per_piece:
@@ -89,16 +88,20 @@ class Player:
   def calculate_heuristic(self, board, move):
     board.try_move_piece(move)
     total_heuristic = 0
-    for piece in board.get_black():
+    end_white = (board.white_piece_count < 9)
+    end_black = (board.black_piece_count < 9)
+    for piece in board.black_pieces:
       total_heuristic += self.calc_material(piece)
       total_heuristic += self.calc_piece_table_score(
-        piece, piece.posX, piece.posY
+        piece, piece.posX, piece.posY, end_black
       )
-    for piece in board.get_white():
+      total_heuristic += self.calculate_attacked(piece, board, board.white_pieces)
+    for piece in board.white_pieces:
       total_heuristic += self.calc_material(piece)
       total_heuristic += self.calc_piece_table_score(
-        piece, piece.posX, piece.posY
+        piece, piece.posX, piece.posY, end_white
       )
+      total_heuristic += self.calculate_attacked(piece, board, board.black_pieces)
     board.undo()
     return total_heuristic
 
@@ -116,20 +119,13 @@ class Player:
   def calc_doubled_blocked_isolated_pawns(self):
     pass
 
-  def calc_piece_table_score(self, piece, posX, posY):
+  def calc_piece_table_score(self, piece, posX, posY, end):
     piece_value = 0         
-    '''king_table_end_game = 
-    numpy.matrix([[-50,-40,-30,-20,-20,-30,-40,-50]
-                                        [-30,-20,-10,  0,  0,-10,-20,-30]
-                                        [-30,-10, 20, 30, 30, 20,-10,-30]
-                                        [-30,-10, 30, 40, 40, 30,-10,-30]
-                                        [-30,-10, 30, 40, 40, 30,-10,-30]
-                                        [-30,-10, 20, 30, 30, 20,-10,-30]
-                                        [-30,-30,  0,  0,  0,  0,-30,-30]
-                                        [-50,-30,-30,-30,-30,-30,-30,-50]])
-        '''
     if(not piece.table == None):
-      piece_value = piece.table[(posX*8) +  posY]
+      if(end and (piece.__class__.__name__ == "King")):
+        piece_value = piece.table_end[(posX*8) +  posY]
+      else:
+        piece_value = piece.table[(posX*8) +  posY]
       if (piece.color == self.color):
         return piece_value
       else:
@@ -137,7 +133,16 @@ class Player:
     else:
       return piece_value
 
-
+  def calculate_attacked(self, piece, board, attacking_pieces):
+    for i in attacking_pieces:
+      if(not i.is_illegal(i.posX, i.posY, piece.posX, piece.posY, board)):
+        attack_points = piece.material * 0.5
+        if(piece.color == self.color):
+          attack_points = -attack_points
+        break
+      else:
+        attack_points = 0
+    return attack_points
 
 
 
