@@ -31,64 +31,74 @@ class Knight(Piece.Piece):
                               -40, -20,   0,   0,   0,   0, -20, -40,
                               -50, -40, -30, -30, -30, -30, -40, -50]
 
-  def get_available_moves_specific(self, board):
-    available = list()
+    self.available_moves = None
+    self.attacking = None
+    self.refresh_on_change_squares = None
+    
+  def refresh_state(self, board):
+    self.available_moves = []
+    self.attacking = []   
+    self.refresh_on_change_squares = []
+    
     if self.posX - 1 >= 0:
       if self.posY - 2 >= 0:
-        if((board.matrix[self.posX - 1][self.posY - 2] == None)
-        or (not board.matrix[self.posX - 1][self.posY - 2].color == self.color)):
-          available.append(Move(self.posX, self.posY, self.posX - 1, self.posY - 2))
+        if(board.matrix[self.posX - 1][self.posY - 2] == None):
+          self.available_moves += [Move(self.posX, self.posY, self.posX - 1, self.posY - 2)]
+        elif(not board.matrix[self.posX - 1][self.posY - 2].color == self.color):
+          self.available_moves += [Move(self.posX, self.posY, self.posX - 1, self.posY - 2)]
+          self.attacking += [board.matrix[self.posX - 1][self.posY - 2]]
+        self.refresh_on_change_squares += [[self.posX - 1,self.posY - 2]]
       if self.posY + 2 <= 7:
-        if(board.matrix[self.posX - 1][self.posY + 2] == None
-        or (not board.matrix[self.posX - 1][self.posY + 2].color == self.color)):
-          available.append(Move(self.posX, self.posY, self.posX - 1, self.posY + 2))
+        if(board.matrix[self.posX - 1][self.posY + 2] == None):
+          self.available_moves += [Move(self.posX, self.posY, self.posX - 1, self.posY + 2)]
+        elif(not board.matrix[self.posX - 1][self.posY + 2].color == self.color):
+          self.available_moves += [Move(self.posX, self.posY, self.posX - 1, self.posY + 2)]
+          self.attacking += [board.matrix[self.posX - 1][self.posY + 2]]
+        self.refresh_on_change_squares += [[self.posX - 1,self.posY + 2]]
     if self.posX - 2 >= 0:
       if self.posY - 1 >= 0:
-        if(board.matrix[self.posX - 2][self.posY - 1] == None
-        or (not board.matrix[self.posX - 2][self.posY - 1].color == self.color)):
-          available.append(Move(self.posX, self.posY, self.posX - 2, self.posY - 1))
+        if(board.matrix[self.posX - 2][self.posY - 1] == None):
+          self.available_moves += [Move(self.posX, self.posY, self.posX - 2, self.posY - 1)]
+        elif(not board.matrix[self.posX - 2][self.posY - 1].color == self.color):
+          self.available_moves += [Move(self.posX, self.posY, self.posX - 2, self.posY - 1)]
+          self.attacking += [board.matrix[self.posX - 2][self.posY - 1]]
+        self.refresh_on_change_squares += [[self.posX - 2,self.posY - 1]]
       if self.posY + 1 <= 7:
-        if(board.matrix[self.posX - 2][self.posY + 1] == None
-        or (not board.matrix[self.posX - 2][self.posY + 1].color == self.color)):
-          available.append(Move(self.posX, self.posY, self.posX - 2, self.posY + 1))
+        if(board.matrix[self.posX - 2][self.posY + 1] == None):
+          self.available_moves += [Move(self.posX, self.posY, self.posX - 2, self.posY + 1)]
+        elif(not board.matrix[self.posX - 2][self.posY + 1].color == self.color):
+          self.available_moves += [Move(self.posX, self.posY, self.posX - 2, self.posY + 1)]
+          self.attacking += [board.matrix[self.posX - 2][self.posY + 1]]
+        self.refresh_on_change_squares += [[self.posX - 2,self.posY + 1]]
     if self.posX + 1 <= 7:
       if self.posY - 2 >= 0:
-        if(board.matrix[self.posX + 1][self.posY - 2] == None
-        or (not board.matrix[self.posX + 1][self.posY - 2].color == self.color)):
-          available.append(Move(self.posX, self.posY, self.posX + 1, self.posY - 2))
+        if(board.matrix[self.posX + 1][self.posY - 2] == None):
+          self.available_moves += [Move(self.posX, self.posY, self.posX + 1, self.posY - 2)]
+        elif(not board.matrix[self.posX + 1][self.posY - 2].color == self.color):
+          self.available_moves += [Move(self.posX, self.posY, self.posX + 1, self.posY - 2)]
+          self.attacking += [board.matrix[self.posX + 1][self.posY - 2]]
+        self.refresh_on_change_squares += [[self.posX + 1,self.posY - 2]]
       if self.posY + 2 <= 7:
-        if(board.matrix[self.posX + 1][self.posY + 2] == None
-        or (not board.matrix[self.posX + 1][self.posY + 2].color == self.color)):
-          available.append(Move(self.posX, self.posY, self.posX + 1, self.posY + 2))
+        if(board.matrix[self.posX + 1][self.posY + 2] == None):
+          self.available_moves += [Move(self.posX, self.posY, self.posX + 1, self.posY + 2)]
+        elif(not board.matrix[self.posX + 1][self.posY + 2].color == self.color):
+          self.available_moves += [Move(self.posX, self.posY, self.posX + 1, self.posY + 2)]
+          self.attacking += [board.matrix[self.posX + 1][self.posY + 2]]
+        self.refresh_on_change_squares += [[self.posX + 1,self.posY + 2]]
     if self.posX + 2 <= 7:
       if self.posY - 1 >= 0:
-        if(board.matrix[self.posX + 2][self.posY - 1] == None
-        or (not board.matrix[self.posX + 2][self.posY - 1].color == self.color)):
-          available.append(Move(self.posX, self.posY, self.posX + 2, self.posY - 1))
+        if(board.matrix[self.posX + 2][self.posY - 1] == None):
+          self.available_moves += [Move(self.posX, self.posY, self.posX + 2, self.posY - 1)]
+        elif(not board.matrix[self.posX + 2][self.posY - 1].color == self.color):
+          self.available_moves += [Move(self.posX, self.posY, self.posX + 2, self.posY - 1)]
+          self.attacking += [board.matrix[self.posX + 2][self.posY - 1]]
+        self.refresh_on_change_squares += [[self.posX + 2,self.posY - 1]]
       if self.posY + 1 <= 7:
-        if(board.matrix[self.posX + 2][self.posY + 1] == None
-        or (not board.matrix[self.posX + 2][self.posY + 1].color == self.color)):
-          available.append(Move(self.posX, self.posY, self.posX + 2, self.posY + 1))
-    return available
-
-  def is_illegal(self, startX, startY, endX, endY, board):
-    if(board.matrix[endX][endY] == None
-    or (not board.matrix[endX][endY].color
-    == self.color)):
-      if(((startX - endX == 2) or (startX - endX == -2))
-      and ((startY - endY == 1) or (startY - endY == -1))):
-        return False
-      elif(((startY - endY == 2) or (startY - endY == -2))
-      and ((startX - endX == 1) or (startX - endX == -1))):
-        return False
-      else:
-        return True
-    else:
-      return True
-
-
-
-
-
+        if(board.matrix[self.posX + 2][self.posY + 1] == None):
+          self.available_moves += [Move(self.posX, self.posY, self.posX + 2, self.posY + 1)]
+        elif(not board.matrix[self.posX + 2][self.posY + 1].color == self.color):
+          self.available_moves += [Move(self.posX, self.posY, self.posX + 2, self.posY + 1)]
+          self.attacking += [board.matrix[self.posX + 2][self.posY + 1]]
+        self.refresh_on_change_squares.append([self.posX + 2,self.posY + 1])
 
 

@@ -5,7 +5,7 @@ class Piece():
     pass
   
   def get_available_moves(self, board):
-    test_set = self.get_available_moves_specific(board)
+    test_set = self.available_moves
     available = list()
 
     for move in test_set:
@@ -20,3 +20,5 @@ class Piece():
     no_check = can_move and not board.is_check(self.color)
     board.undo()
     return no_check
+  
+  

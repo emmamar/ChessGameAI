@@ -17,19 +17,19 @@ class Queen(Piece.Piece):
       self.string_rep = "QW"
     else:
       self.string_rep = "QB"
- 
-  def get_available_moves_specific(self, board):
+    self.available_moves = None
+    self.attacking = None
+    self.refresh_on_change_squares = None
+    
+  def refresh_state(self, board):
     self.bishop.posX = self.posX
     self.castle.posX = self.posX
     self.bishop.posY = self.posY
     self.castle.posY = self.posY
-    available = (self.bishop.get_available_moves_specific(
-                   board) +
-                 self.castle.get_available_moves_specific(
-                   board))
-    return available
+    self.bishop.refresh_state(board)
+    self.castle.refresh_state(board)
+    self.available_moves = self.bishop.available_moves + self.castle.available_moves
+    self.attacking = self.bishop.attacking + self.castle.attacking
+    self.refresh_on_change_squares = self.bishop.refresh_on_change_squares + self.castle.refresh_on_change_squares
       
-  def is_illegal(self, startX, startY, endX, endY, board):
-    return (self.bishop.is_illegal(startX, startY, endX, endY, board)
-    and self.castle.is_illegal(startX, startY, endX, endY, board))
 

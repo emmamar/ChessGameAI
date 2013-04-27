@@ -1,0 +1,115 @@
+import Piece
+from Move import Move
+
+class Castle(Piece.Piece):
+  def __init__(self, c, px, py, board):
+    self.color = c
+    self.posX = px
+    self.posY = py
+    self.first_move = True
+    self.table = None
+    self.material = 750
+    if (self.color == "W"):
+      self.string_rep = "CW"
+    else:
+      self.string_rep = "CB"
+    
+    self.available_moves = None
+    self.attacking = None
+    self.refresh_state(board)
+    
+  def refresh_state(self, board):
+    self.available_moves = self.get_available_moves_specific(board)
+       
+  def get_available_moves_specific(self, board):
+    self.attacking = list()
+    available = list()
+
+    for i in [1,2,3,4,5,6,7]:
+      if self.posX + i > 7:
+        break
+      if(board.matrix[self.posX + i][self.posY] == None):
+        available.append(Move(self.posX, self.posY, self.posX + i, self.posY))
+      elif(not board.matrix[self.posX + i][self.posY].color == self.color):
+        available.append(Move(self.posX, self.posY, self.posX + i, self.posY))
+        self.attacking.append(board.matrix[self.posX + i][self.posY])
+      if (not board.matrix[self.posX + i][self.posY] == None):
+        break
+    for i in [1,2,3,4,5,6,7]:
+      if self.posX - i < 0:
+        break
+      if(board.matrix[self.posX - i][self.posY] == None):
+        available.append(Move(self.posX, self.posY, self.posX - i, self.posY))
+      elif(not board.matrix[self.posX - i][self.posY].color == self.color):
+        available.append(Move(self.posX, self.posY, self.posX - i, self.posY))
+        self.attacking.append(board.matrix[self.posX - i][self.posY])
+      if (not board.matrix[self.posX - i][self.posY] == None):
+        break
+    for i in [1,2,3,4,5,6,7]:
+      if self.posY + i > 7:
+        break
+      if(board.matrix[self.posX][self.posY + i] == None):
+        available.append(Move(self.posX, self.posY, self.posX, self.posY + i))
+      elif(not board.matrix[self.posX][self.posY + i].color == self.color):
+        available.append(Move(self.posX, self.posY, self.posX, self.posY + i))
+        self.attacking.append(board.matrix[self.posX][self.posY + i])
+      if (not board.matrix[self.posX][self.posY + i] == None):
+        break
+    for i in [1,2,3,4,5,6,7]:
+      if self.posY - i < 0:
+        break
+      if(board.matrix[self.posX][self.posY - i] == None):
+        available.append(Move(self.posX, self.posY, self.posX, self.posY - i))
+      elif(not board.matrix[self.posX][self.posY - i].color == self.color):
+        available.append(Move(self.posX, self.posY, self.posX, self.posY - i))
+        self.attacking.append(board.matrix[self.posX][self.posY - i])
+      if (not board.matrix[self.posX][self.posY - i] == None):
+        break
+    return available        
+  
+  def is_illegal(self, startX, startY, endX, endY, board):
+    if((not (startX - endX == 0))
+    and (startY - endY == 0)):
+    
+      length_of_move = startX - endX
+      if (length_of_move < 0):
+        range_var = -length_of_move
+      else:
+        range_var = length_of_move
+      for i in range(1, range_var):
+        if(length_of_move < 0):
+          if(not (board.matrix[startX + i][startY] == None)):
+            return True
+        else:
+          if(not (board.matrix[startX - i][startY] == None)):
+            return True
+      if((board.matrix[endX][endY] == None)
+      or (not (board.matrix[endX][endY].color == self.color))):
+        return False
+      else:
+        return True
+      
+    elif((startX - endX == 0)
+    and (not (startY - endY ==  0))):
+    
+      length_of_move = startY - endY
+      if (length_of_move < 0):
+        range_var = -length_of_move
+      else:
+        range_var = length_of_move
+      for i in range(1, range_var):
+        if(length_of_move < 0):
+          if(not board.matrix[startX][startY + i] == None):
+            return True
+        else:
+          if(not board.matrix[startX][startY - i] == None):
+            return True
+      if((board.matrix[endX][endY] == None)
+      or (not (board.matrix[endX][endY].color == self.color))):
+        return False
+      else:
+        return True
+    else:
+      return True
+
+
