@@ -16,16 +16,14 @@ class Board:
     f = open('/home/emma/Python/board/Board.txt')
     self.matrix = list()
     self.history = list()
-    self.black_king_refX = None
-    self.black_king_refY = None
+    self.white_turn = True
+    self.white_heuristic = 0
     self.white_king_refX = None
     self.white_king_refY = None
     self.white_pieces = [None]*16
     self.refresh_on_change_white = [None]*16
     self.black_pieces = [None]*16
     self.refresh_on_change_black = [None]*16
-    self.white_piece_count = 16
-    self.black_piece_count = 16
     
     self.attacking_black = [None]*16
     self.available_moves_black = [None]*16
@@ -88,38 +86,48 @@ class Board:
 
   '''moves a piece on the board given the move'''
 
-  def try_move_piece(self, move):
-    available_moves_white_copy = [None]*16
-    attacking_white_copy = [None]*16
-    available_moves_black_copy = [None]*16
-    attacking_black_copy = [None]*16
-    refresh_on_change_black_copy = [None]*16
-    refresh_on_change_white_copy = [None]*16
+  def try_move_piece(self, move_heuristic_pair):
+    '''[1:available_moves_white_copy, 2:available_moves_black_copy, 3:attacking_white_copy, 4:attacking_black_copy,
+    5:refresh_on_change_black_copy, 6:refresh_on_change_white_copy, 7:move, 8:taken_piece, 9:queened, 10:castled, 11:first_move]'''
+    history_cell = [None, None, None, None, None, None, None, None, False, False, False]
+    '''get move informatin'''
+    move = move_heuristic_pair[0]
+    heuristic_increase = move_heuristic_pair[1]
+    if(self.matrix[move.startX][move.startY].color == "B"):
+      self.white_heuristic -= heuristic_increase
+    else:
+      self.white_heuristic += heuristic_increase
     
+    '''copy variables into history'''
     available_moves_white_local = self.available_moves_white
-    attacking_white_local = self.attacking_white
     available_moves_black_local = self.available_moves_black
+    attacking_white_local = self.attacking_white
     attacking_black_local = self.attacking_black
     refresh_on_change_black_local = self.refresh_on_change_black
     refresh_on_change_white_local = self.refresh_on_change_white
+    available_moves_white_copy = [None]*16
+    available_moves_black_copy = [None]*16
+    attacking_white_copy = [None]*16
+    attacking_black_copy = [None]*16
+    refresh_on_change_black_copy = [None]*16
+    refresh_on_change_white_copy = [None]*16
     for i in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]:
       available_moves_white_copy[i] = available_moves_white_local[i]
-      attacking_white_copy[i] = attacking_white_local[i]
       available_moves_black_copy[i] = available_moves_black_local[i]
+      attacking_white_copy[i] = attacking_white_local[i]
       attacking_black_copy[i] = attacking_black_local[i]
       refresh_on_change_black_copy[i] = refresh_on_change_black_local[i]
       refresh_on_change_white_copy[i] = refresh_on_change_white_local[i]
+    self.history_cell[1] = available_moves_white_copy
+    self.history_cell[2] = available_moves_black_copy
+    self.history_cell[3] = attacking_white_copy
+    self.history_cell[4] = attacking_black_copy
+    self.history_cell[5] = refresh_on_change_black_copy
+    self.history_cell[6] = refresh_on_change_white_copy
     
-    self.history += [available_moves_white_copy]
-    self.history += [attacking_white_copy]
-    self.history += [available_moves_black_copy]
-    self.history += [attacking_black_copy]
-    self.history += [refresh_on_change_black_copy]
-    self.history += [refresh_on_change_white_copy]
     '''move'''
-    self.history += [Move(move.startX, move.startY, move.endX, move.endY)]
+    self.history_cell[7] = [Move(move.startX, move.startY, move.endX, move.endY), heuristic_increase]
     '''taken piece'''
-    
     index = -1
     if(not self.matrix[move.endX][move.endY] == None):
       if(self.matrix[move.endX][move.endY].color == "B"):
@@ -128,17 +136,14 @@ class Board:
         self.refresh_on_change_black[index] = None
         self.available_moves_black[index] = None
         self.attacking_black[index] = None
-        self.black_piece_count -= 1
       else:
         index = self.white_pieces.index(self.matrix[move.endX][move.endY])
         self.white_pieces[index] = None
         self.refresh_on_change_white[index] = None
         self.available_moves_white[index] = None
         self.attacking_white[index] = None
-        self.white_piece_count -= 1
-    self.history += [[self.matrix[move.endX][move.endY], index]]
-    '''queened'''
-    self.history += [False]
+    self.history_cell[8] = [self.matrix[move.endX][move.endY], index]
+    
     if(self.matrix[move.startX][move.startY].__class__.__name__ == "Pawn"):
       color = self.matrix[move.startX][move.startY].color
       if((color == "W" and move.endX == 7)
@@ -157,15 +162,10 @@ class Board:
           self.black_pieces[index] = self.matrix[move.endX][move.endY]
         else:
           self.white_pieces[index] = self.matrix[move.endX][move.endY]
-        self.history.pop()
-        self.history += [True]
+        self.history[9] = True
       else:
         self.matrix[move.endX][move.endY] = (
         self.matrix[move.startX][move.startY])
-      '''castled'''
-      self.history += [False]
-      '''castle/king first moved'''
-      self.history += [False]
     elif (self.matrix[move.startX]
     [move.startY].__class__.__name__ == "King"):
       if(self.matrix[move.startX][move.startY].first_move):
@@ -196,68 +196,90 @@ class Board:
               self.matrix[0][5].first_move = False
               self.matrix[0][5].posX = 0
               self.matrix[0][5].posY = 5
-          self.history += [True]
-        else:
-          self.history += [False]
-        self.history += [True]
+          self.history[10] = True
+        self.history[11] = True
         self.matrix[move.startX][move.startY].first_move = False
-      else:
-        self.history += [False]
-        self.history += [False]
-      if(self.matrix[move.startX][move.startY].color == "B"):
-        self.black_king_refX = move.endX
-        self.black_king_refY = move.endY
-      else:
-        self.white_king_refX = move.endX
-        self.white_king_refY = move.endY
       self.matrix[move.endX][move.endY] = (
       self.matrix[move.startX][move.startY])
     elif (self.matrix[move.startX]
     [move.startY].__class__.__name__ == "Castle"):
       if(self.matrix[move.startX][move.startY].first_move):
-        self.history += [False]
-        self.history += [True]
+        self.history[11] = True
         self.matrix[move.startX][move.startY].first_move = False
-      else:
-        self.history += [False]
-        self.history += [False]
       self.matrix[move.endX][move.endY] = (
       self.matrix[move.startX][move.startY])
     else:
       self.matrix[move.endX][move.endY] = (
       self.matrix[move.startX][move.startY])
-      self.history += [False]
-      self.history += [False]
     self.matrix[move.startX][move.startY] = None
     self.matrix[move.endX][move.endY].posX = move.endX
     self.matrix[move.endX][move.endY].posY = move.endY
     
+        
     
+    
+    
+    
+    
+    
+    king_to_refresh_black = None
+    saved_index_black = 0
     idx = 0
     for each in self.black_pieces:
       if(not self.black_pieces[idx] == None):
         if ([move.endX, move.endY] in self.refresh_on_change_black[idx]) or ([move.startX, move.startY] in self.refresh_on_change_black[idx]):
-          each.refresh_state(self)
-          self.refresh_on_change_black[idx] = each.refresh_on_change_squares
-          self.available_moves_black[idx] = each.available_moves
-          self.attacking_black[idx] = each.attacking
+          if(each.__class__.__name__ == "King"):
+            king_to_refresh_black = each
+            saved_index_black = idx
+          else:
+            each.refresh_state(self)
+            self.refresh_on_change_black[idx] = each.refresh_on_change_squares
+            self.available_moves_black[idx] = each.available_moves
+            self.attacking_black[idx] = each.attacking
       idx += 1
+     
       
-      
+    king_to_refresh_white = None 
+    saved_index = 0 
     idx = 0
     for each in self.white_pieces:
       if(not self.white_pieces[idx] == None):
         if ([move.endX, move.endY] in self.refresh_on_change_white[idx]) or ([move.startX, move.startY] in self.refresh_on_change_white[idx]):
-          each.refresh_state(self)
-          self.refresh_on_change_white[idx] = each.refresh_on_change_squares
-          self.available_moves_white[idx] = each.available_moves
-          self.attacking_white[idx] = each.attacking
+          if(each.__class__.__name__ == "King"):
+            king_to_refresh_white = each
+            saved_index = idx
+          else:
+            each.refresh_state(self)
+            self.refresh_on_change_white[idx] = each.refresh_on_change_squares
+            self.available_moves_white[idx] = each.available_moves
+            self.attacking_white[idx] = each.attacking
       idx += 1
+      
+    
+    if(not king_to_refresh_black == None):
+      king_to_refresh_black.refresh_state(self)
+      self.refresh_on_change_white[saved_index_black] = king_to_refresh_black.refresh_on_change_squares
+      self.available_moves_white[saved_index_black] = king_to_refresh_black.available_moves
+      self.attacking_white[saved_index_black] = king_to_refresh_black.attacking
+    if(not king_to_refresh_white == None):
+      king_to_refresh_white.refresh_state(self)
+      self.refresh_on_change_white[saved_index] = king_to_refresh_white.refresh_on_change_squares
+      self.available_moves_white[saved_index] = king_to_refresh_white.available_moves
+      self.attacking_white[saved_index] = king_to_refresh_white.attacking
+      
+      
+    self.history += history_cell
     return True
 
 
   def undo(self):
-    first_move = self.history[-1]
+    history_cell = self.history[-1]
+    del self.history[-1]
+    '''[1:available_moves_white_copy, 2:available_moves_black_copy, 3:attacking_white_copy, 4:attacking_black_copy,
+    5:refresh_on_change_black_copy, 6:refresh_on_change_white_copy, 7:move, 8:taken_piece, 9:queened, 10:castled, 11:first_move]'''
+    
+    castled
+    first_move = history_cell
     del self.history[-1]
     castled = self.history[-1]
     del self.history[-1]
@@ -265,28 +287,30 @@ class Board:
     del self.history[-1]
     last_move_taken = self.history[-1]
     del self.history[-1]
-    last_move = self.history[-1]
+    
+    
+    last_move_heuristic_pair = self.history[-1]
+    last_move = last_move_heuristic_pair[0]
+    last_heur_inc = last_move_heuristic_pair[1]
     del self.history[-1]
+    if(self.matrix[last_move.endX][last_move.endY].color == "B"):
+      self.white_heuristic += last_heur_inc
+    else:
+      self.white_heuristic -= last_heur_inc
+    
     self.refresh_on_change_white = self.history[-1]
-    del self.history[-1]
     self.refresh_on_change_black = self.history[-1]
-    del self.history[-1]
     self.attacking_black = self.history[-1]
-    del self.history[-1]
     self.available_moves_black = self.history[-1]
-    del self.history[-1]
     self.attacking_white = self.history[-1]
-    del self.history[-1]
     self.available_moves_white = self.history[-1]
-    del self.history[-1]
+    
     
     if(not last_move_taken[0] == None):
       if(last_move_taken[0].color == "B"):
         self.black_pieces[last_move_taken[1]] = last_move_taken[0]
-        self.black_piece_count += 1
       else:
         self.white_pieces[last_move_taken[1]] = last_move_taken[0]
-        self.white_piece_count += 1
    
     if(queened):
       color = self.matrix[last_move.endX][last_move.endY].color
@@ -333,23 +357,11 @@ class Board:
           self.matrix[0][7].first_move = True
           self.matrix[0][7].posX = 0
           self.matrix[0][7].posY = 7
-      if(self.matrix[last_move.endX][last_move.endY].color == "B"):
-        self.black_king_refX = last_move.startX
-        self.black_king_refY = last_move.startY
-      else:
-        self.white_king_refX = last_move.startX
-        self.white_king_refY = last_move.startY
       self.matrix[last_move.endX][last_move.endY].first_move = True
       self.matrix[last_move.startX][last_move.startY] = self.matrix[last_move.endX][last_move.endY]
     elif(self.matrix[last_move.endX]
     [last_move.endY].__class__.__name__ == "King"):
       self.matrix[last_move.endX][last_move.endY].first_move = first_move
-      if(self.matrix[last_move.endX][last_move.endY].color == "B"):
-        self.black_king_refX = last_move.startX
-        self.black_king_refY = last_move.startY
-      else:
-        self.white_king_refX = last_move.startX
-        self.white_king_refY = last_move.startY
       self.matrix[last_move.startX][last_move.startY] = (
       self.matrix[last_move.endX][last_move.endY])
     elif(self.matrix[last_move.endX]

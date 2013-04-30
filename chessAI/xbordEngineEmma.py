@@ -57,7 +57,8 @@ def given_move(game, given_move):
     sys.stdout.write("Illegal move: " + given_move)
     sys.stdout.flush()
   else:
-    move = game.play_move_computer()
+    move_heur_pair = game.play_move_computer()
+    move = move_heur_pair[0]
     if not move == None:
       sys.stdout.write("move " + move.getalg() + "\n")
       sys.stdout.flush()

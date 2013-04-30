@@ -10,7 +10,7 @@ class Piece():
 
     for move in test_set:
       if self.not_check(board, move):
-        available.append(move)
+        available += move
     return available
 
   def not_check(self, board, move_to_try):

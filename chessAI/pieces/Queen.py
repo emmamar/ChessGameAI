@@ -20,6 +20,14 @@ class Queen(Piece.Piece):
     self.available_moves = None
     self.attacking = None
     self.refresh_on_change_squares = None
+    self.table = [0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0, 0, 0, 0]
     
   def refresh_state(self, board):
     self.bishop.posX = self.posX
@@ -31,5 +39,4 @@ class Queen(Piece.Piece):
     self.available_moves = self.bishop.available_moves + self.castle.available_moves
     self.attacking = self.bishop.attacking + self.castle.attacking
     self.refresh_on_change_squares = self.bishop.refresh_on_change_squares + self.castle.refresh_on_change_squares
-      
 

@@ -66,618 +66,148 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") fairymax
-877 >first : xboard
+924 >first : xboard
 protover 2
 shuffleOpenings = 0
-1040 <first : tellics say     Fairy-Max 4.8Q
-1040 <first : tellics say     by H.G. Muller
-1040 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
-1040 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
-1040 <first : feature myname="Fairy-Max 4.8Q"
-1040 >first : accepted myname
-1040 <first : feature memory=1
-1040 >first : accepted memory
-1040 <first : feature setboard=0 ping=1 done=0
-1040 >first : accepted setboard
-1040 >first : accepted ping
-1040 >first : accepted done
-1040 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
-1040 >first : accepted variants
-1040 <first : feature option="Resign -check 0"
-1040 >first : accepted option
-1040 <first : feature option="Resign Threshold -spin 800 200 1200"
-1040 >first : accepted option
-1040 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
-1040 >first : accepted option
-1040 <first : feature option="Multi-PV Margin -spin 0 0 1000"
-1040 >first : accepted option
-1040 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
-1040 >first : accepted option
-1040 <first : feature option="Dummy Slider Example -slider 20 0 100"
-1040 >first : accepted option
-1040 <first : feature option="Dummy String Example -string happy birthday!"
-1040 >first : accepted option
-1040 <first : feature option="Dummy Path Example -path ."
-1040 >first : accepted option
-1040 <first : feature option="Clear Hash -button"
-1040 >first : accepted option
-1040 <first : feature done=1
-1040 >first : accepted done
-1042 >first : memory 68
-1042 >first : new
+1086 <first : tellics say     Fairy-Max 4.8Q
+1086 <first : tellics say     by H.G. Muller
+1086 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
+1086 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
+1086 <first : feature myname="Fairy-Max 4.8Q"
+1086 >first : accepted myname
+1086 <first : feature memory=1
+1086 >first : accepted memory
+1086 <first : feature setboard=0 ping=1 done=0
+1086 >first : accepted setboard
+1086 >first : accepted ping
+1086 >first : accepted done
+1086 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
+1086 >first : accepted variants
+1086 <first : feature option="Resign -check 0"
+1086 >first : accepted option
+1086 <first : feature option="Resign Threshold -spin 800 200 1200"
+1086 >first : accepted option
+1086 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
+1086 >first : accepted option
+1086 <first : feature option="Multi-PV Margin -spin 0 0 1000"
+1086 >first : accepted option
+1086 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
+1086 >first : accepted option
+1086 <first : feature option="Dummy Slider Example -slider 20 0 100"
+1087 >first : accepted option
+1087 <first : feature option="Dummy String Example -string happy birthday!"
+1087 >first : accepted option
+1087 <first : feature option="Dummy Path Example -path ."
+1087 >first : accepted option
+1087 <first : feature option="Clear Hash -button"
+1087 >first : accepted option
+1087 <first : feature done=1
+1087 >first : accepted done
+1088 >first : memory 68
+1088 >first : new
 random
-1042 >first : level 40 5 0
-1042 >first : post
-1042 >first : hard
-1042 >first : ping 1
-1098 <first : pong 1
-30326 >first : force
-Unload second
-33390 >first : quit
+1088 >first : level 40 5 0
+1088 >first : post
+1088 >first : hard
+1088 >first : ping 1
+1144 <first : pong 1
+5858 >first : force
+5859 >first : quit
 Unload first
-StartChildProcess (dir=".") fairymax
-33400 >first : xboard
+StartChildProcess (dir=".") chessAI/xbordEngineEmma.py
+5873 >first : xboard
 protover 2
-33546 <first : tellics say     Fairy-Max 4.8Q
-33546 <first : tellics say     by H.G. Muller
-33546 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
-33546 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
-33547 <first : feature myname="Fairy-Max 4.8Q"
-33547 >first : accepted myname
-33547 <first : feature memory=1
-33547 >first : accepted memory
-33547 <first : feature setboard=0 ping=1 done=0
-33547 >first : accepted setboard
-33547 >first : accepted ping
-33547 >first : accepted done
-33547 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
-33547 >first : accepted variants
-33547 <first : feature option="Resign -check 0"
-33547 >first : accepted option
-33547 <first : feature option="Resign Threshold -spin 800 200 1200"
-33547 >first : accepted option
-33547 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
-33547 >first : accepted option
-33547 <first : feature option="Multi-PV Margin -spin 0 0 1000"
-33547 >first : accepted option
-33547 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
-33547 >first : accepted option
-33547 <first : feature option="Dummy Slider Example -slider 20 0 100"
-33547 >first : accepted option
-33547 <first : feature option="Dummy String Example -string happy birthday!"
-33547 >first : accepted option
-33547 <first : feature option="Dummy Path Example -path ."
-33547 >first : accepted option
-33547 <first : feature option="Clear Hash -button"
-33547 >first : accepted option
-33547 <first : feature done=1
-33547 >first : accepted done
+5893 <first : feature myname="emmas"
+5893 >first : accepted myname
+5893 <first : ok
+5893 <first : ok
 recognized 'normal' (-1) as variant normal
-33548 >first : memory 68
-33548 >first : new
+15874 >first : new
 random
-33548 >first : level 40 5 0
-33548 >first : post
-33548 >first : hard
-33548 >first : ping 1
-33548 >first : force
-33601 <first : pong 1
+15874 >first : level 40 5 0
+15874 >first : post
+15874 >first : hard
+15874 >first : force
+15874 <first : ok
+15874 <first : ok
+15874 <first : ok
+15874 <first : ok
+15874 <first : ok
+15874 <first : ok
 Reset(1, 1) from gameMode 6
 recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
-34877 >first : memory 68
-34877 >first : new
+18713 >first : new
 random
-34877 >first : level 40 5 0
-34877 >first : post
-34877 >first : hard
-34877 >first : ping 2
-34913 <first : pong 2
-43238 >first : force
-Unload second
-46311 >first : quit
-Unload first
-StartChildProcess (dir=".") fairymax
-46322 >first : xboard
-protover 2
-46468 <first : tellics say     Fairy-Max 4.8Q
-46468 <first : tellics say     by H.G. Muller
-46468 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
-46468 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
-46468 <first : feature myname="Fairy-Max 4.8Q"
-46468 >first : accepted myname
-46469 <first : feature memory=1
-46469 >first : accepted memory
-46469 <first : feature setboard=0 ping=1 done=0
-46469 >first : accepted setboard
-46469 >first : accepted ping
-46469 >first : accepted done
-46469 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
-46469 >first : accepted variants
-46469 <first : feature option="Resign -check 0"
-46469 >first : accepted option
-46469 <first : feature option="Resign Threshold -spin 800 200 1200"
-46469 >first : accepted option
-46469 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
-46469 >first : accepted option
-46469 <first : feature option="Multi-PV Margin -spin 0 0 1000"
-46469 >first : accepted option
-46469 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
-46469 >first : accepted option
-46469 <first : feature option="Dummy Slider Example -slider 20 0 100"
-46469 >first : accepted option
-46469 <first : feature option="Dummy String Example -string happy birthday!"
-46469 >first : accepted option
-46469 <first : feature option="Dummy Path Example -path ."
-46469 >first : accepted option
-46469 <first : feature option="Clear Hash -button"
-46469 >first : accepted option
-46469 <first : feature done=1
-46469 >first : accepted done
-recognized 'normal' (-1) as variant normal
-46470 >first : memory 68
-46470 >first : new
-random
-46470 >first : level 40 5 0
-46470 >first : post
-46470 >first : hard
-46470 >first : ping 1
-46470 >first : force
-46523 <first : pong 1
-StartChildProcess (dir=".") chessAI/xbordEngineEmma.py
-48094 >second: xboard
-protover 2
-48121 <second: feature myname="emmas"
-48121 >second: accepted myname
-48121 <second: ok
-48121 <second: ok
-58105 >second: new
-random
-58105 >second: level 40 5 0
-58105 >second: post
-58105 >second: hard
-58105 >second: force
-58105 <second: ok
-58105 <second: ok
-58105 <second: ok
-58105 <second: ok
-58105 <second: ok
-58105 <second: ok
-New game (0): Fairy-Max 4.8Q-emmas (w)
-58123 >first : computer
-58123 >second: computer
-58124 >first : black
-58124 >first : time 30000
-58124 >first : otim 30000
-58124 >first : white
-book hit = (NULL)
-58124 >first : go
+18713 >first : level 40 5 0
+18713 >first : post
+18713 >first : hard
+18715 <first : ok
+18715 <first : ok
+18715 <first : ok
+18715 <first : ok
 nps: w=-1, b=-1
-58130 <first : Error (unknown command): computer
-58130 <first :  1      0        0          7 a2a4
-58131 <first :  1     12        0          9 b2b4
-58131 <first :  1     20        0         11 f2f4
-58131 <first :  1     25        0         13 f2f3
-58131 <first :  2      9        0         21 f2f3 c7c5
-58131 <first :  2     15        0         53 b1c3 c7c5
-58131 <first :  3     11        0        300 b1c3 c7c5 d2d4
-58131 <first :  3     15        0        485 b1a3 c7c5 c2c4
-58131 <first :  3     28        0        752 d2d3 c7c5 c2c4
-58131 <first :  4    -16        0       1343 d2d3 d7d5 b1c3 c7c5
-58131 <first :  4    -15        0       1902 d2d4 d7d5 b1c3 b8c6
-58137 <first :  4    -11        0       2893 e2e4 c7c5 d2d4 g8f6
-58137 <first :  4     12        1       4727 f2f3 d7d5 b1c3 c7c5
-58140 <first :  5     -4        1       6778 f2f3 d7d5 b1c3 c7c5 a2a4
-58157 <first :  5     27        3      15901 f2f4 c7c5 b1c3 d7d5 g1f3
-58174 <first :  6      2        5      25083 f2f4 c7c5 b1c3 b8c6 g1f3 d7d5
-58501 <first :  6     10       37     200259 c2c4 d7d6 f2f4 c7c5 b1c3 b8c6
-58550 <first :  6     13       42     225885 d2d3 c7c5 c1e3 d7d6 c2c4 b8c6
-58756 <first :  7      4       63     330645 d2d3 d7d5 c1f4 c7c5 b1d2 b8c6 c2c4
-59193 <first :  7     13      106     560160 d2d4 b8c6 c2c3 d7d5 c1f4 c8f5 b1d2
-59509 <first :  7     15      138     726180 e2e4 d7d5 f2f3 b8c6 b1c3 g8f6 f1d3
-59872 <first :  7     22      174     920881 g1f3 d7d5 c2c3 b8d7 d2d3 c7c5 c1f4
-60470 <first :  8     -2      234    1235060 g1f3 d7d5 d2d4 b8c6 c1f4 c8f5 b1c3 g8f6
-61517 <first :  8      5      339    1789107 a2a3 d7d5 d2d4 b8c6 b1c3 c8f5 c1f4 g8f6
-62415 <first :  8     15      429    2267744 c2c4 g8f6 b1c3 d7d5 d2d3
-62551 <first : move c2c4
-62551 >second: time 30000
-62551 >second: otim 29557
+nps: w=-1, b=-1
+21087 >first : time 30000
+21087 >first : otim 30000
 book hit = (NULL)
-62551 >second: c2c4
-62551 >second: black
-62551 >second: go
-67886 <second: ok
-67886 <second: ok
-67886 <second: ok
-67886 <second: move b8c6
+21087 >first : e2e4
+25995 <first : ok
+25995 <first : ok
+25995 <first : move g8f6
 Interrupting first
-67886 >first : time 29557
-67886 >first : otim 29466
+27917 >first : time 29509
+27917 >first : otim 29807
 book hit = (NULL)
-67886 >first : b8c6
-67980 <first :  1     14        0          3 d2d4
-67980 <first :  2      2        0         19 d2d4 a7a5
-67980 <first :  2     13        0         19 d2d3
-67980 <first :  3     12        0         42 d2d3
-67980 <first :  3     27        0        128 b1c3 f7f5 d2d4
-67980 <first :  4      5        0        296 b1c3 f7f5 d2d4 a7a5
-67980 <first :  4      9        0       1095 g1f3 f7f5 d2d3 g8f6
-67980 <first :  4     13        0       1105 d2d3
-67980 <first :  5     21        1       6283 d2d3 d7d5 c4d5 d8d5 b1c3
-68007 <first :  6      0       12      58776 d2d3 g8f6 b1c3 d7d6 c1f4 c8f5
-68062 <first :  6      2       17      85061 f2f4 e7e5 g2g3 f8d6 g1h3 f7f5
-68137 <first :  6      6       25     124478 f2f3 d7d6 b1c3 c8e6 d1b3 c6e5 b3b7 e6c4
-68414 <first :  7      7       52     269243 f2f3 f7f5 b1c3 g8f6 b2b3
-68722 <first :  7     15       83     427971 f2f4 g8f6 d2d3 d7d5 b1d2 c8f5 g1f3
-69202 <first :  7     17      131     679922 b1c3 g8f6 g1f3 d7d5 c4d5 f6d5 d2d4
-69730 <first :  8     12      184     953836 b1c3 g8f6 d2d3 d7d5 c1f4 e7e5 f4g5 f8b4
-73544 <first :  9     16      565    2907072 b1c3 g8f6 d2d3 d7d5 c4d5 f6d5 c3d5 d8d5 c1f4
-82047 <first : move b1c3
-Interrupting second
-82047 >second: time 29466
-82047 >second: otim 28141
-book hit = (NULL)
-82047 >second: b1c3
-82140 <second: ok
-82140 <second: ok
-88528 <second: ok
-88528 <second: move e7e6
+27917 >first : f1d3
+35739 <first : ok
+35739 <first : ok
+35739 <first : move d7d5
 Interrupting first
-88529 >first : time 28141
-88529 >first : otim 28818
+36677 >first : time 28726
+36677 >first : otim 29714
 book hit = (NULL)
-88529 >first : e7e6
-88602 <first :  1     14        0          3 d2d4
-88602 <first :  1     19        0          5 f2f3
-88602 <first :  1     21        0          7 g1f3
-88602 <first :  2      1        0         27 g1f3 f7f5
-88602 <first :  2      5        0         57 c3e4 d7d5
-88602 <first :  2     14        0         90 d2d4
-88602 <first :  3     10        0        630 d2d4 f7f5 c1f4
-88602 <first :  3     21        0        704 d2d3 d7d5 c1f4
-88602 <first :  4     15        0       1443 d2d3 d7d5 c1e3
-88602 <first :  5     15        1       7749 d2d3 d7d5 c4d5 e6d5 c1f4
-88602 <first :  5     16        5      24735 d2d4 g8f6 c1e3 d7d5 d1a4
-88679 <first :  6    -10       15      70880 d2d4 g8f6 c1e3 d7d5 c4d5 f6d5
-88731 <first :  6      1       20      95005 d2d3 d7d5 c1f4 g7g5 f4e3 f8e7 c4d5 e6d5
-88847 <first :  6      5       31     152796 e2e4 g8f6 f2f4 d7d6 g1f3 c8d7
-88952 <first :  6      6       42     206297 f2f4 f7f5 d2d4 g8f6 d4d5 c6e7 d5e6 d7e6 d1d8 e8d8
-89507 <first :  7      9       97     487613 f2f4 g8f6 g1f3 f8d6 d2d4 e8g8 c1e3
-91045 <first :  7     11      251    1244427 d1a4 g8f6 d2d3 d7d5 c1g5 h7h6 g5f4
-91228 <first :  7     15      269    1338212 g1f3 g8f6 d2d4 d7d5 c4d5 f6d5 c1g5
-92026 <first :  8      9      349    1739555 g1f3 g8f6 d2d4 d7d5 c4d5 f6d5 c1g5 f7f6
-93222 <first :  8     10      469    2339279 d2d4 g8f6 g1f3 d7d5
-93479 <first : move d2d4
-Interrupting second
-93480 >second: time 28818
-93480 >second: otim 27646
-book hit = (NULL)
-93480 >second: d2d4
-125745 <second: ok
-125745 <second: move f8b4
+36677 >first : f2f4
+70058 <first : ok
+70058 <first : move b8c6
 Interrupting first
-125745 >first : time 27646
-125745 >first : otim 25591
+73165 >first : time 25388
+73166 >first : otim 29403
 book hit = (NULL)
-125745 >first : f8b4
-125839 <first :  1     -9        0          3 c4c5
-125839 <first :  1     -5        0          3 a2a3
-125839 <first :  1     -3        0          3 e2e4
-125839 <first :  1      9        0          3 f2f4
-125839 <first :  1     14        0          3 c1e3
-125839 <first :  1     17        0          3 c1f4
-125839 <first :  2     17        0          4 c1f4
-125839 <first :  3     17        0         51 c1f4
-125839 <first :  4     -5        0       1365 c1f4 d7d5 c4d5 d8d5
-125839 <first :  4      0        1       7386 g1f3 d7d5 c1g5 g8e7
-125839 <first :  5      7        3      16420 g1f3 d7d5 c4d5 d8d5 c1f4
-126086 <first :  6     -1       34     160928 g1f3 g8e7 d4d5 c6a5 d1a4 c7c5
-126503 <first :  7     -6       75     365155 g1f3 g8f6 a2a3 b4e7 d4d5 e6d5 c3d5
-127987 <first :  7     -5      224    1097173 c1f4 g8f6 a2a3 b4e7 d4d5 c6a5 d1d3
-129697 <first :  8     -8      395    1919761 c1f4 g8f6 d1d3 b4d6 f4d6 c7d6 c3e4 f6e4
-134081 <first : move c1f4
-Interrupting second
-134081 >second: time 25591
-134081 >second: otim 26813
-book hit = (NULL)
-134081 >second: c1f4
-175146 <second: ok
-175146 <second: move d8f6
+73166 >first : g1f3
+82895 <first : ok
+82895 <first : ok
+82895 <first : move d5e4
 Interrupting first
-175146 >first : time 26813
-175146 >first : otim 21485
+85813 >first : time 24415
+85813 >first : otim 29111
 book hit = (NULL)
-175146 >first : d8f6
-175240 <first :  1    -14        0          3 f4c7
-175240 <first :  1     -1        0          3 f4e3
-175240 <first :  2     -7        0         19 f4e3 b4d6
-175240 <first :  3      0        0        941 f4e3 d7d5 c4d5
-175240 <first :  4    -11        0       3234 f4e3 d7d6 g1f3 g8e7
-175240 <first :  5    -10        7      36811 f4e3 g8e7 a2a3 b4d6 g1f3
-175325 <first :  5     -5       17      80632 e2e3 b4d6 g1e2 g8e7 c3e4
-175467 <first :  6    -14       32     149111 e2e3 d7d6 g1f3 g8e7 a2a3 b4a5
-175642 <first :  6      7       49     234312 f4c7 f6d4 d1d4 c6d4 e1c1 b4c5
-175899 <first :  7    -21       75     361090 f4c7 d7d6 d1a4 f6d4 a4b3 g8f6 g1f3
-176674 <first :  7     -6      152     731109 f4e3 g8e7 a2a3 b4a5 b2b4 a5b6 g1f3
-176977 <first :  7     -5      183     877430 e2e3 d7d6 g1f3 g8e7 a2a3 b4a5 f1d3
-178242 <first :  8     -9      309    1480293 e2e3 d7d6 g1f3 g8e7 f1d3 e7f5 a2a3 b4a5
-183245 <first :  9     -5      809    3900817 e2e3 d7d6 g1f3 g8e7 f1d3 h7h6 e1g1 e8g8 c3e4
-187127 <first : move e2e3
-Interrupting second
-187128 >second: time 21485
-187128 >second: otim 25615
-book hit = (NULL)
-187128 >second: e2e3
-251387 <second: ok
-251387 <second: move g8e7
+85813 >first : e1g1
+85891 <first : ok
+85891 <first : ok
+85891 <first : Traceback (most recent call last):
+85891 <first :   File "chessAI/xbordEngineEmma.py", line 219, in <module>
+85891 <first :     main()
+85891 <first :   File "chessAI/xbordEngineEmma.py", line 40, in main
+85891 <first :     given_move(game, words[0])
+85891 <first :   File "chessAI/xbordEngineEmma.py", line 60, in given_move
+85891 <first :     move_heur_pair = game.play_move_computer()
+85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/xboardGamePlay.py", line 35, in play_move_computer
+85891 <first :     self.board_object, alpha_list
+85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/Player.py", line 57, in determineNextMove
+85891 <first :     board, alpha_beta_list[1:]
+85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/Player.py", line 57, in determineNextMove
+85891 <first :     board, alpha_beta_list[1:]
+85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/Player.py", line 57, in determineNextMove
+85891 <first :     board, alpha_beta_list[1:]
+85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/Player.py", line 55, in determineNextMove
+85891 <first :     board.try_move_piece(each_choise)
+85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/Board.py", line 96, in try_move_piece
+85891 <first :     if(self.matrix[move.startX][move.startY].color == "B"):
+85891 <first : AttributeError: 'NoneType' object has no attribute 'color'
+GameEnds(26, Error: first chess program (chessAI/xbordEngineEmma.py) exited unexpectedly, 2)
 Interrupting first
-251388 >first : time 25615
-251388 >first : otim 15059
-book hit = (NULL)
-251388 >first : g8e7
-251486 <first :  1     55        0          3 f4c7
-251486 <first :  2     39        0         37 f4c7 e8g8
-251486 <first :  3     51        1       5119 f4c7 d7d6
-251486 <first :  4     40        2       8932 f4c7 d7d6 g1f3 e8g8
-251487 <first :  5     40        6      28677 f4c7 d7d6 d1a4 e8g8 g1f3
-251999 <first :  6     44       61     277283 f4c7 e8g8 a2a3 b4a5 c7a5 c6a5
-252457 <first :  7     48      106     491659 f4c7 d7d6 d1a4 c8d7 a4b5 b7b6 b5h5
-252992 <first :  8     25      160     756603 f4c7 d7d6 d1a4 c8d7 a4b5 b7b6 b5h5 e8g8
-255254 <first : move f4c7
-Interrupting second
-255254 >second: time 15059
-255254 >second: otim 25228
-book hit = (NULL)
-255254 >second: f4c7
-340995 <second: ok
-340995 <second: move d7d5
-Interrupting first
-340995 >first : time 25228
-340995 >first : otim 6485
-book hit = (NULL)
-340995 >first : d7d5
-341068 <first :  1     63        0          3 c4d5
-341068 <first :  1     69        0          3 a2a3
-341068 <first :  1     78        0          3 f2f3
-341068 <first :  1     84        0          3 f1d3
-341068 <first :  1     87        0          3 g1f3
-341068 <first :  2     61        0        109 g1f3 e8g8
-341068 <first :  2     63        0        129 c4d5 e7d5
-341068 <first :  2     81        0        209 a2a3 b4a5 c7a5 c6a5 c4d5 e6d5
-341068 <first :  3     84        0        727 a2a3 b4a5 c7f4
-341068 <first :  4     76        0       2092 a2a3 b4c3 b2c3 e8g8
-341068 <first :  5     81        1       8620 a2a3 b4a5 c7a5 c6a5 c4d5
-341212 <first :  5     84       21     102155 d1f3 e8g8 f3f6 g7f6 e1c1
-341367 <first :  6     77       37     175474 d1f3 e8g8 f3f6 g7f6 e1c1 c8d7 c4d5 e7d5 c3d5 e6d5
-341536 <first :  6     80       54     253906 a2a3 b4c3 b2c3 e8g8 g1f3 c8d7
-341673 <first :  7     81       67     320419 a2a3 b4a5 c7a5 c6a5 c4d5 e7d5 c3d5
-343009 <first :  8     81      201     965738 a2a3 b4a5 c7a5 c6a5 c4d5 e7d5 c3d5 e6d5
-345073 <first :  9     81      407    1960279 a2a3 b4a5 c7a5 c6a5 c4d5 e6d5 b2b4 a5c6 g1f3
-357826 <first : move a2a3
-Interrupting second
-357826 >second: time 6485
-357826 >second: otim 23545
-book hit = (NULL)
-357826 >second: a2a3
-549528 <second: ok
-549528 <second: move b4c3
-Interrupting first
-549528 >first : time 23545
-549528 >first : otim 1
-book hit = (NULL)
-549528 >first : b4c3
-549602 <first :  1    108        0          3 b2c3
-549602 <first :  2     86        0         33 b2c3 e8g8
-549602 <first :  3     99        0        605 b2c3 e8g8 g1f3
-549602 <first :  4     90        0       1118 b2c3 e8g8 g1f3 c8d7
-549602 <first :  5     99        1       8008 b2c3 e8g8 g1f3 c8d7 f1d3
-549678 <first :  6     95       15      71664 b2c3 e8g8 g1f3 h7h5 f3e5 f6h6
-551678 <first :  7    111      215    1044563 b2c3 e8g8 d1f3 f6g6 e1c1 c8d7 f1d3
-552533 <first :  8    105      300    1475594 b2c3 e8g8 d1f3 f6g6 e1c1 c8d7 f1d3 f7f5
-561387 <first :  9    106     1185    5853711 b2c3 c8d7 d1b1 b7b6 b1c2 e8g8 e1c1 f6g6 c2e2
-561478 <first : move b2c3
-Interrupting second
-561479 >second: time 1
-561479 >second: otim 22350
-book hit = (NULL)
-561479 >second: b2c3
-609113 <second: ok
-609113 <second: move e8d7
-Interrupting first
-609113 >first : time 22350
-609113 >first : otim 1
-book hit = (NULL)
-609113 >first : e8d7
-609188 <first :  1     94        0          3 c4d5
-609188 <first :  1    120        0          3 c7f4
-609188 <first :  2    113        0         82 c7f4 h7h5
-609188 <first :  3    118        0       1822 c7f4 g7g5 f4g3
-609188 <first :  4    118        0       3154 c7f4 g7g5 f4g3 h8g8
-609188 <first :  5    115        1       9011 c7f4 g7g5 f4g3 e7f5 c4d5
-609238 <first :  5    116       12      58508 c7g3 e7f5 c4d5 e6d5 g3f4
-609288 <first :  6    115       17      85159 c7g3 e7f5 g3f4 f6g6 c4d5 e6d5
-609589 <first :  7    107       47     237586 c7g3 e7f5 c4d5 e6d5 d1g4 h7h5 g4h3
-610825 <first :  7    120      171     849564 c7f4 f6g6 d1a4 d5c4 a4c4 e7d5 f4g3
-612231 <first :  8    121      311    1565821 c7f4 g7g5 f4g3 h7h5 d1f3 f6f3 g1f3 h8g8
-615166 <first :  9    122      605    3056182 c7f4 g7g5 f4g3 e7f5 d1f3 d5c4 f1c4 f6e7 d4d5
-615421 <first : move c7f4
-Interrupting second
-615421 >second: time 1
-615421 >second: otim 21719
-book hit = (NULL)
-615421 >second: c7f4
-640749 <second: ok
-640750 <second: move d7e8
-Interrupting first
-640750 >first : time 21719
-640750 >first : otim 1
-book hit = (NULL)
-640750 >first : d7e8
-640843 <first :  1    101        0          3 c4d5
-640843 <first :  1    103        0          3 c4c5
-640843 <first :  1    106        0          3 f4g3
-640843 <first :  1    109        0          3 f4d6
-640843 <first :  1    114        0          3 a3a4
-640843 <first :  1    116        0          3 f2f3
-640843 <first :  1    118        0          3 h2h4
-640843 <first :  1    121        0          3 f1d3
-640843 <first :  1    124        0          3 g1f3
-640843 <first :  2    115        0         45 g1f3 c8d7
-640843 <first :  3    124        0       2147 g1f3 f6g6 d1d3
-640843 <first :  4    118        1       6689 g1f3 c8d7 f1d3 h7h5
-640843 <first :  5    126        7      33192 g1f3 c8d7 d1b1 c6a5 f3e5
-641399 <first :  6    129       64     306182 g1f3 h8g8 d1d3 e7g6 f4g5 d5c4 d3c4
-643564 <first :  7    118      281    1351518 g1f3 h7h6 f3e5 c6e5 f4e5 f6g6 d1b1
-644543 <first : move g1f3
-Interrupting second
-644544 >second: time 1
-644544 >second: otim 21340
-book hit = (NULL)
-644544 >second: g1f3
-668785 <second: ok
-668785 <second: move h7h6
-Interrupting first
-668786 >first : time 21340
-668786 >first : otim 1
-book hit = (NULL)
-668786 >first : h7h6
-668859 <first :  1     75        0          7 c4d5 e7d5
-668859 <first :  1    110        0          7 c4c5
-668859 <first :  1    114        0         15 a3a4
-668859 <first :  1    118        0         25 h2h4
-668859 <first :  2    118        0         47 h2h4 f6g6
-668859 <first :  3    118        0        146 h2h4 f6g6 d1d3
-668859 <first :  4    121        0        592 h2h4 f6g6 g2g3
-668859 <first :  5    107        1       7140 h2h4 d5c4 f1c4 e7d5 c4d5 e6d5
-668859 <first :  5    108        5      26486 d1d2 g7g5 f4g3 e7f5 e1c1 f5g3 h2g3
-668939 <first :  5    114       15      71615 d1b3 e7g6 f4g3 c6a5 b3b5
-668956 <first :  5    116       16      79879 f3e5
-668993 <first :  6    109       20      99298 f3e5 c6e5 f4e5 f6g6 d1b3 h8h7
-669276 <first :  7    111       48     243904 f3e5 c6e5 f4e5 f6g6 d1b3 f7f6 b3b5
-670924 <first :  7    118      213    1063624 h2h4 h8g8 d1b3 g7g5 h4g5 h6g5 f4d6
-672676 <first : move h2h4
-Interrupting second
-672676 >second: time 1
-672676 >second: otim 20950
-book hit = (NULL)
-672676 >second: h2h4
-704999 <second: ok
-704999 <second: move h8g8
-Interrupting first
-704999 >first : time 20950
-704999 >first : otim 1
-book hit = (NULL)
-704999 >first : h8g8
-705072 <first :  1    101        0          3 c4d5
-705072 <first :  1    103        0          3 c4c5
-705072 <first :  1    106        0          3 f4g3
-705072 <first :  1    109        0          3 f4d6
-705072 <first :  1    114        0          3 a3a4
-705072 <first :  1    118        0          3 f1e2
-705072 <first :  2    118        0         41 f1e2 f6g6
-705072 <first :  3    116        0       1697 f1e2 e7f5 a3a4
-705072 <first :  3    120        0       1914 f1d3 e7g6 f4d6
-705072 <first :  4    120        0       2250 f1d3 e7g6 f4d6 f6d8
-705072 <first :  5    100        2      13289 f1d3 d5c4 d3c4 e7d5 c4d5 e6d5
-705184 <first :  5    103       18      85216 c4c5 e7g6 f4d6 c8d7 c3c4
-705198 <first :  5    106       19      92391 f4g3 e7f5 g3f4 c8d7 f1d3
-705260 <first :  5    115       26     122909 f3e5
-705285 <first :  5    116       28     134963 a1c1
-705304 <first :  5    117       30     144979 d1b3
-705488 <first :  6    113       48     237551 d1b3 g7g5 f4g3 g5g4 f3e5 e7f5
-706085 <first :  7    113      108     537534 d1b3 g7g5 f4g3 g5g4 f3e5 e7f5 g3f4 c6e5 f4e5
-709043 <first :  7    121      404    2003290 f1d3 g7g5 f4c7 g5h4 f3h4 c8d7 c7f4
-709086 <first : move f1d3
-Interrupting second
-709086 >second: time 1
-709086 >second: otim 20542
-book hit = (NULL)
-709086 >second: f1d3
-741846 <second: ok
-741846 <second: move e7g6
-Interrupting first
-741846 >first : time 20542
-741846 >first : otim 1
-book hit = (NULL)
-741846 >first : e7g6
-741940 <first :  1     71        0         45 d3g6 f6g6
-741940 <first :  1     76        0        225 g2g3 g6f4 e3f4
-741940 <first :  1    127        0        307 f4g3
-741940 <first :  2    127        0        308 f4g3
-741940 <first :  3    127        0        373 f4g3
-741940 <first :  4    127        0        416 f4g3
-741940 <first :  5    127        0       1334 f4g3
-742313 <first :  6    131       46     225473 f4g3 d5c4 d3c4 c6e7 e1g1 c8d7
-742550 <first :  7    117       70     346655 f4g3 d5c4 d3c4 g6e7 e3e4 f6g6 c4d3
-742814 <first :  8    117       96     487083 f4g3 d5c4 d3c4 g6e7 g3f4 c8d7 f3d2
-744378 <first :  9    119      253    1299774 f4g3 d5c4 d3c4 g6e7 g3f4 c8d7 d1b1 c6a5 c4d3
-748135 <first : 10    118      628    3294117 f4g3 d5c4 d3c4 g6e7 e3e4 f6g6 d1b1 f7f5 c4d3 g6g4
-751246 <first : move f4g3
-Interrupting second
-751246 >second: time 1
-751246 >second: otim 19602
-book hit = (NULL)
-751246 >second: f4g3
-781458 <second: ok
-781458 <second: move g6f8
-Interrupting first
-781458 >first : time 19602
-781458 >first : otim 1
-book hit = (NULL)
-781458 >first : g6f8
-781555 <first :  1    115        0          3 c4d5
-781555 <first :  1    116        0          3 g3f4
-781555 <first :  1    137        0          3 e1g1
-781555 <first :  2    130        0        111 e1g1 c8d7 c4d5 e6d5
-781555 <first :  3    133        0        633 e1g1 c8d7 g3f4
-781555 <first :  3    139        0        917 c4d5 e6d5 e1g1
-781555 <first :  4    125        0       1412 c4d5 e6d5 e1g1 c8e6
-781555 <first :  4    137        2       9561 e1g1 d5c4 d3c4 c8d7
-781555 <first :  5    141        4      20624 e1g1 c8d7 c4d5 e6d5 c3c4
-781785 <first :  6    138       32     152988 e1g1 f8g6 d1b3 d5c4 d3c4 f6f5
-782111 <first :  7    141       65     320271 e1g1 d5c4 d3c4 f8g6 d1b3
-782553 <first :  8    139      109     549300 e1g1 d5c4 d3c4 c8d7 d1b1 b7b6 g3f4 f8g6
-785956 <first :  9    140      449    2308921 e1g1 f8d7 e3e4 d5c4 d3c4 f6g6 c4d3 d7f6 d1e1
-786443 <first : move e1g1
-Interrupting second
-786443 >second: time 1
-786443 >second: otim 19103
-book hit = (NULL)
-786443 >second: e1g1
-786517 <second: ok
-786517 <second: Traceback (most recent call last):
-786517 <second:   File "chessAI/xbordEngineEmma.py", line 218, in <module>
-786517 <second:     main()
-786517 <second:   File "chessAI/xbordEngineEmma.py", line 40, in main
-786517 <second:     given_move(game, words[0])
-786517 <second:   File "chessAI/xbordEngineEmma.py", line 60, in given_move
-786517 <second:     move = game.play_move_computer()
-Impossible move e1g1, type = 0
-GameEnds(25, Xboard: Forfeit due to invalid move: = (a1a1) res=0, 4)
-GE(25, Xboard: Forfeit due to invalid move: = (a1a1) res=0, 4) bare king k=15 color=0
-Interrupting first
-786531 >first : result 1-0 {Xboard: Forfeit due to invalid move: = (a1a1) res=0}
-Interrupting second
-786531 >second: result 1-0 {Xboard: Forfeit due to invalid move: = (a1a1) res=0}
-786537 >first : force
-786537 >first : ping 2
-786537 >second: force
-786537 <second:   File "/home/emma/PythonWorkspace/chessAI/xboardGamePlay.py", line 35, in play_move_computer
-786537 <second:     self.board_object, alpha_list
-786537 <second:   File "/home/emma/PythonWorkspace/chessAI/Player.py", line 45, in determineNextMove
-786537 <second:     board, alpha_beta_list[1:]
-786537 <second:   File "/home/emma/PythonWorkspace/chessAI/Player.py", line 45, in determineNextMove
-786537 <second:     board, alpha_beta_list[1:]
-786537 <second:   File "/home/emma/PythonWorkspace/chessAI/Player.py", line 45, in determineNextMove
-786537 <second:     board, alpha_beta_list[1:]
-786537 <second:   File "/home/emma/PythonWorkspace/chessAI/Player.py", line 55, in determineNextMove
-786537 <second:     board.try_move_piece(choise)
-786537 <second:   File "/home/emma/PythonWorkspace/chessAI/Board.py", line 232, in try_move_piece
-786537 <second:     self.matrix[move.endX][move.endY].posX = move.endX
-786537 <second: AttributeError: 'NoneType' object has no attribute 'posX'
-786545 <first : Error (unknown command): result
-786545 <first : pong 2
-GameEnds(25, Xboard: Forfeit due to invalid move: = (a1a1) res=0, 2)
-992262 >first : quit
-992285 >second: quit
+90282 >first : result 0-1 {Error: first chess program (chessAI/xbordEngineEmma.py) exited unexpectedly}
+90288 >first : force
+90288 >first : quit
