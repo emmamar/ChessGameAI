@@ -7,7 +7,7 @@ Requested font set for list -*-helvetica-medium-r-normal--14-*-*-*-*-*-*-*,-misc
  got list -*-helvetica-medium-r-normal--14-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--14-*-*-*-*-*-*-*,-*-*-*-*-*-*-14-*-*-*-*-*-*-*, locale en_US.UTF-8
  got charset -adobe-helvetica-medium-r-normal--14-100-100-100-p-76-iso8859-1
  got charset -adobe-helvetica-medium-r-normal--14-100-100-100-p-76-iso8859-1
- got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-2
+ got charset -adobe-helvetica-medium-r-normal--14-101-100-100-p-0-iso8859-2
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-3
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-4
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-5
@@ -16,7 +16,7 @@ Requested font set for list -*-helvetica-medium-r-normal--14-*-*-*-*-*-*-*,-misc
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-9
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-13
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-14
- got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-15
+ got charset -adobe-helvetica-medium-r-normal--14-101-100-100-p-0-iso8859-15
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-140-jisx0208.1983-0
  got charset -daewoo-gothic-medium-r-normal--14-101-100-100-c-0-ksc5601.1987-0
  got charset -isas-fangsong ti-medium-r-normal--14-101-100-100-c-0-gb2312.1980-0
@@ -26,7 +26,7 @@ Requested font set for list -*-helvetica-bold-r-normal--34-*-*-*-*-*-*-*,-misc-f
  got list -*-helvetica-bold-r-normal--34-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--34-*-*-*-*-*-*-*,-*-*-*-*-*-*-34-*-*-*-*-*-*-*, locale en_US.UTF-8
  got charset -adobe-helvetica-bold-r-normal--34-240-100-100-p-182-iso8859-1
  got charset -adobe-helvetica-bold-r-normal--34-240-100-100-p-182-iso8859-1
- got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-2
+ got charset -adobe-helvetica-bold-r-normal--34-246-100-100-p-0-iso8859-2
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-3
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-4
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-5
@@ -35,7 +35,7 @@ Requested font set for list -*-helvetica-bold-r-normal--34-*-*-*-*-*-*-*,-misc-f
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-9
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-13
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-14
- got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-15
+ got charset -adobe-helvetica-bold-r-normal--34-246-100-100-p-0-iso8859-15
  got charset -jis-fixed-medium-r-normal--34-246-100-100-c-0-jisx0208.1983-0
  got charset -daewoo-gothic-medium-r-normal--34-246-100-100-c-0-ksc5601.1987-0
  got charset -isas-fangsong ti-medium-r-normal--34-246-100-100-c-0-gb2312.1980-0
@@ -45,7 +45,7 @@ Requested font set for list -*-helvetica-bold-r-normal--12-*-*-*-*-*-*-*,-misc-f
  got list -*-helvetica-bold-r-normal--12-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--12-*-*-*-*-*-*-*,-*-*-*-*-*-*-12-*-*-*-*-*-*-*, locale en_US.UTF-8
  got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-1
  got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-1
- got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-2
+ got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-2
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-3
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-4
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-5
@@ -54,7 +54,7 @@ Requested font set for list -*-helvetica-bold-r-normal--12-*-*-*-*-*-*-*,-misc-f
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-9
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-13
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-14
- got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-15
+ got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-15
  got charset -jis-fixed-medium-r-normal--12-87-100-100-c-0-jisx0208.1983-0
  got charset -daewoo-gothic-medium-r-normal--12-87-100-100-c-0-ksc5601.1987-0
  got charset -isas-fangsong ti-medium-r-normal--12-87-100-100-c-0-gb2312.1980-0
@@ -66,148 +66,305 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") fairymax
-924 >first : xboard
+884 >first : xboard
 protover 2
 shuffleOpenings = 0
-1086 <first : tellics say     Fairy-Max 4.8Q
-1086 <first : tellics say     by H.G. Muller
-1086 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
-1086 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
-1086 <first : feature myname="Fairy-Max 4.8Q"
-1086 >first : accepted myname
-1086 <first : feature memory=1
-1086 >first : accepted memory
-1086 <first : feature setboard=0 ping=1 done=0
-1086 >first : accepted setboard
-1086 >first : accepted ping
-1086 >first : accepted done
-1086 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
-1086 >first : accepted variants
-1086 <first : feature option="Resign -check 0"
-1086 >first : accepted option
-1086 <first : feature option="Resign Threshold -spin 800 200 1200"
-1086 >first : accepted option
-1086 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
-1086 >first : accepted option
-1086 <first : feature option="Multi-PV Margin -spin 0 0 1000"
-1086 >first : accepted option
-1086 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
-1086 >first : accepted option
-1086 <first : feature option="Dummy Slider Example -slider 20 0 100"
-1087 >first : accepted option
-1087 <first : feature option="Dummy String Example -string happy birthday!"
-1087 >first : accepted option
-1087 <first : feature option="Dummy Path Example -path ."
-1087 >first : accepted option
-1087 <first : feature option="Clear Hash -button"
-1087 >first : accepted option
-1087 <first : feature done=1
-1087 >first : accepted done
-1088 >first : memory 68
-1088 >first : new
+1044 <first : tellics say     Fairy-Max 4.8Q
+1044 <first : tellics say     by H.G. Muller
+1044 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
+1044 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
+1044 <first : feature myname="Fairy-Max 4.8Q"
+1044 >first : accepted myname
+1044 <first : feature memory=1
+1044 >first : accepted memory
+1044 <first : feature setboard=0 ping=1 done=0
+1044 >first : accepted setboard
+1044 >first : accepted ping
+1044 >first : accepted done
+1044 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
+1044 >first : accepted variants
+1044 <first : feature option="Resign -check 0"
+1044 >first : accepted option
+1044 <first : feature option="Resign Threshold -spin 800 200 1200"
+1044 >first : accepted option
+1044 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
+1044 >first : accepted option
+1044 <first : feature option="Multi-PV Margin -spin 0 0 1000"
+1044 >first : accepted option
+1044 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
+1045 >first : accepted option
+1045 <first : feature option="Dummy Slider Example -slider 20 0 100"
+1045 >first : accepted option
+1045 <first : feature option="Dummy String Example -string happy birthday!"
+1045 >first : accepted option
+1045 <first : feature option="Dummy Path Example -path ."
+1045 >first : accepted option
+1045 <first : feature option="Clear Hash -button"
+1045 >first : accepted option
+1045 <first : feature done=1
+1045 >first : accepted done
+1046 >first : memory 68
+1046 >first : new
 random
-1088 >first : level 40 5 0
-1088 >first : post
-1088 >first : hard
-1088 >first : ping 1
-1144 <first : pong 1
-5858 >first : force
-5859 >first : quit
+1046 >first : level 40 5 0
+1046 >first : post
+1046 >first : hard
+1046 >first : ping 1
+1097 <first : pong 1
+6357 >first : force
+6358 >first : quit
 Unload first
 StartChildProcess (dir=".") chessAI/xbordEngineEmma.py
-5873 >first : xboard
+6370 >first : xboard
 protover 2
-5893 <first : feature myname="emmas"
-5893 >first : accepted myname
-5893 <first : ok
-5893 <first : ok
+6390 <first : feature myname="emmas"
+6390 >first : accepted myname
+6391 <first : ok
+6392 <first : ok
 recognized 'normal' (-1) as variant normal
-15874 >first : new
+16380 >first : new
 random
-15874 >first : level 40 5 0
-15874 >first : post
-15874 >first : hard
-15874 >first : force
-15874 <first : ok
-15874 <first : ok
-15874 <first : ok
-15874 <first : ok
-15874 <first : ok
-15874 <first : ok
+16380 >first : level 40 5 0
+16380 >first : post
+16380 >first : hard
+16380 >first : force
+16380 <first : ok
+16380 <first : ok
+16380 <first : ok
+16380 <first : ok
+16380 <first : ok
+16380 <first : ok
 Reset(1, 1) from gameMode 6
 recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
-18713 >first : new
+18892 >first : new
 random
-18713 >first : level 40 5 0
-18713 >first : post
-18713 >first : hard
-18715 <first : ok
-18715 <first : ok
-18715 <first : ok
-18715 <first : ok
+18892 >first : level 40 5 0
+18892 >first : post
+18892 >first : hard
+18894 <first : ok
+18894 <first : ok
+18894 <first : ok
+18894 <first : ok
 nps: w=-1, b=-1
 nps: w=-1, b=-1
-21087 >first : time 30000
-21087 >first : otim 30000
+20226 >first : time 30000
+20226 >first : otim 30000
 book hit = (NULL)
-21087 >first : e2e4
-25995 <first : ok
-25995 <first : ok
-25995 <first : move g8f6
+20226 >first : e2e4
+23042 <first : ok
+23042 <first : ok
+23042 <first : move e7e5
 Interrupting first
-27917 >first : time 29509
-27917 >first : otim 29807
+24656 >first : time 29718
+24656 >first : otim 29838
 book hit = (NULL)
-27917 >first : f1d3
-35739 <first : ok
-35739 <first : ok
-35739 <first : move d7d5
+24656 >first : d2d3
+32300 <first : ok
+32300 <first : ok
+32300 <first : move d7d5
 Interrupting first
-36677 >first : time 28726
-36677 >first : otim 29714
+34169 >first : time 28953
+34169 >first : otim 29651
 book hit = (NULL)
-36677 >first : f2f4
-70058 <first : ok
-70058 <first : move b8c6
+34169 >first : e4d5
+48228 <first : ok
+48228 <first : ok
+48228 <first : move g8f6
 Interrupting first
-73165 >first : time 25388
-73166 >first : otim 29403
+60145 >first : time 27547
+60145 >first : otim 28460
 book hit = (NULL)
-73166 >first : g1f3
-82895 <first : ok
-82895 <first : ok
-82895 <first : move d5e4
+60145 >first : c2c4
+72990 <first : ok
+72990 <first : ok
+72990 <first : move f8b4
 Interrupting first
-85813 >first : time 24415
-85813 >first : otim 29111
+76193 >first : time 26263
+76194 >first : otim 28140
 book hit = (NULL)
-85813 >first : e1g1
-85891 <first : ok
-85891 <first : ok
-85891 <first : Traceback (most recent call last):
-85891 <first :   File "chessAI/xbordEngineEmma.py", line 219, in <module>
-85891 <first :     main()
-85891 <first :   File "chessAI/xbordEngineEmma.py", line 40, in main
-85891 <first :     given_move(game, words[0])
-85891 <first :   File "chessAI/xbordEngineEmma.py", line 60, in given_move
-85891 <first :     move_heur_pair = game.play_move_computer()
-85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/xboardGamePlay.py", line 35, in play_move_computer
-85891 <first :     self.board_object, alpha_list
-85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/Player.py", line 57, in determineNextMove
-85891 <first :     board, alpha_beta_list[1:]
-85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/Player.py", line 57, in determineNextMove
-85891 <first :     board, alpha_beta_list[1:]
-85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/Player.py", line 57, in determineNextMove
-85891 <first :     board, alpha_beta_list[1:]
-85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/Player.py", line 55, in determineNextMove
-85891 <first :     board.try_move_piece(each_choise)
-85891 <first :   File "/home/emma/PythonWorkspaceBackup/chessAI/Board.py", line 96, in try_move_piece
-85891 <first :     if(self.matrix[move.startX][move.startY].color == "B"):
-85891 <first : AttributeError: 'NoneType' object has no attribute 'color'
-GameEnds(26, Error: first chess program (chessAI/xbordEngineEmma.py) exited unexpectedly, 2)
+76194 >first : c1d2
+82067 <first : ok
+82067 <first : ok
+82067 <first : move b4d2
 Interrupting first
-90282 >first : result 0-1 {Error: first chess program (chessAI/xbordEngineEmma.py) exited unexpectedly}
-90288 >first : force
-90288 >first : quit
+83368 >first : time 25675
+83368 >first : otim 28009
+book hit = (NULL)
+83369 >first : d1d2
+90976 <first : ok
+90976 <first : ok
+90976 <first : move c8f5
+Interrupting first
+100512 >first : time 24915
+100512 >first : otim 27056
+book hit = (NULL)
+100513 >first : b2b4
+109382 <first : ok
+109382 <first : ok
+109382 <first : move b8d7
+Interrupting first
+113376 >first : time 24028
+113376 >first : otim 26656
+book hit = (NULL)
+113376 >first : b1c3
+125245 <first : ok
+125245 <first : ok
+125245 <first : move d8e7
+Interrupting first
+128896 >first : time 22841
+128896 >first : otim 26291
+book hit = (NULL)
+128896 >first : g1f3
+144138 <first : ok
+144138 <first : move e7b4
+Interrupting first
+152513 >first : time 21316
+152513 >first : otim 25454
+book hit = (NULL)
+152513 >first : a2a3
+166132 <first : ok
+166132 <first : ok
+166132 <first : move b4b3
+Interrupting first
+188472 >first : time 19954
+188472 >first : otim 23220
+book hit = (NULL)
+188472 >first : f3g5
+215428 <first : ok
+215428 <first : ok
+215428 <first : move h7h6
+Interrupting first
+223048 >first : time 17259
+223048 >first : otim 22458
+book hit = (NULL)
+223048 >first : g5f3
+256990 <first : ok
+256990 <first : ok
+256990 <first : move f5g4
+Interrupting first
+282128 >first : time 13865
+282128 >first : otim 19944
+book hit = (NULL)
+282128 >first : f3h4
+305582 <first : ok
+305582 <first : ok
+305582 <first : move g7g5
+Interrupting first
+308256 >first : time 11519
+308256 >first : otim 19677
+book hit = (NULL)
+308257 >first : h4f3
+337012 <first : ok
+337012 <first : ok
+337013 <first : move e8f8
+Interrupting first
+338632 >first : time 8643
+338632 >first : otim 19515
+book hit = (NULL)
+338632 >first : a3a4
+363460 <first : ok
+363460 <first : ok
+363460 <first : move g4f3
+Interrupting first
+368392 >first : time 6161
+368392 >first : otim 19022
+book hit = (NULL)
+368392 >first : g2f3
+410621 <first : ok
+410621 <first : ok
+410621 <first : move d7c5
+Interrupting first
+423976 >first : time 1938
+423976 >first : otim 17686
+book hit = (NULL)
+423976 >first : d3d4
+433653 <first : ok
+433653 <first : move e5d4
+Interrupting first
+456504 >first : time 970
+456504 >first : otim 15401
+book hit = (NULL)
+456504 >first : d2d4
+463975 <first : ok
+463975 <first : ok
+463975 <first : move a8e8
+Interrupting first
+468584 >first : time 223
+468584 >first : otim 14940
+book hit = (NULL)
+468584 >first : e1d2
+482812 <first : ok
+482812 <first : ok
+482812 <first : move f6e4
+Interrupting first
+491248 >first : time 1
+491248 >first : otim 14097
+book hit = (NULL)
+491248 >first : d2e3
+497025 <first : ok
+497025 <first : ok
+497025 <first : move b3c3
+Interrupting first
+500704 >first : time 1
+500704 >first : otim 13729
+book hit = (NULL)
+500704 >first : e3e2
+505113 <first : ok
+505113 <first : move c3d4
+Interrupting first
+506448 >first : time 1
+506448 >first : otim 13596
+book hit = (NULL)
+506448 >first : f3e4
+518984 <first : ok
+518984 <first : ok
+518984 <first : move e8e4
+Interrupting first
+521991 >first : time 1
+521991 >first : otim 13295
+book hit = (NULL)
+521991 >first : e2f3
+526005 <first : ok
+526005 <first : ok
+526005 <first : move d4a1
+Interrupting first
+531280 >first : time 1
+531280 >first : otim 12768
+book hit = (NULL)
+531280 >first : f1e2
+534413 <first : ok
+534413 <first : ok
+534413 <first : move a1h1
+Interrupting first
+538655 >first : time 1
+538656 >first : otim 12343
+book hit = (NULL)
+538656 >first : f3g3
+544377 <first : ok
+544377 <first : ok
+544377 <first : move e4e2
+Interrupting first
+547215 >first : time 1
+547215 >first : otim 12060
+book hit = (NULL)
+547216 >first : g3g4
+558821 <first : ok
+558821 <first : ok
+558821 <first : move e2f2
+Interrupting first
+560911 >first : time 1
+560911 >first : otim 11851
+book hit = (NULL)
+560911 >first : g4h5
+566177 <first : ok
+566177 <first : ok
+566177 <first : move h1f3
+GameEnds(26, Xboard adjudication: Checkmate, 4)
+Interrupting first
+566177 >first : result 0-1 {Xboard adjudication: Checkmate}
+566180 >first : force
+566276 <first : ok
+GameEnds(26, Xboard adjudication: Checkmate, 2)
+576464 >first : quit

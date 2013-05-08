@@ -1,9 +1,5 @@
 
 
-'''cProfile.runctx( "self.calculate_heuristic(board, choise)", 
-globals(), locals(), 
-filename="/home/emma/Desktop/emmaPython.profile" )'''
-
 '''this class creates a player object of a given color and of 
 human or computer'''
 
@@ -22,7 +18,8 @@ class Player:
         lesser = self.quicksort([x for x in inlist[1:] if x[1] < pivot[1]])
         greater = self.quicksort([x for x in inlist[1:] if x[1] >= pivot[1]])
         return greater + [pivot] + lesser
-
+  
+  
   '''determines the best next move for the computer player
   given the current board configuration'''
   def determineNextMove(self, board, ab_list):
@@ -52,7 +49,7 @@ class Player:
             opponent = Player("W", (self.depth - 1))
           elif self.color == "W":
             opponent = Player("B", (self.depth - 1))
-          board.try_move_piece(each_choise)
+          board.try_move_piece(each_choise, False)
           opponent_choise, opponent_heur = opponent.determineNextMove(
             board, alpha_beta_list[1:]
           )
@@ -64,15 +61,13 @@ class Player:
           else:
             return each_choise, -99999999
         else:
-          board.try_move_piece(each_choise)
+          board.try_move_piece(each_choise, True)
           '''print board.to_string()'''
           if(self.color == "W"):
             my_heur_for_choise = board.white_heuristic
           else:
             my_heur_for_choise = -board.white_heuristic
-          '''my_heur_for_choise = self.calculate_heuristic(
-            board
-          )'''
+          '''print my_heur_for_choise'''
           board.undo()
 
 
