@@ -1,0 +1,121 @@
+locale = en_US.UTF-8
+recognized 'normal' (-1) as variant normal
+recognized 'normal' (-1) as variant normal
+recognized 'normal' (-1) as variant normal
+shuffleOpenings = 0
+Requested font set for list -*-helvetica-medium-r-normal--14-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--14-*-*-*-*-*-*-*,-*-*-*-*-*-*-14-*-*-*-*-*-*-*
+ got list -*-helvetica-medium-r-normal--14-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--14-*-*-*-*-*-*-*,-*-*-*-*-*-*-14-*-*-*-*-*-*-*, locale en_US.UTF-8
+ got charset -adobe-helvetica-medium-r-normal--14-100-100-100-p-76-iso8859-1
+ got charset -adobe-helvetica-medium-r-normal--14-100-100-100-p-76-iso8859-1
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-2
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-3
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-4
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-5
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-koi8-r
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-7
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-9
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-13
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-14
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-15
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-140-jisx0208.1983-0
+ got charset -daewoo-gothic-medium-r-normal--14-101-100-100-c-0-ksc5601.1987-0
+ got charset -isas-fangsong ti-medium-r-normal--14-101-100-100-c-0-gb2312.1980-0
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-jisx0201.1976-0
+ got charset -adobe-helvetica-medium-r-normal--14-100-100-100-p-76-iso10646-1
+Requested font set for list -*-helvetica-bold-r-normal--34-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--34-*-*-*-*-*-*-*,-*-*-*-*-*-*-34-*-*-*-*-*-*-*
+ got list -*-helvetica-bold-r-normal--34-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--34-*-*-*-*-*-*-*,-*-*-*-*-*-*-34-*-*-*-*-*-*-*, locale en_US.UTF-8
+ got charset -adobe-helvetica-bold-r-normal--34-240-100-100-p-182-iso8859-1
+ got charset -adobe-helvetica-bold-r-normal--34-240-100-100-p-182-iso8859-1
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-2
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-3
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-4
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-5
+ got charset -misc-fixed-medium-r-normal--34-246-100-100-c-0-koi8-r
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-7
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-9
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-13
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-14
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-15
+ got charset -jis-fixed-medium-r-normal--34-246-100-100-c-0-jisx0208.1983-0
+ got charset -daewoo-gothic-medium-r-normal--34-246-100-100-c-0-ksc5601.1987-0
+ got charset -isas-fangsong ti-medium-r-normal--34-246-100-100-c-0-gb2312.1980-0
+ got charset -misc-fixed-medium-r-normal--34-246-100-100-c-0-jisx0201.1976-0
+ got charset -adobe-helvetica-bold-r-normal--34-240-100-100-p-182-iso10646-1
+Requested font set for list -*-helvetica-bold-r-normal--12-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--12-*-*-*-*-*-*-*,-*-*-*-*-*-*-12-*-*-*-*-*-*-*
+ got list -*-helvetica-bold-r-normal--12-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--12-*-*-*-*-*-*-*,-*-*-*-*-*-*-12-*-*-*-*-*-*-*, locale en_US.UTF-8
+ got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-1
+ got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-1
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-2
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-3
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-4
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-5
+ got charset -misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-koi8-r
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-7
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-9
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-13
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-14
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-15
+ got charset -jis-fixed-medium-r-normal--12-87-100-100-c-0-jisx0208.1983-0
+ got charset -daewoo-gothic-medium-r-normal--12-87-100-100-c-0-ksc5601.1987-0
+ got charset -isas-fangsong ti-medium-r-normal--12-87-100-100-c-0-gb2312.1980-0
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-jisx0201.1976-0
+ got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso10646-1
+xboard 4.6.2 + fairymax
+Reset(1, 0) from gameMode 0
+recognized 'normal' (-1) as variant normal
+GameEnds(0, (null), 2)
+shuffleOpenings = 0
+StartChildProcess (dir=".") fairymax
+908 >first : xboard
+protover 2
+shuffleOpenings = 0
+1065 <first : tellics say     Fairy-Max 4.8Q
+1065 <first : tellics say     by H.G. Muller
+1065 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
+1065 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
+1065 <first : feature myname="Fairy-Max 4.8Q"
+1065 >first : accepted myname
+1066 <first : feature memory=1
+1066 >first : accepted memory
+1066 <first : feature setboard=0 ping=1 done=0
+1066 >first : accepted setboard
+1066 >first : accepted ping
+1066 >first : accepted done
+1066 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
+1066 >first : accepted variants
+1066 <first : feature option="Resign -check 0"
+1066 >first : accepted option
+1066 <first : feature option="Resign Threshold -spin 800 200 1200"
+1066 >first : accepted option
+1066 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
+1066 >first : accepted option
+1066 <first : feature option="Multi-PV Margin -spin 0 0 1000"
+1066 >first : accepted option
+1066 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
+1066 >first : accepted option
+1066 <first : feature option="Dummy Slider Example -slider 20 0 100"
+1066 >first : accepted option
+1066 <first : feature option="Dummy String Example -string happy birthday!"
+1066 >first : accepted option
+1066 <first : feature option="Dummy Path Example -path ."
+1066 >first : accepted option
+1066 <first : feature option="Clear Hash -button"
+1066 >first : accepted option
+1066 <first : feature done=1
+1066 >first : accepted done
+1067 >first : memory 68
+1067 >first : new
+random
+1067 >first : level 40 5 0
+1067 >first : post
+1067 >first : hard
+1067 >first : ping 1
+1119 <first : pong 1
+4242 >first : force
+4243 >first : quit
+Unload first
+StartChildProcess (dir=".") board/xbordEngineEmma.py
+4257 >first : xboard
+protover 2
+4258 <first : board/xbordEngineEmma.py: No such file or directory
+GameEnds(28, xboard exit, 2)

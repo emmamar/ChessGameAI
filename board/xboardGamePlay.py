@@ -1,6 +1,11 @@
 from Board import Board
 from Player import Player
+<<<<<<< HEAD
 import cProfile
+=======
+from Move import Move
+import copy
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
 
 '''this class starts the game on the computer. It creates a board 
 object and can create 2 players, determine the next move for the 
@@ -11,18 +16,26 @@ class xboardGamePlay:
   def __init__ (self):
     self.board_object = Board()
     self.white_turn = True
+<<<<<<< HEAD
     self.depth = 4
     self.increased_depth = False
 
   '''start the game by creating 2 players'''
   def start_new_game(self):
     self.player1_computer = Player("B",self.depth)
+=======
+
+  '''start the game by creating 2 players'''
+  def start_new_game(self):
+    self.player1_computer = Player("B", 2)
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
     self.player2_human = Player("W", 0)
     
 
   '''determine and play the computers move'''
   def play_move_computer(self):
     if not self.white_turn:
+<<<<<<< HEAD
       alpha_list = list()
       
       if ((not self.increased_depth) and (self.board_object.black_piece_count + self.board_object.white_piece_count) < 16):
@@ -38,6 +51,12 @@ class xboardGamePlay:
         self.board_object, alpha_list
       )
       self.board_object.try_move_piece(p1next, False)
+=======
+      p1next, heur = self.player1_computer.determineNextMove(
+        self.board_object, None
+      )
+      self.board_object.try_move_piece(p1next)
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
       self.board_object.save_board()
       self.white_turn = True
       return p1next
@@ -49,11 +68,15 @@ class xboardGamePlay:
   '''play the human players move on the board'''
   def play_move_human(self, given_move):
     if self.white_turn:
+<<<<<<< HEAD
       heur_inc = self.board_object.matrix[given_move.startX][given_move.startY].table[(given_move.endX)*8 + given_move.endY]
       heur_inc -= self.board_object.matrix[given_move.startX][given_move.startY].table[(given_move.startX)*8 + given_move.startY]
       if(not self.board_object.matrix[given_move.endX][given_move.endY] == None):
         heur_inc += self.board_object.matrix[given_move.endX][given_move.endY].material
       can_move_piece = self.board_object.try_move_piece([given_move,heur_inc], False)
+=======
+      can_move_piece = self.board_object.try_move_piece(given_move)
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
       self.board_object.save_board()
       self.white_turn = False
       return can_move_piece

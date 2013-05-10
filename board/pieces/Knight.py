@@ -2,6 +2,7 @@ import Piece
 from Move import Move
 
 class Knight(Piece.Piece):
+<<<<<<< HEAD
   def __init__(self, c, px, py):
     self.color = c
     self.posX = px
@@ -100,5 +101,78 @@ class Knight(Piece.Piece):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 2, self.posY + 1), self.table[(self.posX + 2)*8 + self.posY + 1] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX + 2][self.posY + 1].material]]
           self.attacking += [board.matrix[self.posX + 2][self.posY + 1]]
         self.refresh_on_change_squares.append([self.posX + 2,self.posY + 1])
+=======
+  def __init__(self, c):
+    self.color = c
+
+  def get_available_moves_specific(self, board, px, py):
+    posX = px
+    posY = py
+    available = list()
+    if posX - 1 >= 0:
+      if posY - 2 >= 0:
+        if(board.matrix[posX - 1][posY - 2] == None or not
+          board.matrix[posX - 1][posY - 2].color == self.color):
+          available.append(Move(posX, posY, posX - 1, posY - 2))
+      if posY + 2 < 8:
+        if(board.matrix[posX - 1][posY + 2] == None or not
+          board.matrix[posX - 1][posY + 2].color == self.color):
+          available.append(Move(posX, posY, posX - 1, posY + 2))
+    if posX - 2 >= 0:
+      if posY - 1 >= 0:
+        if(board.matrix[posX - 2][posY - 1] == None or not
+          board.matrix[posX - 2][posY - 1].color == self.color):
+          available.append(Move(posX, posY, posX - 2, posY - 1))
+      if posY + 1 < 8:
+        if(board.matrix[posX - 2][posY + 1] == None or not
+          board.matrix[posX - 2][posY + 1].color == self.color):
+          available.append(Move(posX, posY, posX - 2, posY + 1))
+    if posX + 1 < 8:
+      if posY - 2 >= 0:
+        if(board.matrix[posX + 1][posY - 2] == None or not
+          board.matrix[posX + 1][posY - 2].color == self.color):
+          available.append(Move(posX, posY, posX + 1, posY - 2))
+      if posY + 2 < 8:
+        if(board.matrix[posX + 1][posY + 2] == None or not
+          board.matrix[posX + 1][posY + 2].color == self.color):
+          available.append(Move(posX, posY, posX + 1, posY + 2))
+    if posX + 2 < 8:
+      if posY - 1 >= 0:
+        if(board.matrix[posX + 2][posY - 1] == None or not
+          board.matrix[posX + 2][posY - 1].color == self.color):
+          available.append(Move(posX, posY, posX + 2, posY - 1))
+      if posY + 1 < 8:
+        if(board.matrix[posX + 2][posY + 1] == None or not
+          board.matrix[posX + 2][posY + 1].color == self.color):
+          available.append(Move(posX, posY, posX + 2, posY + 1))
+
+    return available
+
+  def is_illegal(self, move, board):
+    if(board.matrix[move.endX][move.endY] == None
+    or not board.matrix[move.endX][move.endY].color
+    == self.color):
+      if(abs(move.startX - move.endX) == 2
+      and abs(move.startY - move.endY) == 1):
+        return False
+      elif(abs(move.startY - move.endY) == 2
+      and abs(move.startX - move.endX) == 1):
+        return False
+      else:
+        return True
+    else:
+      return True
+
+
+  def toString(self):
+    if self.color == "W":
+      return "RW"
+    else:
+      return "RB"
+
+
+
+
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
 
 

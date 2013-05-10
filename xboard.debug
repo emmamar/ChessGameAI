@@ -7,7 +7,11 @@ Requested font set for list -*-helvetica-medium-r-normal--14-*-*-*-*-*-*-*,-misc
  got list -*-helvetica-medium-r-normal--14-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--14-*-*-*-*-*-*-*,-*-*-*-*-*-*-14-*-*-*-*-*-*-*, locale en_US.UTF-8
  got charset -adobe-helvetica-medium-r-normal--14-100-100-100-p-76-iso8859-1
  got charset -adobe-helvetica-medium-r-normal--14-100-100-100-p-76-iso8859-1
+<<<<<<< HEAD
  got charset -adobe-helvetica-medium-r-normal--14-101-100-100-p-0-iso8859-2
+=======
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-2
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-3
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-4
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-5
@@ -16,7 +20,11 @@ Requested font set for list -*-helvetica-medium-r-normal--14-*-*-*-*-*-*-*,-misc
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-9
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-13
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-14
+<<<<<<< HEAD
  got charset -adobe-helvetica-medium-r-normal--14-101-100-100-p-0-iso8859-15
+=======
+ got charset -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-15
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
  got charset -misc-fixed-medium-r-normal--14-130-75-75-c-140-jisx0208.1983-0
  got charset -daewoo-gothic-medium-r-normal--14-101-100-100-c-0-ksc5601.1987-0
  got charset -isas-fangsong ti-medium-r-normal--14-101-100-100-c-0-gb2312.1980-0
@@ -26,7 +34,11 @@ Requested font set for list -*-helvetica-bold-r-normal--34-*-*-*-*-*-*-*,-misc-f
  got list -*-helvetica-bold-r-normal--34-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--34-*-*-*-*-*-*-*,-*-*-*-*-*-*-34-*-*-*-*-*-*-*, locale en_US.UTF-8
  got charset -adobe-helvetica-bold-r-normal--34-240-100-100-p-182-iso8859-1
  got charset -adobe-helvetica-bold-r-normal--34-240-100-100-p-182-iso8859-1
+<<<<<<< HEAD
  got charset -adobe-helvetica-bold-r-normal--34-246-100-100-p-0-iso8859-2
+=======
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-2
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-3
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-4
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-5
@@ -35,7 +47,11 @@ Requested font set for list -*-helvetica-bold-r-normal--34-*-*-*-*-*-*-*,-misc-f
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-9
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-13
  got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-14
+<<<<<<< HEAD
  got charset -adobe-helvetica-bold-r-normal--34-246-100-100-p-0-iso8859-15
+=======
+ got charset -misc-fixed-bold-r-normal--34-246-100-100-c-0-iso8859-15
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
  got charset -jis-fixed-medium-r-normal--34-246-100-100-c-0-jisx0208.1983-0
  got charset -daewoo-gothic-medium-r-normal--34-246-100-100-c-0-ksc5601.1987-0
  got charset -isas-fangsong ti-medium-r-normal--34-246-100-100-c-0-gb2312.1980-0
@@ -45,7 +61,11 @@ Requested font set for list -*-helvetica-bold-r-normal--12-*-*-*-*-*-*-*,-misc-f
  got list -*-helvetica-bold-r-normal--12-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--12-*-*-*-*-*-*-*,-*-*-*-*-*-*-12-*-*-*-*-*-*-*, locale en_US.UTF-8
  got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-1
  got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-1
+<<<<<<< HEAD
  got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-2
+=======
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-2
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-3
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-4
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-5
@@ -54,7 +74,11 @@ Requested font set for list -*-helvetica-bold-r-normal--12-*-*-*-*-*-*-*,-misc-f
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-9
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-13
  got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-14
+<<<<<<< HEAD
  got charset -adobe-helvetica-bold-r-normal--12-87-100-100-p-0-iso8859-15
+=======
+ got charset -misc-fixed-bold-r-normal--12-87-100-100-c-0-iso8859-15
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
  got charset -jis-fixed-medium-r-normal--12-87-100-100-c-0-jisx0208.1983-0
  got charset -daewoo-gothic-medium-r-normal--12-87-100-100-c-0-ksc5601.1987-0
  got charset -isas-fangsong ti-medium-r-normal--12-87-100-100-c-0-gb2312.1980-0
@@ -66,6 +90,7 @@ recognized 'normal' (-1) as variant normal
 GameEnds(0, (null), 2)
 shuffleOpenings = 0
 StartChildProcess (dir=".") fairymax
+<<<<<<< HEAD
 918 >first : xboard
 protover 2
 shuffleOpenings = 0
@@ -116,3 +141,146 @@ GameEnds(28, xboard exit, 2)
 1249397 >first : force
 1249397 >first : ping 2
 1249398 >first : quit
+=======
+1245 >first : xboard
+protover 2
+shuffleOpenings = 0
+1424 <first : tellics say     Fairy-Max 4.8Q
+1424 <first : tellics say     by H.G. Muller
+1424 <first : tellics say Gothic Chess is protected by U.S. patent #6,481,716 by Ed Trice.
+1424 <first : tellics say Falcon Chess is protected by U.S. patent #5,690,334 by George W. Duke
+1424 <first : feature myname="Fairy-Max 4.8Q"
+1424 >first : accepted myname
+1425 <first : feature memory=1
+1425 >first : accepted memory
+1425 <first : feature setboard=0 ping=1 done=0
+1425 >first : accepted setboard
+1425 >first : accepted ping
+1425 >first : accepted done
+1425 <first : feature variants="normal,shatranj,makruk,courier,knightmate,capablanca,gothic,cylinder,berolina,super,seirawan,great,fairy"
+1425 >first : accepted variants
+1425 <first : feature option="Resign -check 0"
+1425 >first : accepted option
+1425 <first : feature option="Resign Threshold -spin 800 200 1200"
+1425 >first : accepted option
+1425 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
+1425 >first : accepted option
+1425 <first : feature option="Multi-PV Margin -spin 0 0 1000"
+1425 >first : accepted option
+1425 <first : feature option="Variant fairy selects -combo Spartan /// FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers"
+1425 >first : accepted option
+1425 <first : feature option="Dummy Slider Example -slider 20 0 100"
+1425 >first : accepted option
+1425 <first : feature option="Dummy String Example -string happy birthday!"
+1425 >first : accepted option
+1425 <first : feature option="Dummy Path Example -path ."
+1425 >first : accepted option
+1425 <first : feature option="Clear Hash -button"
+1425 >first : accepted option
+1425 <first : feature done=1
+1425 >first : accepted done
+1426 >first : memory 68
+1426 >first : new
+random
+1426 >first : level 40 5 0
+1426 >first : post
+1426 >first : hard
+1426 >first : ping 1
+1478 <first : pong 1
+7405 >first : force
+Unload second
+Reset(1, 1) from gameMode 6
+recognized 'normal' (-1) as variant normal
+GameEnds(0, (null), 2)
+shuffleOpenings = 0
+18996 >first : memory 68
+18996 >first : new
+random
+18996 >first : level 40 5 0
+18996 >first : post
+18996 >first : hard
+18996 >first : ping 2
+19031 <first : pong 2
+27740 >first : force
+27742 >first : quit
+Unload first
+StartChildProcess (dir=".") board/xbordEngineEmma.py
+27749 >first : xboard
+protover 2
+28905 <first : feature myname="emmas"
+28905 >first : accepted myname
+28907 <first : ok
+28907 <first : ok
+recognized 'normal' (-1) as variant normal
+37755 >first : new
+random
+37755 >first : level 40 5 0
+37755 >first : post
+37755 >first : hard
+37755 >first : force
+37755 <first : ok
+37755 <first : ok
+37755 <first : ok
+37755 <first : ok
+37755 <first : ok
+37755 <first : ok
+Reset(1, 1) from gameMode 6
+recognized 'normal' (-1) as variant normal
+GameEnds(0, (null), 2)
+shuffleOpenings = 0
+38797 >first : new
+random
+38797 >first : level 40 5 0
+38797 >first : post
+38797 >first : hard
+38799 <first : ok
+38799 <first : ok
+38799 <first : ok
+38799 <first : ok
+nps: w=-1, b=-1
+nps: w=-1, b=-1
+40682 >first : time 30000
+40682 >first : otim 30000
+book hit = (NULL)
+40682 >first : e2e4
+44902 <first : ok
+44902 <first : ok
+44902 <first : move d7d5
+Interrupting first
+48472 >first : time 29577
+48472 >first : otim 29643
+book hit = (NULL)
+48472 >first : c2c3
+51862 <first : ok
+51862 <first : ok
+51862 <first : move d5e4
+Interrupting first
+57728 >first : time 29238
+57728 >first : otim 29056
+book hit = (NULL)
+57728 >first : d1e2
+60671 <first : ok
+60671 <first : ok
+60672 <first : move a7a6
+Interrupting first
+61552 >first : time 28944
+61552 >first : otim 28968
+book hit = (NULL)
+61552 >first : e2e4
+69695 <first : ok
+69695 <first : ok
+69695 <first : move e7e5
+Interrupting first
+75159 >first : time 28130
+75160 >first : otim 28422
+book hit = (NULL)
+75160 >first : g2g4
+106141 <first : ok
+106141 <first : ok
+106141 <first : move f7f6
+GameEnds(28, xboard exit, 2)
+Interrupting first
+113767 >first : result * {xboard exit}
+113769 >first : force
+113769 >first : quit
+>>>>>>> 179cf9c41a43cb1d35c3db4c4451e29e23c9abf4
