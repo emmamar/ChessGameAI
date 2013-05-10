@@ -7,7 +7,7 @@ class King(Piece.Piece):
     self.posX = px
     self.posY = py
     self.first_move = True
-    self.material = 999
+    self.material = 99999999
     if (self.color == "W"):
       self.string_rep = "KW"
     else:
@@ -61,59 +61,59 @@ class King(Piece.Piece):
         self.available_moves += [[Move(self.posX, self.posY, self.posX + 1, self.posY), self.table[(self.posX + 1)*8 + self.posY] - self.table[(self.posX)*8 + self.posY]]]
       elif(not board.matrix[self.posX + 1][self.posY].color == self.color):
         self.available_moves += [[Move(self.posX, self.posY, self.posX + 1, self.posY), self.table[(self.posX + 1)*8 + self.posY] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX + 1][self.posY].material]]
-        self.attacking += [board.matrix[self.posX + 1][self.posY]]
+        self.attacking += [board.matrix[self.posX + 1][self.posY].__class__.__name__]
       self.refresh_on_change_squares += [[self.posX + 1,self.posY]]
       if self.posY > 0:
         if(board.matrix[self.posX + 1][self.posY - 1] == None):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 1, self.posY - 1), self.table[(self.posX + 1)*8 + self.posY - 1] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX + 1][self.posY - 1].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 1, self.posY - 1), self.table[(self.posX + 1)*8 + self.posY - 1] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX + 1][self.posY - 1].material]]
-          self.attacking += [board.matrix[self.posX + 1][self.posY - 1]]
+          self.attacking += [board.matrix[self.posX + 1][self.posY - 1].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX + 1,self.posY - 1]]
       if self.posY < 7:
         if(board.matrix[self.posX + 1][self.posY + 1] == None):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 1, self.posY + 1), self.table[(self.posX + 1)*8 + self.posY + 1] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX + 1][self.posY + 1].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 1, self.posY + 1), self.table[(self.posX + 1)*8 + self.posY + 1] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX + 1][self.posY + 1].material]]
-          self.attacking += [board.matrix[self.posX + 1][self.posY + 1]]
+          self.attacking += [board.matrix[self.posX + 1][self.posY + 1].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX + 1,self.posY + 1]]
     if self.posX > 0:
       if(board.matrix[self.posX - 1][self.posY] == None):
         self.available_moves += [[Move(self.posX, self.posY, self.posX - 1, self.posY), self.table[(self.posX - 1)*8 + self.posY] - self.table[(self.posX)*8 + self.posY]]]
       elif(not board.matrix[self.posX - 1][self.posY].color == self.color):
         self.available_moves += [[Move(self.posX, self.posY, self.posX - 1, self.posY), self.table[(self.posX - 1)*8 + self.posY] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX - 1][self.posY].material]]
-        self.attacking += [board.matrix[self.posX - 1][self.posY]]
+        self.attacking += [board.matrix[self.posX - 1][self.posY].__class__.__name__]
       self.refresh_on_change_squares += [[self.posX - 1,self.posY]]
       if self.posY > 0:
         if(board.matrix[self.posX - 1][self.posY - 1] == None):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 1, self.posY - 1), self.table[(self.posX - 1)*8 + self.posY - 1] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX - 1][self.posY -1].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 1, self.posY - 1), self.table[(self.posX - 1)*8 + self.posY - 1] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX - 1][self.posY - 1].material]]
-          self.attacking += [board.matrix[self.posX - 1][self.posY - 1]]
+          self.attacking += [board.matrix[self.posX - 1][self.posY - 1].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX - 1,self.posY - 1]]
       if self.posY < 7:
         if(board.matrix[self.posX - 1][self.posY + 1] == None):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 1, self.posY + 1), self.table[(self.posX - 1)*8 + self.posY + 1] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX - 1][self.posY + 1].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 1, self.posY + 1), self.table[(self.posX - 1)*8 + self.posY + 1] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX - 1][self.posY + 1].material]]
-          self.attacking += [board.matrix[self.posX - 1][self.posY + 1]]
+          self.attacking += [board.matrix[self.posX - 1][self.posY + 1].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX - 1,self.posY + 1]]
     if self.posY < 7:
       if(board.matrix[self.posX][self.posY + 1] == None):
         self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY + 1), self.table[(self.posX)*8 + self.posY + 1] - self.table[(self.posX)*8 + self.posY]]]
       elif(not board.matrix[self.posX][self.posY + 1].color == self.color):
         self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY + 1), self.table[(self.posX)*8 + self.posY + 1] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX][self.posY + 1].material]]
-        self.attacking += [board.matrix[self.posX][self.posY + 1]]
+        self.attacking += [board.matrix[self.posX][self.posY + 1].__class__.__name__]
       self.refresh_on_change_squares += [[self.posX,self.posY + 1]]
     if self.posY > 0:
       if(board.matrix[self.posX][self.posY - 1] == None):
         self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY - 1), self.table[(self.posX)*8 + self.posY - 1] - self.table[(self.posX)*8 + self.posY]]]
       elif(not board.matrix[self.posX][self.posY - 1].color == self.color):
         self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY - 1), self.table[(self.posX)*8 + self.posY - 1] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX][self.posY - 1].material]]
-        self.attacking += [board.matrix[self.posX][self.posY - 1]]
+        self.attacking += [board.matrix[self.posX][self.posY - 1].__class__.__name__]
       self.refresh_on_change_squares += [[self.posX,self.posY - 1]]
         
-    if(self.first_move):
+    '''if(self.first_move):
       if(self.color == "B"):
         if(self.posX == 7 and self.posY == 4):
           if(board.matrix[7][0].__class__.__name__ == "Castle"):      
@@ -122,22 +122,22 @@ class King(Piece.Piece):
             and board.matrix[7][2] == None
             and board.matrix[7][3] == None):
               pass
-              '''if(not board.is_check(self.color)):
+              if(not board.is_check(self.color)):
                 board.try_move_piece( [Move(self.posX, self.posY, self.posX, self.posY - 1), 0] )
                 if(not board.is_check(self.color)):
                   self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY - 2), 50]]
-                board.undo()'''
+                board.undo()
            
           if(board.matrix[7][7].__class__.__name__ == "Castle"):
             if(board.matrix[7][7].first_move
             and board.matrix[7][6] == None
             and board.matrix[7][5] == None):
               pass
-              '''if(not board.is_check(self.color)):
+              if(not board.is_check(self.color)):
                 board.try_move_piece( [Move(self.posX, self.posY, self.posX, self.posY - 1), 0] )
                 if(not board.is_check(self.color)):
                   self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY + 2), 50]]
-                board.undo()'''
+                board.undo()
       else:
         if(self.posX == 0 and self.posY == 4): 
           if(board.matrix[0][0].__class__.__name__ == "Castle"):
@@ -146,17 +146,17 @@ class King(Piece.Piece):
             and board.matrix[0][2] == None
             and board.matrix[0][3] == None):
               pass
-              '''if(not board.is_check(self.color)):
+              if(not board.is_check(self.color)):
                 board.try_move_piece( [Move(self.posX, self.posY, self.posX, self.posY - 1), 0] )
                 if(not board.is_check(self.color)):
                   self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY - 2), 50]]
-                board.undo()'''
+                board.undo()
           if(board.matrix[0][7].__class__.__name__ == "Castle"):
             if(board.matrix[0][7].first_move
             and board.matrix[0][6] == None
             and board.matrix[0][5] == None):
               pass
-              '''if(not board.is_check(self.color)):
+              if(not board.is_check(self.color)):
                 board.try_move_piece( [Move(self.posX, self.posY, self.posX, self.posY - 1), 0] )
                 if(not board.is_check(self.color)):
                   self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY + 2), 50]]

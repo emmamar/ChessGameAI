@@ -54,13 +54,13 @@ class Pawn(Piece.Piece):
       (not board.matrix[posX - 1][posY + 1] == None
       and board.matrix[posX - 1][posY + 1].color == "W")):
         self.available_moves += [[Move(posX, posY, posX - 1, posY + 1), self.table[(posX - 1)*8 + posY + 1] - self.table[(posX)*8 + posY] + board.matrix[posX - 1][posY + 1].material]]
-        self.attacking += [board.matrix[posX - 1][posY + 1]]
+        self.attacking += [board.matrix[posX - 1][posY + 1].__class__.__name__]
       self.refresh_on_change_squares += [[posX - 1,posY + 1]]
       if(posY > 0 and
       (not board.matrix[posX - 1][posY - 1] == None
       and board.matrix[posX - 1][posY - 1].color == "W")):
         self.available_moves += [[Move(posX, posY, posX - 1, posY - 1), self.table[(posX - 1)*8 + posY - 1] - self.table[(posX)*8 + posY] + board.matrix[posX - 1][posY - 1].material]]
-        self.attacking += [board.matrix[posX - 1][posY - 1]]
+        self.attacking += [board.matrix[posX - 1][posY - 1].__class__.__name__]
       self.refresh_on_change_squares += [[posX - 1,posY - 1]]
     else:
       if board.matrix[posX + 1][posY] == None:
@@ -74,13 +74,13 @@ class Pawn(Piece.Piece):
       ((not board.matrix[posX + 1][posY + 1] == None)
       and board.matrix[posX + 1][posY + 1].color == "B")):
         self.available_moves += [[Move(posX, posY, posX + 1, posY + 1), self.table[(posX + 1)*8 + posY + 1] - self.table[(posX)*8 + posY] + board.matrix[posX + 1][posY + 1].material]]
-        self.attacking += [board.matrix[posX + 1][posY + 1]]
+        self.attacking += [board.matrix[posX + 1][posY + 1].__class__.__name__]
       self.refresh_on_change_squares += [[posX + 1,posY + 1]]
       if(posY > 0 and
       ((not board.matrix[posX + 1][posY - 1] == None)
       and board.matrix[posX + 1][posY - 1].color == "B")):
         self.available_moves += [[Move(posX, posY, posX + 1, posY - 1), self.table[(posX + 1)*8 + posY - 1] - self.table[(posX)*8 + posY] + board.matrix[posX + 1][posY - 1].material]]
-        self.attacking += [board.matrix[posX + 1][posY - 1]]    
+        self.attacking += [board.matrix[posX + 1][posY - 1].__class__.__name__]    
       self.refresh_on_change_squares += [[posX + 1,posY - 1]]  
   
  

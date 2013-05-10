@@ -38,7 +38,7 @@ class Castle(Piece.Piece):
         self.available_moves += [[Move(self.posX, self.posY, self.posX + i, self.posY), 0]]
       elif(not board.matrix[self.posX + i][self.posY].color == self.color):
         self.available_moves += [[Move(self.posX, self.posY, self.posX + i, self.posY), board.matrix[self.posX + i][self.posY].material]]
-        self.attacking += [board.matrix[self.posX + i][self.posY]]
+        self.attacking += [board.matrix[self.posX + i][self.posY].__class__.__name__]
       self.refresh_on_change_squares += [[self.posX + i,self.posY]]
       if (not board.matrix[self.posX + i][self.posY] == None):
         break
@@ -49,7 +49,7 @@ class Castle(Piece.Piece):
         self.available_moves += [[Move(self.posX, self.posY, self.posX - i, self.posY), 0]]
       elif(not board.matrix[self.posX - i][self.posY].color == self.color):
         self.available_moves += [[Move(self.posX, self.posY, self.posX - i, self.posY), board.matrix[self.posX - i][self.posY].material]]
-        self.attacking += [board.matrix[self.posX - i][self.posY]]
+        self.attacking += [board.matrix[self.posX - i][self.posY].__class__.__name__]
       self.refresh_on_change_squares += [[self.posX - i,self.posY]]
       if (not board.matrix[self.posX - i][self.posY] == None):
         break
@@ -60,7 +60,7 @@ class Castle(Piece.Piece):
         self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY + i), 0]]
       elif(not board.matrix[self.posX][self.posY + i].color == self.color):
         self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY + i), board.matrix[self.posX][self.posY + i].material]]
-        self.attacking += [board.matrix[self.posX][self.posY + i]]
+        self.attacking += [board.matrix[self.posX][self.posY + i].__class__.__name__]
       self.refresh_on_change_squares += [[self.posX,self.posY + i]]
       if (not board.matrix[self.posX][self.posY + i] == None):
         break
@@ -71,7 +71,7 @@ class Castle(Piece.Piece):
         self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY - i), 0]]
       elif(not board.matrix[self.posX][self.posY - i].color == self.color):
         self.available_moves += [[Move(self.posX, self.posY, self.posX, self.posY - i), board.matrix[self.posX][self.posY - i].material]]
-        self.attacking += [board.matrix[self.posX][self.posY - i]]
+        self.attacking += [board.matrix[self.posX][self.posY - i].__class__.__name__]
       self.refresh_on_change_squares += [[self.posX,self.posY - i]]
       if (not board.matrix[self.posX][self.posY - i] == None):
         break       

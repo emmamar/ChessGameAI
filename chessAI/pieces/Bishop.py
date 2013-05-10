@@ -48,7 +48,7 @@ class Bishop(Piece.Piece):
           self.available_moves += [[Move(self.posX,self.posY,self.posX + i, self.posY + i), self.table[(self.posX + i)*8 + self.posY + i] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX + i][self.posY + i].color == self.color):
           self.available_moves += [[Move(self.posX,self.posY,self.posX + i, self.posY + i), self.table[(self.posX + i)*8 + self.posY + i] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX + i][self.posY + i].material]]
-          self.attacking += [board.matrix[self.posX + i][self.posY + i]]
+          self.attacking += [board.matrix[self.posX + i][self.posY + i].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX + i, self.posY + i]]
         if (not board.matrix[self.posX + i][self.posY + i] == None):
           break
@@ -58,7 +58,7 @@ class Bishop(Piece.Piece):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + i, self.posY - i), self.table[(self.posX + i)*8 + self.posY - i] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX + i][self.posY - i].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + i, self.posY - i), self.table[(self.posX + i)*8 + self.posY - i] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX + i][self.posY -i].material]]
-          self.attacking += [board.matrix[self.posX + i][self.posY -i]]
+          self.attacking += [board.matrix[self.posX + i][self.posY -i].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX + i,self.posY -i]]
         if (not board.matrix[self.posX + i][self.posY - i] == None):
           break
@@ -68,7 +68,7 @@ class Bishop(Piece.Piece):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - i, self.posY + i), self.table[(self.posX - i)*8 + self.posY + i] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX - i][self.posY + i].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - i, self.posY + i), self.table[(self.posX - i)*8 + self.posY + i] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX - i][self.posY + i].material]]
-          self.attacking += [board.matrix[self.posX - i][self.posY + i]]
+          self.attacking += [board.matrix[self.posX - i][self.posY + i].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX - i,self.posY + i]]
         if (not board.matrix[self.posX - i][self.posY + i] == None):
           break
@@ -78,7 +78,7 @@ class Bishop(Piece.Piece):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - i, self.posY - i), self.table[(self.posX - i)*8 + self.posY - i] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX - i][self.posY - i].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - i, self.posY - i), self.table[(self.posX - i)*8 + self.posY - i] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX - i][self.posY - i].material]]
-          self.attacking += [board.matrix[self.posX - i][self.posY - i]]
+          self.attacking += [board.matrix[self.posX - i][self.posY - i].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX - i,self.posY - i]]
         if (not board.matrix[self.posX - i][self.posY - i] == None):
           break

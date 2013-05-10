@@ -87,15 +87,15 @@ class Board:
   '''moves a piece on the board given the move'''
   
   
-  def try_move_piece(self, move_heuristic_pair, depth_zero):
+  def try_move_piece(self, move_heuristic_pair, d_z):
     '''[0:available_moves_white_copy, 1:available_moves_black_copy, 2:attacking_white_copy, 3:attacking_black_copy,
-    4:refresh_on_change_black_copy, 5:refresh_on_change_white_copy, 6:move, 7:taken_piece, 8:queened, 9:castled, 10:first_move, 12:check]'''
-    history_cell = [None, None, None, None, None, None, None, None, False, False, False, False]
+    4:refresh_on_change_black_copy, 5:refresh_on_change_white_copy, 6:move, 7:taken_piece, 8:queened, 9:castled, 10:first_move]'''
+    history_cell = [None, None, None, None, None, None, None, None, False, False, False]
     '''get move informatin'''
     move = move_heuristic_pair[0]
     heuristic_increase = move_heuristic_pair[1]
     player_piece = self.matrix[move.startX][move.startY]
-      
+    depth_zero = d_z
     '''copy variables into history'''
     available_moves_white_local = self.available_moves_white
     available_moves_black_local = self.available_moves_black
@@ -216,113 +216,33 @@ class Board:
         self.refresh_on_change_white[4] = player_piece.refresh_on_change_squares
         self.available_moves_white[4] = player_piece.available_moves
         self.attacking_white[4] = player_piece.attacking
-      
-    
-    if(self.check):
-      history_cell[11] = True
 
     if(not depth_zero):
-      if(player_piece.color == "W"):
-        if(self.check):
-          self.check = False
-          idx = 0
-          for each in self.white_pieces:
-            if(not self.white_pieces[idx] == None):
-              each.refresh_state(self)
-              self.refresh_on_change_white[idx] = each.refresh_on_change_squares
-              self.available_moves_white[idx] = each.available_moves
-              self.attacking_white[idx] = each.attacking
-            idx += 1 
-        else:
-          idx = 0
-          for each in self.white_pieces:
-            if(not self.white_pieces[idx] == None):
-              if ([move.endX, move.endY] in self.refresh_on_change_white[idx]) or ([move.startX, move.startY] in self.refresh_on_change_white[idx]):
-                each.refresh_state(self)
-                self.refresh_on_change_white[idx] = each.refresh_on_change_squares
-                self.available_moves_white[idx] = each.available_moves
-                self.attacking_white[idx] = each.attacking
-            idx += 1 
-        if(self.is_check("B")):
-          idx = 0
-          for each in self.black_pieces:
-            if(not self.black_pieces[idx] == None):
-              each.refresh_state(self)
-              self.refresh_on_change_black[idx] = each.refresh_on_change_squares
-              self.available_moves_black[idx] = each.available_moves
-              self.attacking_black[idx] = each.attacking
-            idx += 1 
-          self.check = True
-        else:
-          idx = 0
-          for each in self.black_pieces:
-            if(not self.black_pieces[idx] == None):
-              if ([move.endX, move.endY] in self.refresh_on_change_black[idx]) or ([move.startX, move.startY] in self.refresh_on_change_black[idx]):
-                each.refresh_state(self)
-                self.refresh_on_change_black[idx] = each.refresh_on_change_squares
-                self.available_moves_black[idx] = each.available_moves
-                self.attacking_black[idx] = each.attacking
-            idx += 1 
-      else:
-        if(self.check):
-          self.check = False
-          idx = 0
-          for each in self.black_pieces:
-            if(not self.black_pieces[idx] == None):
-              each.refresh_state(self)
-              self.refresh_on_change_black[idx] = each.refresh_on_change_squares
-              self.available_moves_black[idx] = each.available_moves
-              self.attacking_black[idx] = each.attacking
-            idx += 1 
-        else:
-          idx = 0
-          for each in self.black_pieces:
-            if(not self.black_pieces[idx] == None):
-              if ([move.endX, move.endY] in self.refresh_on_change_black[idx]) or ([move.startX, move.startY] in self.refresh_on_change_black[idx]):
-                each.refresh_state(self)
-                self.refresh_on_change_black[idx] = each.refresh_on_change_squares
-                self.available_moves_black[idx] = each.available_moves
-                self.attacking_black[idx] = each.attacking
-            idx += 1 
-        if(self.is_check("W")):
-          idx = 0
-          for each in self.white_pieces:
-            if(not self.white_pieces[idx] == None):
-              each.refresh_state(self)
-              self.refresh_on_change_white[idx] = each.refresh_on_change_squares
-              self.available_moves_white[idx] = each.available_moves
-              self.attacking_white[idx] = each.attacking
-            idx += 1 
-          self.check = True
-        else:
-          idx = 0
-          for each in self.white_pieces:
-            if(not self.white_pieces[idx] == None):
-              if ([move.endX, move.endY] in self.refresh_on_change_white[idx]) or ([move.startX, move.startY] in self.refresh_on_change_white[idx]):
-                each.refresh_state(self)
-                self.refresh_on_change_white[idx] = each.refresh_on_change_squares
-                self.available_moves_white[idx] = each.available_moves
-                self.attacking_white[idx] = each.attacking
-            idx += 1 
+      idx = 0
+      for each in self.white_pieces:
+        if(not self.white_pieces[idx] == None):
+          if ([move.endX, move.endY] in self.refresh_on_change_white[idx]) or ([move.startX, move.startY] in self.refresh_on_change_white[idx]):
+            each.refresh_state(self)
+            self.refresh_on_change_white[idx] = each.refresh_on_change_squares
+            self.available_moves_white[idx] = each.available_moves
+            self.attacking_white[idx] = each.attacking
+        idx += 1 
+      idx = 0
+      for each in self.black_pieces:
+        if(not self.black_pieces[idx] == None):
+          if ([move.endX, move.endY] in self.refresh_on_change_black[idx]) or ([move.startX, move.startY] in self.refresh_on_change_black[idx]):
+            each.refresh_state(self)
+            self.refresh_on_change_black[idx] = each.refresh_on_change_squares
+            self.available_moves_black[idx] = each.available_moves
+            self.attacking_black[idx] = each.attacking
+        idx += 1 
     self.history += [history_cell]
-    
-    
-
-    for piece in self.attacking_white:
-      if(not piece == None):
-        for attacking in piece:
-          if(not attacking == None):
-            heuristic_increase += (0.1)*attacking.material
-    for piece in self.attacking_black:
-      if(not piece == None):
-        for attacking in piece:
-          if(not attacking == None):
-            heuristic_increase += (0.1)*attacking.material
             
     if(player_piece.color == "W"):
       self.white_heuristic += heuristic_increase
     else:
       self.white_heuristic -= heuristic_increase
+      
     '''move'''
     history_cell[6] = [Move(move.startX, move.startY, move.endX, move.endY), heuristic_increase]
     return True
@@ -355,7 +275,6 @@ class Board:
     queened = history_cell[8]
     castled = history_cell[9]
     first_move = history_cell[10]
-    self.check = history_cell[11]
     
     
     
@@ -466,14 +385,14 @@ class Board:
   
   def is_check(self, color):
     if(color == "B"):
-      for piece in self.attacking_white:
-        if(not piece == None):
-          if(piece.__class__.__name__ == "King"):
+      for piece_attack_options in self.attacking_white:
+        if(not piece_attack_options == None):
+          if "King" in piece_attack_options:
             return True
     else:
-      for piece in self.attacking_black:
-        if(not piece == None):
-          if(piece.__class__.__name__ == "King"):
+      for piece_attack_options in self.attacking_black:
+        if(not piece_attack_options == None):
+          if "King" in piece_attack_options:
             return True
     return False   
         

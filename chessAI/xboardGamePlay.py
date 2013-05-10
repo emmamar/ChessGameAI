@@ -37,10 +37,14 @@ class xboardGamePlay:
       p1next, heur = self.player1_computer.determineNextMove(
         self.board_object, alpha_list
       )
-      self.board_object.try_move_piece(p1next, False)
-      self.board_object.save_board()
-      self.white_turn = True
-      return p1next
+      if(not p1next == None):
+        self.board_object.try_move_piece(p1next, False)
+        self.board_object.save_board()
+        self.white_turn = True
+        return p1next
+      else:
+        '''check mate'''
+        return "None"
     else:
       '''isnt blacks turn'''
       return None

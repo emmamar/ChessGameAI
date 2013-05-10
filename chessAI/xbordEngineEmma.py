@@ -58,12 +58,16 @@ def given_move(game, given_move):
     sys.stdout.flush()
   else:
     move_heur_pair = game.play_move_computer()
-    move = move_heur_pair[0]
-    if not move == None:
-      sys.stdout.write("move " + move.getalg() + "\n")
+    if (move_heur_pair == None):
+      sys.stdout.write("check mate")
       sys.stdout.flush()
     else:
-      raise ValueError("move is null")
+      move = move_heur_pair[0]
+      if not move == None:
+        sys.stdout.write("move " + move.getalg() + "\n")
+        sys.stdout.flush()
+      else:
+        raise ValueError("move is null")
     
 
 def xboard(game):

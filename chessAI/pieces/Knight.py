@@ -46,14 +46,14 @@ class Knight(Piece.Piece):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 1, self.posY - 2), self.table[(self.posX - 1)*8 + self.posY - 2] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX - 1][self.posY - 2].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 1, self.posY - 2), self.table[(self.posX - 1)*8 + self.posY - 2] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX - 1][self.posY - 2].material]]
-          self.attacking += [board.matrix[self.posX - 1][self.posY - 2]]
+          self.attacking += [board.matrix[self.posX - 1][self.posY - 2].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX - 1,self.posY - 2]]
       if self.posY + 2 <= 7:
         if(board.matrix[self.posX - 1][self.posY + 2] == None):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 1, self.posY + 2), self.table[(self.posX - 1)*8 + self.posY + 2] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX - 1][self.posY + 2].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 1, self.posY + 2), self.table[(self.posX - 1)*8 + self.posY + 2] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX - 1][self.posY + 2].material]]
-          self.attacking += [board.matrix[self.posX - 1][self.posY + 2]]
+          self.attacking += [board.matrix[self.posX - 1][self.posY + 2].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX - 1,self.posY + 2]]
     if self.posX - 2 >= 0:
       if self.posY - 1 >= 0:
@@ -61,14 +61,14 @@ class Knight(Piece.Piece):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 2, self.posY - 1), self.table[(self.posX - 2)*8 + self.posY - 1] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX - 2][self.posY - 1].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 2, self.posY - 1), self.table[(self.posX - 2)*8 + self.posY - 1] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX - 2][self.posY - 1].material]]
-          self.attacking += [board.matrix[self.posX - 2][self.posY - 1]]
+          self.attacking += [board.matrix[self.posX - 2][self.posY - 1].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX - 2,self.posY - 1]]
       if self.posY + 1 <= 7:
         if(board.matrix[self.posX - 2][self.posY + 1] == None):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 2, self.posY + 1), self.table[(self.posX - 2)*8 + self.posY + 1] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX - 2][self.posY + 1].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX - 2, self.posY + 1), self.table[(self.posX - 2)*8 + self.posY + 1] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX - 2][self.posY + 1].material]]
-          self.attacking += [board.matrix[self.posX - 2][self.posY + 1]]
+          self.attacking += [board.matrix[self.posX - 2][self.posY + 1].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX - 2,self.posY + 1]]
     if self.posX + 1 <= 7:
       if self.posY - 2 >= 0:
@@ -76,14 +76,14 @@ class Knight(Piece.Piece):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 1, self.posY - 2), self.table[(self.posX + 1)*8 + self.posY - 2] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX + 1][self.posY - 2].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 1, self.posY - 2), self.table[(self.posX + 1)*8 + self.posY - 2] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX + 1][self.posY - 2].material]]
-          self.attacking += [board.matrix[self.posX + 1][self.posY - 2]]
+          self.attacking += [board.matrix[self.posX + 1][self.posY - 2].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX + 1,self.posY - 2]]
       if self.posY + 2 <= 7:
         if(board.matrix[self.posX + 1][self.posY + 2] == None):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 1, self.posY + 2), self.table[(self.posX + 1)*8 + self.posY + 2] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX + 1][self.posY + 2].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 1, self.posY + 2), self.table[(self.posX + 1)*8 + self.posY + 2] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX + 1][self.posY + 2].material]]
-          self.attacking += [board.matrix[self.posX + 1][self.posY + 2]]
+          self.attacking += [board.matrix[self.posX + 1][self.posY + 2].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX + 1,self.posY + 2]]
     if self.posX + 2 <= 7:
       if self.posY - 1 >= 0:
@@ -91,14 +91,14 @@ class Knight(Piece.Piece):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 2, self.posY - 1), self.table[(self.posX + 2)*8 + self.posY - 1] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX + 2][self.posY - 1].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 2, self.posY - 1), self.table[(self.posX + 2)*8 + self.posY - 1] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX + 2][self.posY - 1].material]]
-          self.attacking += [board.matrix[self.posX + 2][self.posY - 1]]
+          self.attacking += [board.matrix[self.posX + 2][self.posY - 1].__class__.__name__]
         self.refresh_on_change_squares += [[self.posX + 2,self.posY - 1]]
       if self.posY + 1 <= 7:
         if(board.matrix[self.posX + 2][self.posY + 1] == None):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 2, self.posY + 1), self.table[(self.posX + 2)*8 + self.posY + 1] - self.table[(self.posX)*8 + self.posY]]]
         elif(not board.matrix[self.posX + 2][self.posY + 1].color == self.color):
           self.available_moves += [[Move(self.posX, self.posY, self.posX + 2, self.posY + 1), self.table[(self.posX + 2)*8 + self.posY + 1] - self.table[(self.posX)*8 + self.posY] + board.matrix[self.posX + 2][self.posY + 1].material]]
-          self.attacking += [board.matrix[self.posX + 2][self.posY + 1]]
+          self.attacking += [board.matrix[self.posX + 2][self.posY + 1].__class__.__name__]
         self.refresh_on_change_squares.append([self.posX + 2,self.posY + 1])
 
 
